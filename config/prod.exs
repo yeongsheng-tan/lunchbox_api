@@ -69,6 +69,12 @@ config :logger, level: :info
 # Finally import the config/prod.secret.exs which should be versioned
 # separately.
 # import_config "prod.secret.exs"
+config :lunchbox_api, LunchboxApi.Repo,
+       adapter: Ecto.Adapters.Postgres,
+       url: "${DATABASE_URL}",
+       database: "",
+       ssl: true,
+       pool_size: 1 # Free tier db only allows 1 conn
 
 # Configure Basic_auth for prod
 config :lunchbox_api, lunchbox_auth: [
