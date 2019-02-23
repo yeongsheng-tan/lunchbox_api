@@ -77,7 +77,7 @@ config :lunchbox_api, LunchboxApi.Repo,
        url: "${DATABASE_URL}",
        database: "",
        ssl: true,
-       pool_size: 1 # Free tier db only allows 1 conn
+       pool_size: 2 # Free tier db only allows 1 conn
 
 # Configure Basic_auth for prod
 config :lunchbox_api, lunchbox_auth: [
