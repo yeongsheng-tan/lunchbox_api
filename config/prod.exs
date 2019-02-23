@@ -10,7 +10,9 @@ use Mix.Config
 # which you should run after static files are built and
 # before starting your production server.
 config :lunchbox_api, LunchboxApiWeb.Endpoint,
-  http: [:inet6, port: System.get_env("PORT") || 4000],
+  # http: [:inet6, port: System.get_env("PORT") || 4000],
+  server: true,
+  secret_key_base: "${SECRET_KEY_BASE}",
   url: [host: "example.com", port: 80],
   cache_static_manifest: "priv/static/cache_manifest.json"
 
