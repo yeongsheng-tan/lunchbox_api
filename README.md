@@ -2,21 +2,23 @@
 ##### Setting up local dev env with 3x nodes of CockroachDB clustered.
   * Spin up 3 nodes of cockroachdb 2.1 and link them up as a singular cluster:
   ```
-  > cockroach start --insecure --listen-addr=localhost &
+  > cockroach start --insecure --listen-addr=localhost --background
   
   > cockroach start \
             --insecure \
             --store=node2 \
             --listen-addr=localhost:26258 \
             --http-addr=localhost:8081 \
-            --join=localhost:26257 &
+            --join=localhost:26257 \
+            --background
             
   > cockroach start \
             --insecure \
             --store=node3 \
             --listen-addr=localhost:26259 \
             --http-addr=localhost:8082 \
-            --join=localhost:26257 &
+            --join=localhost:26257 \
+            --background
   ```
   * Test you can connect to either one of the cockroachdb node:
   ```
