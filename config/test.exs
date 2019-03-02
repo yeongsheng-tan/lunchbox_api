@@ -11,11 +11,13 @@ config :logger, level: :warn
 
 # Configure your database
 config :lunchbox_api, LunchboxApi.Repo,
-  username: "postgres",
-  password: "postgres",
+  username: "root",
+  password: "",
   database: "lunchbox_api_test",
   hostname: "localhost",
-  pool: Ecto.Adapters.SQL.Sandbox
+  port:      26257,
+  # pool: Ecto.Adapters.SQL.Sandbox
+  pool: EctoReplaySandbox
 
 # Configure Basic_auth for test
 config :lunchbox_api, lunchbox_auth: [

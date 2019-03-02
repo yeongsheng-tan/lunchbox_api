@@ -38,6 +38,7 @@ defmodule LunchboxApi.MixProject do
       {:phoenix_ecto, "~> 3.6"},
       {:ecto, "~> 2.2"},
       {:postgrex, "~> 0.13", hex: :postgrex_cdb, override: true},
+      {:ecto_replay_sandbox, "~> 1.0", only: :test},
       {:gettext, "~> 0.11"},
       {:jason, "~> 1.0"},
       {:plug_cowboy, "~> 2.0"},
