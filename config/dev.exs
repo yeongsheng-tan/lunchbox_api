@@ -7,7 +7,7 @@ use Mix.Config
 # watchers to your application. For example, we use it
 # with webpack to recompile .js and .css sources.
 config :lunchbox_api, LunchboxApiWeb.Endpoint,
-  http: [port: 4000],
+  http: [port: System.get_env("PHX_PORT")],
   debug_errors: true,
   code_reloader: true,
   check_origin: false,
@@ -61,7 +61,7 @@ config :lunchbox_api, LunchboxApi.Repo,
   password: "",
   database: "lunchbox_api_dev",
   hostname: "localhost",
-  port:      26257,
+  port:      System.get_env("CDB_PORT"),
   pool_size: 10
 
 # Configure Basic_auth for dev
