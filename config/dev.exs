@@ -57,11 +57,10 @@ config :phoenix, :plug_init_mode, :runtime
 
 # Configure your database
 config :lunchbox_api, LunchboxApi.Repo,
-  username: "root",
-  password: "",
+  username: "postgres",
+  password: "postgres",
   database: "lunchbox_api_dev",
   hostname: "localhost",
-  port:      26257,
   pool_size: 10
 
 # Configure Basic_auth for dev

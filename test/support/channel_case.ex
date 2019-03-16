@@ -26,16 +26,12 @@ defmodule LunchboxApiWeb.ChannelCase do
   end
 
   setup tags do
-    # :ok = Ecto.Adapters.SQL.Sandbox.checkout(LunchboxApi.Repo)
-    sandbox = Application.get_env(:lunchbox_api, LunchboxApi.Repo)[:pool]
-    :ok = sandbox.checkout(LunchboxApi.Repo)
+    :ok = Ecto.Adapters.SQL.Sandbox.checkout(LunchboxApi.Repo)
 
     unless tags[:async] do
-      # Ecto.Adapters.SQL.Sandbox.mode(LunchboxApi.Repo, {:shared, self()})
-      :ok = sandbox.checkout(LunchboxApi.Repo)
+      Ecto.Adapters.SQL.Sandbox.mode(LunchboxApi.Repo, {:shared, self()})
     end
 
-    # :ok
-    {:ok, conn: Phoenix.ConnTest.build_conn()}
+    :ok
   end
 end
