@@ -1,0 +1,12 @@
+#!/bin/sh
+
+set -eo pipefail
+
+unset CDPATH
+
+SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd -P)"
+REL_NAME="${REL_NAME:-lunchbox_api}"
+
+cockroach start --insecure --host=localhost --background
+cockroach start --background --insecure --port=26258 --http-port=8081 --store=node2 --join=localhost:26257
+cockroach start --background --insecure --port=26259 --http-port=8082 --store=node3 --join=localhost:26257

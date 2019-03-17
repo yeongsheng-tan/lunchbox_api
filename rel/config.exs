@@ -32,6 +32,10 @@ environment :dev do
   set dev_mode: true
   set include_erts: false
   set cookie: :"b_n/y.YGY&A{.1fH{Af|SHx^vBBa(~t2L%KN)R~,=.f<pXLCAH.5x8mRdt@SwI0p"
+  set commands: [
+    start_cdb_cluster: "rel/commands/start_cdb_cluster",
+    shutdown_cdb_cluster: "rel/commands/shutdown_cdb_cluster"
+  ]
 end
 
 environment :prod do

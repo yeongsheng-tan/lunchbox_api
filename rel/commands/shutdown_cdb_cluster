@@ -1,0 +1,12 @@
+#!/bin/sh
+
+set -eo pipefail
+
+unset CDPATH
+
+SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd -P)"
+REL_NAME="${REL_NAME:-lunchbox_api}"
+
+cockroach quit --insecure --host=localhost --port=26259
+cockroach quit --insecure --host=localhost --port=26258
+cockroach quit --insecure --host=localhost --port=26257
