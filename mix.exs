@@ -43,6 +43,9 @@ defmodule LunchboxApi.MixProject do
       {:jason, "~> 1.0"},
       {:plug_cowboy, "~> 2.0"},
       {:basic_auth, "~> 2.2.4"},
+      {:guardian, "~> 1.2"},
+      {:comeonin, "~> 5.1"},
+      {:argon2_elixir, "~> 2.0"},
       {:distillery, "~> 2.0", runtime: false}
     ]
   end
