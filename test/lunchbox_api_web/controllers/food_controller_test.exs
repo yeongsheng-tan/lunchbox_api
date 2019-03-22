@@ -15,13 +15,13 @@ defmodule LunchboxApiWeb.FoodControllerTest do
   @invalid_attrs %{name: nil, status: nil}
 
   # get auth username
-  @username Application.get_env(:lunchbox_api, :lunchbox_auth)[:username]
-  @password Application.get_env(:lunchbox_api, :lunchbox_auth)[:password]
+  # @username Application.get_env(:lunchbox_api, :lunchbox_auth)[:username]
+  # @password Application.get_env(:lunchbox_api, :lunchbox_auth)[:password]
 
   # setup auth on conn
   setup %{conn: conn} do
     conn = build_conn()
-    |> using_basic_auth(@username, @password)
+    # |> using_basic_auth(@username, @password)
     |> put_req_header("accept", "application/json")
     {:ok, conn: conn}
   end
@@ -35,15 +35,15 @@ defmodule LunchboxApiWeb.FoodControllerTest do
   defp recycle_conn_auth(conn) do
     conn
       |> recycle()
-      |> using_basic_auth(@username, @password)
+      # |> using_basic_auth(@username, @password)
       |> put_req_header("accept", "application/json")
   end
 
   # basic auth
-  defp using_basic_auth(conn, username, password) do
-    header_content = "Basic " <> Base.encode64("#{username}:#{password}")
-    conn |> put_req_header("authorization", header_content)
-  end
+  # defp using_basic_auth(conn, username, password) do
+  #   header_content = "Basic " <> Base.encode64("#{username}:#{password}")
+  #   conn |> put_req_header("authorization", header_content)
+  # end
 
   describe "index" do
     test "lists all foods", %{conn: conn} do

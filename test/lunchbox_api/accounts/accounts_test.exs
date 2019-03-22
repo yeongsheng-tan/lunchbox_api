@@ -6,9 +6,17 @@ defmodule LunchboxApi.AccountsTest do
   describe "users" do
     alias LunchboxApi.Accounts.User
 
-    @valid_attrs %{email: "some email", password_hash: "some password_hash"}
-    @update_attrs %{email: "some updated email", password_hash: "some updated password_hash"}
-    @invalid_attrs %{email: nil, password_hash: nil}
+    @valid_attrs %{
+      email: "some_email@mail.com",
+      password: "some_password_098765",
+      password_confirmation: "some_password_098765"
+    }
+    @update_attrs %{
+      email: "some_updated_email@mymail.com",
+      password: "some_password_zyxwv",
+      password_confirmation: "some_password_zyxwv"
+    }
+    @invalid_attrs %{email: nil, password: nil, password_confirmation: nil}
 
     def user_fixture(attrs \\ %{}) do
       {:ok, user} =
@@ -21,18 +29,19 @@ defmodule LunchboxApi.AccountsTest do
 
     test "list_users/0 returns all users" do
       user = user_fixture()
-      assert Accounts.list_users() == [user]
+      assert Accounts.list_users() == [%User{user | password: nil, password_confirmation: nil}]
     end
 
     test "get_user!/1 returns the user with given id" do
       user = user_fixture()
-      assert Accounts.get_user!(user.id) == user
+      assert Accounts.get_user!(user.id) == %User{user | password: nil, password_confirmation: nil}
     end
 
     test "create_user/1 with valid data creates a user" do
       assert {:ok, %User{} = user} = Accounts.create_user(@valid_attrs)
-      assert user.email == "some email"
-      assert user.password_hash == "some password_hash"
+      assert user.email == "some_email@mail.com"
+      refute is_nil(user.password_hash)
+      assert Argon2.check_pass(@valid_attrs.password, user.password_hash)
     end
 
     test "create_user/1 with invalid data returns error changeset" do
@@ -42,12 +51,14 @@ defmodule LunchboxApi.AccountsTest do
     test "update_user/2 with valid data updates the user" do
       user = user_fixture()
       assert {:ok, %User{} = user} = Accounts.update_user(user, @update_attrs)
-      assert user.email == "some updated email"
-      assert user.password_hash == "some updated password_hash"
+      assert user.email == "some_updated_email@mymail.com"
+      refute is_nil(user.password_hash)
+      assert Argon2.check_pass(@update_attrs.password, user.password_hash)
     end
 
     test "update_user/2 with invalid data returns error changeset" do
       user = user_fixture()
+      user = %User{user | password: nil, password_confirmation: nil}
       assert {:error, %Ecto.Changeset{}} = Accounts.update_user(user, @invalid_attrs)
       assert user == Accounts.get_user!(user.id)
     end
