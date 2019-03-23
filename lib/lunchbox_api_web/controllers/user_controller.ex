@@ -40,4 +40,20 @@ defmodule LunchboxApiWeb.UserController do
       send_resp(conn, :no_content, "")
     end
   end
+
+  def sign_in(conn, %{"email" => email, "password" => password}) do
+    case LunchboxApi.Accounts.authenticate_user(email, password) do
+      {:ok, user} ->
+        conn
+        |> put_status(:ok)
+        |> put_view(LunchboxApiWeb.UserView)
+        |> render("sign_in.json", user: user)
+
+      {:error, message} ->
+        conn
+        |> put_status(:unauthorized)
+        |> put_view(LunchboxApiWeb.ErrorView)
+        |> render("401.json", message: message)
+    end
+  end
 end

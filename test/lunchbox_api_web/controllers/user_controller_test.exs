@@ -35,8 +35,7 @@ defmodule LunchboxApiWeb.UserControllerTest do
       hashed_password = Argon2.add_hash(@create_attrs.password)
       assert %{
                "id" => id,
-               "email" => "some_email@mail.com",
-               "password_hash" => hashed_password
+               "email" => "some_email@mail.com"
              } = json_response(conn, 200)["data"]
       refute Map.get(json_response(conn, 200)["data"], :password)
     end

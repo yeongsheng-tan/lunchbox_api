@@ -25,6 +25,7 @@ defmodule LunchboxApiWeb.Router do
 
     resources "/foods", FoodController, except: [:new, :edit]
 
-    resources "/users", UserController, only: [:create, :show]
+    resources "/users", UserController, except: [:new, :edit]
+    post "/users/sign_in", UserController, :sign_in
   end
 end
