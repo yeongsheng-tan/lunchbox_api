@@ -114,7 +114,7 @@ defmodule LunchboxApi.Accounts do
   end
 
   defp verify_password(user, password) do
-    if Argon2.check_pass(password, user.password_hash) do
+    if Argon2.verify_pass(password, user.password_hash) do
       {:ok, user}
     else
       {:error, "Wrong email or password"}
