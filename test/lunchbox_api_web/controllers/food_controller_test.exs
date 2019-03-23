@@ -1,8 +1,11 @@
 defmodule LunchboxApiWeb.FoodControllerTest do
   use LunchboxApiWeb.ConnCase
 
+  alias LunchboxApi.Accounts
+  alias LunchboxApi.Accounts.User
   alias LunchboxApi.Lunchbox
   alias LunchboxApi.Lunchbox.Food
+  alias Plug.Test
 
   @create_attrs %{
     name: "some name",
@@ -13,17 +16,15 @@ defmodule LunchboxApiWeb.FoodControllerTest do
     status: "some updated status"
   }
   @invalid_attrs %{name: nil, status: nil}
+  @user_attrs %{
+    email: "test_user@gmail.com",
+    password: "p@55W0rD",
+    password_confirmation: "p@55W0rD"
+  }
 
-  # get auth username
-  # @username Application.get_env(:lunchbox_api, :lunchbox_auth)[:username]
-  # @password Application.get_env(:lunchbox_api, :lunchbox_auth)[:password]
-
-  # setup auth on conn
   setup %{conn: conn} do
-    conn = build_conn()
-    # |> using_basic_auth(@username, @password)
-    |> put_req_header("accept", "application/json")
-    {:ok, conn: conn}
+    {:ok, conn: conn, current_user: current_user} = setup_current_user(conn)
+    {:ok, conn: put_req_header(conn, "accept", "application/json"), current_user: current_user}
   end
 
   def fixture(:food) do
@@ -31,20 +32,16 @@ defmodule LunchboxApiWeb.FoodControllerTest do
     food
   end
 
-  # recycle conn with auth
-  defp recycle_conn_auth(conn) do
-    conn
-      |> recycle()
-      # |> using_basic_auth(@username, @password)
-      |> put_req_header("accept", "application/json")
+  def fixture(:user) do
+    {:ok, user} = Accounts.create_user(@user_attrs)
+    user
   end
 
-  # basic auth
-  # defp using_basic_auth(conn, username, password) do
-  #   header_content = "Basic " <> Base.encode64("#{username}:#{password}")
-  #   conn |> put_req_header("authorization", header_content)
-  # end
-
+  def fixture(:current_user) do
+    {:ok, current_user} = Accounts.create_user(@user_attrs)
+    current_user
+  end
+  
   describe "index" do
     test "lists all foods", %{conn: conn} do
       conn = get(conn, Routes.food_path(conn, :index))
@@ -110,5 +107,12 @@ defmodule LunchboxApiWeb.FoodControllerTest do
   defp create_food(_) do
     food = fixture(:food)
     {:ok, food: food}
+  end
+
+  defp setup_current_user(conn) do
+    current_user = fixture(:current_user)
+    {:ok,
+     conn: Test.init_test_session(conn, current_user_id: current_user.id),
+     current_user: current_user}
   end
 end

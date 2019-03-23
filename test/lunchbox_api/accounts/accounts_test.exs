@@ -73,5 +73,12 @@ defmodule LunchboxApi.AccountsTest do
       user = user_fixture()
       assert %Ecto.Changeset{} = Accounts.change_user(user)
     end
+
+    test "authenticate_user/2 authenticates the user" do
+      user = user_fixture()
+      assert {:error, "Wrong email or password"} = Accounts.authenticate_user("wrong@email.com", "abc")
+      assert {:ok, authenticated_user} = Accounts.authenticate_user(user.email, @valid_attrs.password)
+      assert %User{user | password: nil, password_confirmation: nil} == authenticated_user
+    end
   end
 end

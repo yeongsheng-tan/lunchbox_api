@@ -45,12 +45,14 @@ defmodule LunchboxApiWeb.UserController do
     case LunchboxApi.Accounts.authenticate_user(email, password) do
       {:ok, user} ->
         conn
+        |> put_session(:current_user_id, user.id)
         |> put_status(:ok)
         |> put_view(LunchboxApiWeb.UserView)
         |> render("sign_in.json", user: user)
 
       {:error, message} ->
         conn
+        |> delete_session(:current_user_id)
         |> put_status(:unauthorized)
         |> put_view(LunchboxApiWeb.ErrorView)
         |> render("401.json", message: message)
