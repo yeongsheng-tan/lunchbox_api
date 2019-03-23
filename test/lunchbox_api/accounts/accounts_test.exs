@@ -34,7 +34,12 @@ defmodule LunchboxApi.AccountsTest do
 
     test "get_user!/1 returns the user with given id" do
       user = user_fixture()
-      assert Accounts.get_user!(user.id) == %User{user | password: nil, password_confirmation: nil}
+
+      assert Accounts.get_user!(user.id) == %User{
+               user
+               | password: nil,
+                 password_confirmation: nil
+             }
     end
 
     test "create_user/1 with valid data creates a user" do
@@ -76,8 +81,13 @@ defmodule LunchboxApi.AccountsTest do
 
     test "authenticate_user/2 authenticates the user" do
       user = user_fixture()
-      assert {:error, "Wrong email or password"} = Accounts.authenticate_user("wrong@email.com", "abc")
-      assert {:ok, authenticated_user} = Accounts.authenticate_user(user.email, @valid_attrs.password)
+
+      assert {:error, "Wrong email or password"} =
+               Accounts.authenticate_user("wrong@email.com", "abc")
+
+      assert {:ok, authenticated_user} =
+               Accounts.authenticate_user(user.email, @valid_attrs.password)
+
       assert %User{user | password: nil, password_confirmation: nil} == authenticated_user
     end
   end

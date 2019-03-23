@@ -15,12 +15,13 @@ config :lunchbox_api, LunchboxApi.Repo,
   password: "",
   database: "lunchbox_api_test",
   hostname: "localhost",
-  port:      System.get_env("CDB_PORT"),
+  port: System.get_env("CDB_PORT"),
   # pool: Ecto.Adapters.SQL.Sandbox
   pool: EctoReplaySandbox
 
 # Configure Basic_auth for test
-config :lunchbox_api, lunchbox_auth: [
-  username: System.get_env("BASIC_AUTH_USERNAME"),
-  password: System.get_env("BASIC_AUTH_PASSWORD")
-]
+config :lunchbox_api,
+  lunchbox_auth: [
+    username: System.get_env("BASIC_AUTH_USERNAME"),
+    password: System.get_env("BASIC_AUTH_PASSWORD")
+  ]

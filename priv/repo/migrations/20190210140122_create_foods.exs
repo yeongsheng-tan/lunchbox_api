@@ -3,11 +3,10 @@ defmodule LunchboxApi.Repo.Migrations.CreateFoods do
 
   def change do
     create table(:foods) do
-      add :name, :string
-      add :status, :string
+      add(:name, :string)
+      add(:status, :string)
 
       timestamps()
     end
-
   end
 end

@@ -42,14 +42,14 @@ defmodule LunchboxApiWeb.UserControllerTest do
       conn = get(conn, Routes.user_path(conn, :index))
 
       assert json_response(conn, 200)["data"] == [
-        %{
-          "id" => current_user.id,
-          "email" => current_user.email
-        }
-      ]
+               %{
+                 "id" => current_user.id,
+                 "email" => current_user.email
+               }
+             ]
     end
   end
-  
+
   describe "create user" do
     test "renders user when data is valid", %{conn: conn} do
       conn = post(conn, Routes.user_path(conn, :create), user: @create_attrs)
@@ -58,13 +58,15 @@ defmodule LunchboxApiWeb.UserControllerTest do
       conn = get(conn, Routes.user_path(conn, :show, id))
 
       hashed_password = Argon2.add_hash(@create_attrs.password)
+
       assert %{
                "id" => id,
                "email" => "some_email@mail.com"
              } = json_response(conn, 200)["data"]
+
       refute Map.get(json_response(conn, 200)["data"], :password)
     end
-    
+
     test "does not create a user when data is invalid", %{conn: conn} do
       conn = post(conn, Routes.user_path(conn, :create), user: @invalid_attrs)
       assert json_response(conn, 422)["errors"] != %{}
@@ -82,15 +84,15 @@ defmodule LunchboxApiWeb.UserControllerTest do
     setup [:create_user]
 
     test "renders user when data is valid", %{conn: conn, user: %User{id: id} = user} do
-     conn = put(conn, Routes.user_path(conn, :update, user), user: @update_attrs) 
-     assert %{"id" => ^id} = json_response(conn, 200)["data"]
+      conn = put(conn, Routes.user_path(conn, :update, user), user: @update_attrs)
+      assert %{"id" => ^id} = json_response(conn, 200)["data"]
 
-     conn = get(conn, Routes.user_path(conn, :show, id))
+      conn = get(conn, Routes.user_path(conn, :show, id))
 
-     assert %{
-       "id" => id,
-       "email" => "some_updated_email@mymail.com",
-     } = json_response(conn, 200)["data"]
+      assert %{
+               "id" => id,
+               "email" => "some_updated_email@mymail.com"
+             } = json_response(conn, 200)["data"]
     end
 
     test "renders errors when data is invalid", %{conn: conn, user: user} do
@@ -118,18 +120,23 @@ defmodule LunchboxApiWeb.UserControllerTest do
         post(
           conn,
           Routes.user_path(conn, :sign_in, %{
-                email: current_user.email,
-                password: @current_user_attrs.password
+            email: current_user.email,
+            password: @current_user_attrs.password
           })
         )
 
       assert json_response(conn, 200)["data"] == %{
-        "user" => %{"id" => current_user.id, "email" => current_user.email}
-      }
+               "user" => %{"id" => current_user.id, "email" => current_user.email}
+             }
     end
 
     test "renders errors when user credentials are bad", %{conn: conn} do
-      conn = post(conn, Routes.user_path(conn, :sign_in, %{email: "nonexistent@mail.com", password: "rubbish"}))
+      conn =
+        post(
+          conn,
+          Routes.user_path(conn, :sign_in, %{email: "nonexistent@mail.com", password: "rubbish"})
+        )
+
       assert json_response(conn, 401)["errors"] == %{"detail" => "Wrong email or password"}
     end
   end
@@ -141,6 +148,7 @@ defmodule LunchboxApiWeb.UserControllerTest do
 
   defp setup_current_user(conn) do
     current_user = fixture(:current_user)
+
     {:ok,
      conn: Test.init_test_session(conn, current_user_id: current_user.id),
      current_user: current_user}

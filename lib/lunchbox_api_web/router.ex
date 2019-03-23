@@ -25,15 +25,15 @@ defmodule LunchboxApiWeb.Router do
 
   scope "/api/v1", LunchboxApiWeb do
     pipe_through :api
-    post      "/users/sign_in", UserController, :sign_in
+    post "/users/sign_in", UserController, :sign_in
   end
-  
+
   scope "/api/v1", LunchboxApiWeb do
     pipe_through [:api, :api_auth]
 
-    resources "/users",         UserController, except: [:new, :edit]
-    resources "/foods",         FoodController, except: [:new, :edit]
-    resources "/foods",         FoodController, except: [:new, :edit]
+    resources "/users", UserController, except: [:new, :edit]
+    resources "/foods", FoodController, except: [:new, :edit]
+    resources "/foods", FoodController, except: [:new, :edit]
   end
 
   defp ensure_authenticated(conn, _opts) do

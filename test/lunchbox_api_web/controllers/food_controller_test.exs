@@ -41,7 +41,7 @@ defmodule LunchboxApiWeb.FoodControllerTest do
     {:ok, current_user} = Accounts.create_user(@user_attrs)
     current_user
   end
-  
+
   describe "index" do
     test "lists all foods", %{conn: conn} do
       conn = get(conn, Routes.food_path(conn, :index))
@@ -111,6 +111,7 @@ defmodule LunchboxApiWeb.FoodControllerTest do
 
   defp setup_current_user(conn) do
     current_user = fixture(:current_user)
+
     {:ok,
      conn: Test.init_test_session(conn, current_user_id: current_user.id),
      current_user: current_user}
