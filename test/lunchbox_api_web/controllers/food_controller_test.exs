@@ -2,7 +2,6 @@ defmodule LunchboxApiWeb.FoodControllerTest do
   use LunchboxApiWeb.ConnCase
 
   alias LunchboxApi.Accounts
-  alias LunchboxApi.Accounts.User
   alias LunchboxApi.Lunchbox
   alias LunchboxApi.Lunchbox.Food
   alias Plug.Test
