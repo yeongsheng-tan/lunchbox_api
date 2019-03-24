@@ -57,8 +57,6 @@ defmodule LunchboxApiWeb.UserControllerTest do
 
       conn = get(conn, Routes.user_path(conn, :show, id))
 
-      hashed_password = Argon2.add_hash(@create_attrs.password)
-
       assert %{
                "id" => id,
                "email" => "some_email@mail.com"

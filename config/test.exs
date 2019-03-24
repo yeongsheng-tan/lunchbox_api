@@ -15,7 +15,7 @@ config :lunchbox_api, LunchboxApi.Repo,
   password: "",
   database: "lunchbox_api_test",
   hostname: "localhost",
-  port: System.get_env("CDB_PORT"),
+  port: System.get_env("DB_PORT"),
   # pool: Ecto.Adapters.SQL.Sandbox
   pool: EctoReplaySandbox
 

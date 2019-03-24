@@ -26,8 +26,11 @@ lunchbox_api-*.tar
 
 # If NPM crashes, it generates a log, let's ignore it too.
 npm-debug.log
+yarn-error.log
 
 # The directory NPM downloads your dependencies sources to.
+yarn.lock
+/node_modules/
 /assets/node_modules/
 
 # Since we are building assets from assets/,
