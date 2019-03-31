@@ -65,7 +65,7 @@ defmodule LunchboxApiWeb.UserControllerTest do
     test "does not create a user when data is invalid", %{conn: conn} do
       conn = post(conn, Routes.user_path(conn, :create), user: @invalid_attrs)
       assert json_response(conn, 422)["errors"] != %{}
-      assert %{"email" => _email, "password" => _password} = json_response(conn, 422)["errors"]
+      assert %{"detail" =>  "Unprocessable Entity"} = json_response(conn, 422)["errors"]
       refute json_response(conn, 422)["meta"]
     end
 
