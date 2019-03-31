@@ -6,13 +6,6 @@ defmodule LunchboxApiWeb.FallbackController do
   """
   use LunchboxApiWeb, :controller
 
-  def call(conn, {:error, %Ecto.Changeset{} = changeset}) do
-    conn
-    |> put_status(:unprocessable_entity)
-    |> put_view(LunchboxApiWeb.ChangesetView)
-    |> render("error.json", changeset: changeset)
-  end
-
   def call(conn, {:error, %Ecto.Changeset{}}) do
     conn
     |> put_status(:unprocessable_entity)
