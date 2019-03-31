@@ -23,7 +23,13 @@ defmodule LunchboxApiWeb.FoodControllerTest do
 
   setup %{conn: conn} do
     {:ok, conn: conn, current_user: current_user} = setup_current_user(conn)
-    {:ok, conn: put_req_header(conn, "accept", "application/json"), current_user: current_user}
+    # create the jwt token
+    {:ok, token, _claims} = LunchboxApi.Guardian.encode_and_sign(current_user)
+    # add authorization header to request
+    conn = conn
+    |> put_req_header("authorization", "Bearer #{token}")
+    |> put_req_header("accept", "application/json")
+    {:ok, conn: conn, current_user: current_user}
   end
 
   def fixture(:food) do

@@ -34,7 +34,13 @@ defmodule LunchboxApiWeb.UserControllerTest do
 
   setup %{conn: conn} do
     {:ok, conn: conn, current_user: current_user} = setup_current_user(conn)
-    {:ok, conn: put_req_header(conn, "accept", "application/json"), current_user: current_user}
+    # create the jwt token
+    {:ok, token, _claims} = LunchboxApi.Guardian.encode_and_sign(current_user)
+    # add authorization header to request
+    conn = conn
+           |> put_req_header("authorization", "Bearer #{token}")
+           |> put_req_header("accept", "application/json")
+    {:ok, conn: conn, current_user: current_user}
   end
 
   describe "index" do
@@ -51,18 +57,9 @@ defmodule LunchboxApiWeb.UserControllerTest do
   end
 
   describe "create user" do
-    test "renders user when data is valid", %{conn: conn} do
+    test "renders jwt token when data is valid", %{conn: conn} do
       conn = post(conn, Routes.user_path(conn, :create), user: @create_attrs)
-      assert %{"id" => id} = json_response(conn, 201)["data"]
-
-      conn = get(conn, Routes.user_path(conn, :show, id))
-
-      assert %{
-               "id" => id,
-               "email" => "some_email@mail.com"
-             } = json_response(conn, 200)["data"]
-
-      refute Map.get(json_response(conn, 200)["data"], :password)
+      assert %{"jwt" => token} = json_response(conn, 200)
     end
 
     test "does not create a user when data is invalid", %{conn: conn} do
@@ -88,7 +85,7 @@ defmodule LunchboxApiWeb.UserControllerTest do
       conn = get(conn, Routes.user_path(conn, :show, id))
 
       assert %{
-               "id" => id,
+               "id" => ^id,
                "email" => "some_updated_email@mymail.com"
              } = json_response(conn, 200)["data"]
     end
@@ -113,7 +110,7 @@ defmodule LunchboxApiWeb.UserControllerTest do
   end
 
   describe "sign_in user" do
-    test "renders user when user credentials are good", %{conn: conn, current_user: current_user} do
+    test "renders jwt token when user credentials are good", %{conn: conn, current_user: current_user} do
       conn =
         post(
           conn,
@@ -123,9 +120,8 @@ defmodule LunchboxApiWeb.UserControllerTest do
           })
         )
 
-      assert json_response(conn, 200)["data"] == %{
-               "user" => %{"id" => current_user.id, "email" => current_user.email}
-             }
+      %{"jwt" => token} = json_response(conn, 200)
+      refute token == nil
     end
 
     test "renders errors when user credentials are bad", %{conn: conn} do
@@ -135,7 +131,7 @@ defmodule LunchboxApiWeb.UserControllerTest do
           Routes.user_path(conn, :sign_in, %{email: "nonexistent@mail.com", password: "rubbish"})
         )
 
-      assert json_response(conn, 401)["errors"] == %{"detail" => "Wrong email or password"}
+      assert json_response(conn, 401) == %{"error" => "Login error"}
     end
   end
 

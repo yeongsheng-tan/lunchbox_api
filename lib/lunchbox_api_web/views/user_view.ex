@@ -24,4 +24,12 @@ defmodule LunchboxApiWeb.UserView do
       }
     }
   end
+
+  def render("sign_out.json", %{message: message}) do
+    %{data: %{detail: message}}
+  end
+
+  def render("jwt.json", %{jwt: jwt}) do
+    %{jwt: jwt}
+  end
 end

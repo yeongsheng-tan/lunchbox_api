@@ -82,13 +82,19 @@ defmodule LunchboxApi.AccountsTest do
     test "authenticate_user/2 authenticates the user" do
       user = user_fixture()
 
-      assert {:error, "Wrong email or password"} =
-               Accounts.authenticate_user("wrong@email.com", "abc")
+      assert {:error, :unauthorized} =
+               Accounts.token_sign_in("wrong@email.com", "abc")
 
-      assert {:ok, authenticated_user} =
-               Accounts.authenticate_user(user.email, @valid_attrs.password)
+      assert {:ok, jwt_token, claims} =
+               Accounts.token_sign_in(user.email, @valid_attrs.password)
 
-      assert %User{user | password: nil, password_confirmation: nil} == authenticated_user
+      # assert %User{user | password: nil, password_confirmation: nil} == authenticated_user
+      user = LunchboxApi.Accounts.get_user!(claims["sub"])
+      %{"aud" => aud, "exp" => _exp, "iat" => _iat, "iss" => iss, "jti" => _jti, "nbf" => _nbf, "sub" => sub, "typ" => typ} = claims
+      assert aud == "lunchbox_api"
+      assert iss == "lunchbox_api"
+      assert sub == Integer.to_string(user.id)
+      assert typ == "access"
     end
   end
 end

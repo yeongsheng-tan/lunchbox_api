@@ -1,6 +1,8 @@
 defmodule LunchboxApiWeb.Router do
   use LunchboxApiWeb, :router
 
+  alias LunchboxApi.Guardian
+
   pipeline :browser do
     plug :accepts, ["json"]
     plug :fetch_session
@@ -11,11 +13,10 @@ defmodule LunchboxApiWeb.Router do
 
   pipeline :api do
     plug :accepts, ["json"]
-    plug :fetch_session
   end
 
-  pipeline :api_auth do
-    plug :ensure_authenticated
+  pipeline :jwt_authenticated do
+    plug Guardian.AuthPipeline
   end
 
   scope "/", LunchboxApiWeb do
@@ -25,28 +26,16 @@ defmodule LunchboxApiWeb.Router do
 
   scope "/api/v1", LunchboxApiWeb do
     pipe_through :api
-    post "/users/sign_in", UserController, :sign_in
+    
+    post "/sign_up", UserController, :create
+    post "/sign_in", UserController, :sign_in
   end
 
   scope "/api/v1", LunchboxApiWeb do
-    pipe_through [:api, :api_auth]
+    pipe_through [:api, :jwt_authenticated]
 
+    get "/me", UserController, :show_current_user
     resources "/users", UserController, except: [:new, :edit]
     resources "/foods", FoodController, except: [:new, :edit]
-    resources "/foods", FoodController, except: [:new, :edit]
-  end
-
-  defp ensure_authenticated(conn, _opts) do
-    current_user_id = get_session(conn, :current_user_id)
-
-    if current_user_id do
-      conn
-    else
-      conn
-      |> put_status(:unauthorized)
-      |> put_view(LunchboxApiWeb.ErrorView)
-      |> render("401.json", message: "Unauthenticated user!")
-      |> halt()
-    end
   end
 end
