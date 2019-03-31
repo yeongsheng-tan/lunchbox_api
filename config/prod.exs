@@ -79,10 +79,3 @@ config :lunchbox_api, LunchboxApi.Repo,
   ssl: true,
   # Free tier db only allows 1 conn
   pool_size: 2
-
-# Configure Basic_auth for prod
-config :lunchbox_api,
-  lunchbox_auth: [
-    username: "${BASIC_AUTH_USERNAME}",
-    password: "${BASIC_AUTH_PASSWORD}"
-  ]
