@@ -10,16 +10,7 @@ config :lunchbox_api, LunchboxApiWeb.Endpoint,
   http: [port: System.get_env("PHX_PORT")],
   debug_errors: true,
   code_reloader: true,
-  check_origin: false,
-  watchers: [
-    node: [
-      "node_modules/webpack/bin/webpack.js",
-      "--mode",
-      "development",
-      "--watch-stdin",
-      cd: Path.expand("../assets", __DIR__)
-    ]
-  ]
+  check_origin: false
 
 # ## SSL Support
 #
@@ -63,10 +54,3 @@ config :lunchbox_api, LunchboxApi.Repo,
   hostname: "localhost",
   port: System.get_env("DB_PORT"),
   pool_size: 10
-
-# Configure Basic_auth for dev
-config :lunchbox_api,
-  lunchbox_auth: [
-    username: System.get_env("BASIC_AUTH_USERNAME"),
-    password: System.get_env("BASIC_AUTH_PASSWORD")
-  ]

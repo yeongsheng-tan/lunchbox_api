@@ -17,6 +17,11 @@ config :lunchbox_api, LunchboxApiWeb.Endpoint,
   render_errors: [view: LunchboxApiWeb.ErrorView, accepts: ~w(json)],
   pubsub: [name: LunchboxApi.PubSub, adapter: Phoenix.PubSub.PG2]
 
+# Guardian config
+config :lunchbox_api, LunchboxApi.Guardian,
+  issuer: "lunchbox_api",
+  secret_key: "CtqHRfW9yPFcSlYQ1UBK4zcK2/kHOnVz3UYzFVf5tZ1JwXloG9oy4vhTCBnZpEgz"
+
 # Configures Elixir's Logger
 config :logger, :console,
   format: "$time $metadata[$level] $message\n",
