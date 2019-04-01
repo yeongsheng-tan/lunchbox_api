@@ -28,6 +28,7 @@ lunchbox_api-*.tar
 npm-debug.log
 
 # The directory NPM downloads your dependencies sources to.
+/node_modules/
 /assets/node_modules/
 
 # Since we are building assets from assets/,
