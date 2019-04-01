@@ -29,7 +29,6 @@ npm-debug.log
 yarn-error.log
 
 # The directory NPM downloads your dependencies sources to.
-yarn.lock
 /node_modules/
 /assets/node_modules/
 
@@ -45,3 +44,6 @@ yarn.lock
 # secrets files as long as you replace their contents by environment
 # variables.
 /config/*.secret.exs
+
+# e2e testing
+cypress/screenshots

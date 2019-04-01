@@ -1,33 +1,37 @@
 describe('foods', () => {
-  const signIn = () => {
-    const validUser = {
-      "email": "cypress_user@cypress.com",
-      "password": "cyPR355.io"
-    }
+  let jwtToken
+  beforeEach(function() {
+      const validUser = {
+        "email": "cypress_user@cypress.com",
+        "password": "cyPR355.io"
+      }
 
     // sign-in
-    cy.request('POST', '/users/sign_in', validUser)
-  }
+    cy.request('POST', '/sign_in', validUser).then((resp) => {
+      expect(resp.body).to.have.property('jwt')
+      jwtToken = resp.body.jwt
+    })
+  })
   
   it('returns list of foods', () => {
-    // sign-in first
-    signIn()
     // get all foods
-    cy.request('/foods')
+    cy.request({method: 'GET', url: '/foods',
+                headers: {authorization: `Bearer ${jwtToken}`}
+              })
       .its('body.data')
-      .should('have.length', 5)
+      .should('not.be.empty')
   })
   
   it('returns specific food item', () => {
-    // sign-in first
-    signIn()
     const caramelMocha = {
       "id": 434693139967377410,
       "name": "caramel-mocha",
       "status": "iced"
     }
     // get specific food item
-    cy.request('/foods/434693139967377410')
+    cy.request({method: 'GET', url: '/foods/434693139967377410',
+                headers: {authorization: `Bearer ${jwtToken}`}
+              })
       .its('body.data')
       .should('deep.eq', caramelMocha)
   })
