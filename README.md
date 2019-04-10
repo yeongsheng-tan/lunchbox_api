@@ -33,8 +33,7 @@
   ```
   npm i -g yarn
   yarn
-  PHX_PORT=7000 DB_PORT=26257 mix phx.server
-  yarn cy:open
+  yarn test
   ```
 ---
 ##### Running and interacting with local instance of lunchbox_api phoenix app with local clustered CockroachDB.
