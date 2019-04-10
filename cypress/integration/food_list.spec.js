@@ -23,16 +23,16 @@ describe('foods', () => {
   })
   
   it('returns specific food item', () => {
-    const caramelMocha = {
-      "id": 434693139967377410,
-      "name": "caramel-mocha",
-      "status": "iced"
+    const food = {
+      "id": 441841402296270849,
+      "name": "coffee",
+      "status": "roasted"
     }
     // get specific food item
-    cy.request({method: 'GET', url: '/foods/434693139967377410',
+    cy.request({method: 'GET', url: '/foods/441841402296270849',
                 headers: {authorization: `Bearer ${jwtToken}`}
               })
       .its('body.data')
-      .should('deep.eq', caramelMocha)
+      .should('deep.eq', food)
   })
 })

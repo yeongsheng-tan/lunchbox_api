@@ -2,23 +2,7 @@
 ##### Setting up local dev env with 3x nodes of CockroachDB clustered.
   * Spin up 3 nodes of cockroachdb 2.1 and link them up as a singular cluster:
   ```
-  > cockroach start --insecure --listen-addr=localhost --background
-  
-  > cockroach start \
-            --insecure \
-            --store=node2 \
-            --listen-addr=localhost:26258 \
-            --http-addr=localhost:8081 \
-            --join=localhost:26257 \
-            --background
-            
-  > cockroach start \
-            --insecure \
-            --store=node3 \
-            --listen-addr=localhost:26259 \
-            --http-addr=localhost:8082 \
-            --join=localhost:26257 \
-            --background
+  > bash _build/dev/rel/lunchbox_api/releases/0.1.0/commands/start_cdb_cluster.sh
   ```
   * Test you can connect to either one of the cockroachdb node:
   ```
@@ -43,17 +27,26 @@
   * Run `mix ecto.migrate`.
   * Run tests.
   ```
-  BASIC_AUTH_USERNAME=specialUserName BASIC_AUTH_PASSWORD=superSecretPassword mix test
+  DB_PORT=26257 mix test
+  ```
+  * Perform blackbox functional API testing using [Cypress](https://www.cypress.io/)
+  ```
+  npm i -g yarn
+  yarn
+  PHX_PORT=7000 DB_PORT=26257 mix phx.server
+  yarn cy:open
   ```
 ---
 ##### Running and interacting with local instance of lunchbox_api phoenix app with local clustered CockroachDB.
   * Start lunchbox_api phoenix app with:
   ```
-  BASIC_AUTH_USERNAME=specialUserName BASIC_AUTH_PASSWORD=superSecretPassword mix phx.server
+  PHX_PORT=7000 DB_PORT=26257 mix phx.server
   ```
-  * Hit lunchbox_api REST endpoint at `http://localhost:4000/api/v1/foods` from your browser. You will be prompted for `BASIC_AUTH`.
-  * Login using `BASIC_AUTH_USERNAME` and `BASIC_AUTH_PASSWORD` used to start phoenix server.
-  * Use [Insomnia](https://insomnia.rest/) to test above `GET` query supplying `BASIC_AUTH` details as above and expect response as (assuming fresh clean empty cockroachdb instance):
+  * Signup for an account via `http://localhost:7000/api/v1/sign_up` by entering a desired user name and password
+  * Copy the JWT auth Bearer token returned for your above sign-up
+  * Login using JWT auth Bearer token to proceed at `http://localhost:7000/api/v1/sign_in` using user name and password used for sign_up
+  * Hit lunchbox_api REST endpoint at `http://localhost:4000/api/v1/foods` from your browser, setting your JWT auth Bearer token received from your login into the POST request 'authentication' HEADER
+  * Use [Insomnia](https://insomnia.rest/) to test above `GET` query supplying JWT auth Bearer token in 'authentication' HEADER of GET request and expect response as (assuming fresh clean empty cockroachdb instance):
   ```
   {"data":[]}
   ```
@@ -82,7 +75,7 @@
 ##### Setup and configure Gigalixir account-app and deploy distillery OTP release to Gigalixir and run lunchbox_api against PostgreSQL.
   * Generate prod OTP release for release into Gigalixir (**N/B: currently gigalixir only has PostgreSQL; However, the code will work as-is**)
   ```
-  BASIC_AUTH_USERNAME=specialPowerUserName BASIC_AUTH_PASSWORD=ultimatePassword MIX_ENV=prod mix release --env=prod
+  MIX_ENV=prod mix release --env=prod
   ```
   * Create gigalixir app `APP_NAME=$(gigalixir create)`
   * Verify app created in gigalixir `gigalixir apps` and expect something similar as:
@@ -111,12 +104,12 @@
   ```
   * Add gigalixir env config to store BASIC AUTH credentials:
   ```
-  gigalixir config:set BASIC_AUTH_USERNAME=”specialPowerUserName”
-  gigalixir config:set BASIC_AUTH_PASSWORD=”ultimatePassword”
+  gigalixir config:set DB_PORT=5432
+  gigalixir config:set PHX_PORT=7000
   gigalixir config
   {
-    "BASIC_AUTH_PASSWORD": "ultimatePassWord",
-    "BASIC_AUTH_USERNAME": "specialPowerUserName",
+    "DB_PORT": 5432,
+    "PHX_PORT": 7000,
     "DATABASE_URL": "ecto://2dd78a9e-7870-455c-842f-322f4c405dca-user:pw-b3f386dd-9c0b-4125-8290-218d8ab89011@postgres-free-tier-1.gigalixir.com:5432/2dd78a9e-7870-455c-842f-322f4c405dca"
   }
   ```
