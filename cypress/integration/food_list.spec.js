@@ -1,11 +1,23 @@
 describe('foods', () => {
   let jwtToken
-  beforeEach(function() {
-      const validUser = {
-        "email": "cypress_user@cypress.com",
-        "password": "cyPR355.io"
-      };
+  const signupUser = {
+      "user": {
+          "email": "cypress_user1@cypress.com",
+          "password": "cyPR355.io",
+          "password_confirmation": "cyPR355.io"
+      }
+  };
 
+  const validUser = {
+      "email": "cypress_user1@cypress.com",
+      "password": "cyPR355.io"
+  };
+
+  before(function() {
+    // sign-up
+    cy.request('POST', '/sign_up', signupUser).then((resp) => {
+        expect(resp.body).to.have.property('jwt');
+    });
     // sign-in
     cy.request('POST', '/sign_in', validUser).then((resp) => {
         expect(resp.body).to.have.property('jwt');
