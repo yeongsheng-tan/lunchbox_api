@@ -97,8 +97,8 @@
   ```
   * Add gigalixir env config to store BASIC AUTH credentials:
   ```
-  gigalixir config:set DB_PORT=5432
-  gigalixir config:set PHX_PORT=7000
+  gigalixir config:set DB_PORT=5432,
+  gigalixir config:set PHX_PORT=7000,
   gigalixir config
   {
     "DB_PORT": 5432
