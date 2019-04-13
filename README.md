@@ -70,7 +70,7 @@
     ]
   }
   ```
----  
+---
 ##### Setup and configure Gigalixir account-app and deploy distillery OTP release to Gigalixir and run lunchbox_api against PostgreSQL.
   * Generate prod OTP release for release into Gigalixir (**N/B: currently gigalixir only has PostgreSQL; However, the code will work as-is**)
   ```
@@ -125,14 +125,18 @@
   gigalixir ps:migrate
   ```
   * Test your app using `curl`:
-    * `GET`
+    * `SIGNIN`
     ```
-    > curl https://blue-glistening-xenopus.gigalixirapp.com/api/v1/foods --user specialPowerUserName:ultimatePassWord
+    JWT_TOKEN=$(curl -s -X POST -H "Accept: application/json" -H "Content-Type: application/json" --data '{"email":"${USERNAME}","password":"${PASSWORD}"}' https://blue-glistening-xenopus.gigalixirapp.com/api/v1/sign_in | jq -r '.jwt')
+    ```
+    * `GET` list of foods
+    ```
+    > curl -H "Accept: application/json" -H "Authorization: Bearer ${JWT_TOKEN}" https://blue-glistening-xenopus.gigalixirapp.com/api/v1/foods
     {"data":[]}
     ```
     * `POST`
     ```
-    > curl -i --user specialPowerUserName:ultimatePassWord-H "Content-Type: application/json" -H "Accept: application/json" -X POST -d '{"food":{"name":"cheese", "status":"really old and getting stinky"}}' https://blue-glistening-xenopus.gigalixirapp.com/api/v1/foods
+    > curl -i -H "Accept: application/json" -H "Authorization: Bearer ${JWT_TOKEN}" -H "Content-Type: application/json" -X POST -d '{"food":{"name":"cheese", "status":"really old and getting stinky"}}' https://blue-glistening-xenopus.gigalixirapp.com/api/v1/foods
     HTTP/2 201
     server: nginx/1.15.8
     date: Sat, 02 Mar 2019 12:50:25 GMT
@@ -143,12 +147,12 @@
     x-request-id: 8f39541ccb761c422d1c19ee51f492f1
     via: 1.1 google
     alt-svc: clear
-    
+
     {"data":{"id":1,"name":"cheese","status":"really old and getting stinky"}}
     ```
-    * `GET`
+    * `GET` list of foods
     ```
-    > curl https://blue-glistening-xenopus.gigalixirapp.com/api/v1/foods --user specialPowerUserName:ultimatePassWord
+    > curl -H "Accept: application/json" -H "Authorization: Bearer ${JWT_TOKEN}" https://blue-glistening-xenopus.gigalixirapp.com/api/v1/foods
     {"data":[{"id":1,"name":"cheese","status":"really old and getting stinky"}]}
     ```
 
