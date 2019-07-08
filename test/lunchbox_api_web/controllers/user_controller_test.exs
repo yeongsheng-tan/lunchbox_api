@@ -75,39 +75,39 @@ defmodule LunchboxApiWeb.UserControllerTest do
     end
   end
 
-  describe "update user" do
-    setup [:create_user]
+  # describe "update user" do
+  #   setup [:create_user]
 
-    test "renders user when data is valid", %{conn: conn, user: %User{id: id} = user} do
-      conn = put(conn, Routes.user_path(conn, :update, user), user: @update_attrs)
-      assert %{"id" => ^id} = json_response(conn, 200)["data"]
+  #   test "renders user when data is valid", %{conn: conn, user: %User{id: id} = user} do
+  #     conn = put(conn, Routes.user_path(conn, :update, user), user: @update_attrs)
+  #     assert %{"id" => ^id} = json_response(conn, 200)["data"]
 
-      conn = get(conn, Routes.user_path(conn, :show, id))
+  #     conn = get(conn, Routes.user_path(conn, :show, id))
 
-      assert %{
-               "id" => ^id,
-               "email" => "some_updated_email@mymail.com"
-             } = json_response(conn, 200)["data"]
-    end
+  #     assert %{
+  #              "id" => ^id,
+  #              "email" => "some_updated_email@mymail.com"
+  #            } = json_response(conn, 200)["data"]
+  #   end
 
-    test "renders errors when data is invalid", %{conn: conn, user: user} do
-      conn = put(conn, Routes.user_path(conn, :update, user), user: @invalid_attrs)
-      assert json_response(conn, 422)["errors"] != %{}
-    end
-  end
+  #   test "renders errors when data is invalid", %{conn: conn, user: user} do
+  #     conn = put(conn, Routes.user_path(conn, :update, user), user: @invalid_attrs)
+  #     assert json_response(conn, 422)["errors"] != %{}
+  #   end
+  # end
 
-  describe "delete user" do
-    setup [:create_user]
+  # describe "delete user" do
+  #   setup [:create_user]
 
-    test "deletes chosen user", %{conn: conn, user: user} do
-      conn = delete(conn, Routes.user_path(conn, :delete, user))
-      assert response(conn, 204)
+  #   test "deletes chosen user", %{conn: conn, user: user} do
+  #     conn = delete(conn, Routes.user_path(conn, :delete, user))
+  #     assert response(conn, 204)
 
-      assert_error_sent 404, fn ->
-        get(conn, Routes.user_path(conn, :show, user))
-      end
-    end
-  end
+  #     assert_error_sent 404, fn ->
+  #       get(conn, Routes.user_path(conn, :show, user))
+  #     end
+  #   end
+  # end
 
   describe "sign_in user" do
     test "renders jwt token when user credentials are good", %{conn: conn, current_user: current_user} do
