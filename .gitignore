@@ -1,3 +1,4 @@
+.tool-versions
 .idea/
 lunchbox_api.iml
 # The directory Mix will write compiled artifacts to.
