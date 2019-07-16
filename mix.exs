@@ -42,7 +42,7 @@ defmodule LunchboxApi.MixProject do
       {:jason, "~> 1.0"},
       {:plug_cowboy, "~> 2.0"},
       {:basic_auth, "~> 2.2.4"},
-      {:distillery, "~> 2.0", runtime: false}
+      {:distillery, "~> 2.1.1", runtime: false}
     ]
   end
 
