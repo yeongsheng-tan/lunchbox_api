@@ -1,6 +1,6 @@
 {
   "devDependencies": {
-    "cypress": "^3.4.0",
+    "cypress": "^3.4.1",
     "npm-run-all": "^4.1.5"
   },
   "scripts": {
@@ -9,5 +9,8 @@
     "cy:run:record": "cypress run --record",
     "start": "export PHX_PORT=7000 DB_PORT=26257 && mix ecto.drop && mix ecto.setup && mix ecto.migrate && mix phx.server",
     "test": "run-p --race start cy:run"
+  },
+  "dependencies": {
+    "yarn": "^1.17.3"
   }
 }
