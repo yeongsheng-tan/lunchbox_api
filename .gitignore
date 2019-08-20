@@ -1,5 +1,8 @@
 .idea/
-lunchbox_api.iml
+**/*.iml
+.elixir_ls/
+.tool-versions
+node_modules/
 # The directory Mix will write compiled artifacts to.
 /_build/
 
