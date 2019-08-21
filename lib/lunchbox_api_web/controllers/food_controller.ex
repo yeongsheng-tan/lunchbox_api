@@ -28,7 +28,6 @@ defmodule LunchboxApiWeb.FoodController do
 
   def update(conn, %{"id" => id, "food" => food_params}) do
     food = Lunchbox.get_food!(id)
-
     with {:ok, %Food{} = food} <- Lunchbox.update_food(food, food_params) do
       render(conn, "show.json", food: food)
     end

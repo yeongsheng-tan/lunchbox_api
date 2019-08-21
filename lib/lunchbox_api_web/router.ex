@@ -36,11 +36,11 @@ defmodule LunchboxApiWeb.Router do
 
     get "/me", UserController, :show_current_user
     resources "/users", UserController, except: [:new, :edit]
-    delete "/users", UserController, :delete
-    put "/users", UserController, :update
+#    delete "/users", UserController, :delete
+#    put "/users", UserController, :update
     
     resources "/foods", FoodController, except: [:new, :edit]
-    delete "/foods", FoodController, :delete
-    put "/foods", FoodController, :update
+#    delete "/foods", FoodController, :delete
+#    put "/foods", FoodController, :update
   end
 end

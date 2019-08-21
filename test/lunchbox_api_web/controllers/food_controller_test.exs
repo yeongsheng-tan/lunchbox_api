@@ -82,7 +82,6 @@ defmodule LunchboxApiWeb.FoodControllerTest do
       assert %{"id" => ^id} = json_response(conn, 200)["data"]
 
       conn = get(conn, Routes.food_path(conn, :show, id))
-
       assert %{
                "id" => id,
                "name" => "some updated name",
