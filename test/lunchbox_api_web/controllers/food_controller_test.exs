@@ -74,40 +74,40 @@ defmodule LunchboxApiWeb.FoodControllerTest do
     end
   end
 
-  # describe "update food" do
-  #   setup [:create_food]
+   describe "update food" do
+     setup [:create_food]
 
-  #   test "renders food when data is valid", %{conn: conn, food: %Food{id: id} = food} do
-  #     conn = put(conn, Routes.food_path(conn, :update, food), food: @update_attrs)
-  #     assert %{"id" => ^id} = json_response(conn, 200)["data"]
+     test "renders food when data is valid", %{conn: conn, food: %Food{id: id} = food} do
+       conn = put(conn, Routes.food_path(conn, :update, food), food: @update_attrs)
+       assert %{"id" => ^id} = json_response(conn, 200)["data"]
 
-  #     conn = get(conn, Routes.food_path(conn, :show, id))
+       conn = get(conn, Routes.food_path(conn, :show, id))
 
-  #     assert %{
-  #              "id" => id,
-  #              "name" => "some updated name",
-  #              "status" => "some updated status"
-  #            } = json_response(conn, 200)["data"]
-  #   end
+       assert %{
+                "id" => id,
+                "name" => "some updated name",
+                "status" => "some updated status"
+              } = json_response(conn, 200)["data"]
+     end
 
-  #   test "renders errors when data is invalid", %{conn: conn, food: food} do
-  #     conn = put(conn, Routes.food_path(conn, :update, food), food: @invalid_attrs)
-  #     assert json_response(conn, 422)["errors"] != %{}
-  #   end
-  # end
+     test "renders errors when data is invalid", %{conn: conn, food: food} do
+       conn = put(conn, Routes.food_path(conn, :update, food), food: @invalid_attrs)
+       assert json_response(conn, 422)["errors"] != %{}
+     end
+   end
 
-  # describe "delete food" do
-  #   setup [:create_food]
+   describe "delete food" do
+     setup [:create_food]
 
-  #   test "deletes chosen food", %{conn: conn, food: food} do
-  #     conn = delete(conn, Routes.food_path(conn, :delete, food))
-  #     assert response(conn, 204)
+     test "deletes chosen food", %{conn: conn, food: food} do
+       conn = delete(conn, Routes.food_path(conn, :delete, food))
+       assert response(conn, 204)
 
-  #     assert_error_sent 404, fn ->
-  #       get(conn, Routes.food_path(conn, :show, food))
-  #     end
-  #   end
-  # end
+       assert_error_sent 404, fn ->
+         get(conn, Routes.food_path(conn, :show, food))
+       end
+     end
+   end
 
   defp create_food(_) do
     food = fixture(:food)
