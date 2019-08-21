@@ -20,9 +20,7 @@ defmodule LunchboxApiWeb.Router do
 
   scope "/api/v1", LunchboxApiWeb do
     pipe_through :api
-
     resources "/foods", FoodController, except: [:new, :edit]
-
     resources "/foods", FoodController, except: [:new, :edit]
   end
 end
