@@ -9,8 +9,8 @@
     "phoenix": "file:../deps/phoenix"
   },
   "devDependencies": {
-    "@babel/core": "^7.5.5",
-    "@babel/preset-env": "^7.5.5",
+    "@babel/core": "^7.6.0",
+    "@babel/preset-env": "^7.6.0",
     "babel-loader": "^8.0.6",
     "copy-webpack-plugin": "^4.5.0",
     "css-loader": "^2.1.1",
