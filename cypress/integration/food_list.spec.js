@@ -13,7 +13,7 @@ describe('foods', () => {
       "password": "cyPR355.io"
   };
 
-  before(function() {
+  before(() => {
     // sign-up
     cy.request('POST', '/sign_up', signupUser).then((resp) => {
         expect(resp.body).to.have.property('jwt');
