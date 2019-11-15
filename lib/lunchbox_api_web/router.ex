@@ -26,9 +26,10 @@ defmodule LunchboxApiWeb.Router do
 
   scope "/api/v1", LunchboxApiWeb do
     pipe_through :api
-    
-    post "/sign_up", UserController, :create
-    post "/sign_in", UserController, :sign_in
+
+    post "/sign_up", UserController,     :create
+    post "/sign_in", UserController,     :sign_in
+    delete "/users/:id", UserController, :delete
   end
 
   scope "/api/v1", LunchboxApiWeb do
@@ -38,7 +39,7 @@ defmodule LunchboxApiWeb.Router do
     resources "/users", UserController, except: [:new, :edit]
 #    delete "/users", UserController, :delete
 #    put "/users", UserController, :update
-    
+
     resources "/foods", FoodController, except: [:new, :edit]
 #    delete "/foods", FoodController, :delete
 #    put "/foods", FoodController, :update

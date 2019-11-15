@@ -23,7 +23,7 @@ defmodule LunchboxApiWeb.UserController do
     user = Accounts.get_user!(id)
     render(conn, "show.json", user: user)
   end
-  
+
   def show_current_user(conn, _params) do
     user = Guardian.Plug.current_resource(conn)
     conn |> render("user.json", user: user)

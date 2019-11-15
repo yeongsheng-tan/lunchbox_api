@@ -1,58 +1,54 @@
 describe('foods', () => {
-  let jwtToken
-  const signupUser = {
-      "user": {
-          "email": "cypress_user1@cypress.com",
-          "password": "cyPR355.io",
-          "password_confirmation": "cyPR355.io"
-      }
-  };
-
-  const validUser = {
-      "email": "cypress_user1@cypress.com",
-      "password": "cyPR355.io"
-  };
-
-  before(() => {
-    // sign-up
-    cy.request('POST', '/sign_up', signupUser).then((resp) => {
-        expect(resp.body).to.have.property('jwt');
-    });
-    // sign-in
-    cy.request('POST', '/sign_in', validUser).then((resp) => {
-        expect(resp.body).to.have.property('jwt');
-        jwtToken = resp.body.jwt;
-    });
+  beforeEach(function() {
+    cy.fixture('sign_up_user').as('signUpUser');
+    cy.fixture('sign_in_user').as('validUser');
   });
 
-  it('returns list of foods', () => {
-      // create 2 food items
-      cy.request({method: 'POST',
-                  url: 'foods',
-                  body: {
-                    "food": {
-                      "name": "coffee",
-                      "status": "roasted"
-                    }
-                  },
-                  headers: {authorization: `Bearer ${jwtToken}`}
-                 });
-      cy.request({method: 'POST',
-                  url: 'foods',
-                  body: {
-                    "food": {
-                      "name": "blue cheese",
-                      "status": "well-aged"
-                    }
-                  },
-                  headers: {authorization: `Bearer ${jwtToken}`}
-                 });
-    // get all foods
-    cy.request({method: 'GET', url: '/foods',
-                headers: {authorization: `Bearer ${jwtToken}`}
-              })
-        .its('body.data')
-        .should('not.be.empty')
-        .should('have.lengthOf', 2);
+  it('returns list of foods', function() {
+    cy.signup(this.signUpUser).then(function() {
+      cy.login(this.validUser).then(function() {
+        // create 2 food items
+        cy.request({
+          method: 'POST',
+          url: 'foods',
+          body: {
+            "food": {
+              "name": "coffee",
+              "status": "roasted"
+            }
+          },
+          headers: {
+            authorization: `Bearer ${this.jwt}`
+          }
+        });
+
+        cy.request({
+          method: 'POST',
+          url: 'foods',
+          body: {
+            "food": {
+              "name": "blue cheese",
+              "status": "well-aged"
+            }
+          },
+          headers: {
+            authorization: `Bearer ${this.jwt}`
+          }
+        });
+
+        // get all foods
+        cy.request({
+          method: 'GET',
+          url: '/foods',
+          headers: {
+            authorization: `Bearer ${this.jwt}`
+          }
+        }).then(function(resp) {
+          expect(resp.body.data).not.to.be.empty;
+          expect(resp.body.data).to.have.length.of.at.least(2);
+        });
+      });
+
+    });
   });
-})
+});

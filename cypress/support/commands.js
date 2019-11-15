@@ -23,3 +23,16 @@
 //
 // -- This is will overwrite an existing command --
 // Cypress.Commands.overwrite("visit", (originalFn, url, options) => { ... })
+
+Cypress.Commands.add("signup", user => {
+  cy.request('POST', '/sign_up', user)
+    .its('body.jwt')
+    .should('not.be.empty')
+});
+
+Cypress.Commands.add("login", user => {
+  cy.request('POST', '/sign_in', user)
+    .its('body.jwt')
+    .as('jwt')
+    .should('not.be.empty')
+});
