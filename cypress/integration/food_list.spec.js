@@ -44,10 +44,10 @@ describe('foods', () => {
           headers: {
             authorization: `Bearer ${this.jwt}`
           }
-        }).then(function(resp) {
-          expect(resp.body.data).not.to.be.empty;
-          expect(resp.body.data).to.have.length.of.at.least(2);
-        });
+        })
+        .its('body.data')
+        .should('not.be.empty')
+        .should('have.lengthOf', 2);
       });
 
     });
