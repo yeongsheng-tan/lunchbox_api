@@ -29,7 +29,6 @@ defmodule LunchboxApiWeb.Router do
 
     post "/sign_up", UserController,     :create
     post "/sign_in", UserController,     :sign_in
-    delete "/users/:id", UserController, :delete
   end
 
   scope "/api/v1", LunchboxApiWeb do

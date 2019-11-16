@@ -1,5 +1,6 @@
 describe('foods', () => {
-  beforeEach(function() {
+  before(function() {
+    cy.exec("export DB_PORT=26257 && mix ecto.drop && mix ecto.setup && mix ecto.migrate");
     cy.fixture('sign_up_user').as('signUpUser');
     cy.fixture('sign_in_user').as('validUser');
   });

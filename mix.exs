@@ -4,7 +4,7 @@ defmodule LunchboxApi.MixProject do
   def project do
     [
       app: :lunchbox_api,
-      version: "0.4.0",
+      version: "0.5.0",
       elixir: "~> 1.9",
       elixirc_paths: elixirc_paths(Mix.env()),
       compilers: [:phoenix, :gettext] ++ Mix.compilers(),
@@ -43,7 +43,7 @@ defmodule LunchboxApi.MixProject do
       {:jason, "~> 1.1"},
       {:plug_cowboy, "~> 2.1"},
       {:guardian, "~> 2.0"},
-      {:argon2_elixir, "~> 2.0"},
+      {:argon2_elixir, "~> 2.1"},
       {:distillery, "~> 2.1", runtime: false}
     ]
   end

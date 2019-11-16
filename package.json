@@ -8,7 +8,8 @@
     "cy:open": "cypress open",
     "cy:run": "cypress run",
     "cy:run:record": "cypress run --record",
-    "start": "export PHX_PORT=7000 DB_PORT=26257 && mix ecto.drop && mix ecto.setup && mix ecto.migrate && mix phx.server",
+    "start": "export PHX_PORT=7000 DB_PORT=26257 && mix phx.server",
+    "reset_db": "export DB_PORT=26257 && mix ecto.drop && mix ecto.setup && mix ecto.migrate",
     "test": "run-p --race start cy:run"
   },
   "dependencies": {
