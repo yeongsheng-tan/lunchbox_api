@@ -17,7 +17,7 @@ describe('users signin', () => {
         }).then(function(resp) {
           expect(resp.body).to.have.property('id');
           expect(resp.body).to.have.property('email');
-          expect(resp.body.id).not.to.be.empty;
+          expect(resp.body.id).not.to.be.null;
           expect(resp.body.email).to.equal(this.validUser.email);
         })
         .its('body.id').as('userId');
