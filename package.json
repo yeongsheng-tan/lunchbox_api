@@ -1,8 +1,19 @@
 {
   "devDependencies": {
-    "cypress": "^4.0",
-    "cypress-dark": "^1.7.14",
-    "npm-run-all": "^4.1.5"
+    "@cypress/webpack-preprocessor": "^4.1.3",
+    "@typescript-eslint/eslint-plugin": "^2.26.0",
+    "@typescript-eslint/parser": "^2.26.0",
+    "cypress": "^4.3.0",
+    "eslint": "^6.8.0",
+    "eslint-config-prettier": "^6.10.1",
+    "eslint-plugin-cypress": "^2.10.3",
+    "eslint-plugin-prettier": "^3.1.2",
+    "eslint-plugin-testing-library": "^3.0.2",
+    "npm-run-all": "^4.1.5",
+    "prettier": "^2.0.2",
+    "ts-loader": "^6.2.2",
+    "typescript": "^3.8.3",
+    "webpack": "^4.42.1"
   },
   "scripts": {
     "cy:open": "cypress open",
@@ -10,6 +21,8 @@
     "cy:run:record": "cypress run --record",
     "start": "export PHX_PORT=7000 DB_PORT=26257 && mix phx.server",
     "reset_db": "export DB_PORT=26257 && mix ecto.drop && mix ecto.setup && mix ecto.migrate",
-    "test": "run-p --race start cy:run"
+    "test": "run-p --race start cy:run",
+    "format": "prettier --write cypress/**/*.js cypress/**/*.ts'",
+    "fix-ts": "eslint --fix 'cypress/**/*.ts'"
   }
 }
