@@ -4,7 +4,6 @@ defmodule LunchboxApiWeb.FoodController do
   alias LunchboxApi.Lunchbox
   alias LunchboxApi.Lunchbox.Food
 
-  plug BasicAuth, use_config: {:lunchbox_api, :lunchbox_auth}
   action_fallback LunchboxApiWeb.FallbackController
 
   def index(conn, _params) do

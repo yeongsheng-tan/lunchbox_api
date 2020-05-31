@@ -15,28 +15,22 @@ defmodule LunchboxApiWeb.FoodControllerTest do
   @invalid_attrs %{name: nil, status: nil}
 
   # get auth username
-  @username Application.get_env(:lunchbox_api, :lunchbox_auth)[:username]
-  @password Application.get_env(:lunchbox_api, :lunchbox_auth)[:password]
+  @username System.get_env("BASIC_AUTH_USERNAME")
+  @password System.get_env("BASIC_AUTH_PASSWORD")
 
   # setup auth on conn
-  setup %{conn: conn} do
-    conn = build_conn()
-    |> using_basic_auth(@username, @password)
-    |> put_req_header("accept", "application/json")
+  setup %{conn: _conn} do
+    conn =
+      build_conn()
+      |> using_basic_auth(@username, @password)
+      |> put_req_header("accept", "application/json")
+
     {:ok, conn: conn}
   end
 
   def fixture(:food) do
     {:ok, food} = Lunchbox.create_food(@create_attrs)
     food
-  end
-
-  # recycle conn with auth
-  defp recycle_conn_auth(conn) do
-    conn
-      |> recycle()
-      |> using_basic_auth(@username, @password)
-      |> put_req_header("accept", "application/json")
   end
 
   # basic auth
