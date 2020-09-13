@@ -12,15 +12,12 @@
     "@babel/core": "^7.7.4",
     "@babel/preset-env": "^7.7.4",
     "babel-loader": "^8.0.6",
-    "copy-webpack-plugin": "^4.5.0",
+    "copy-webpack-plugin": "^5.1",
     "css-loader": "^2.1.1",
     "mini-css-extract-plugin": "^0.4.0",
     "optimize-css-assets-webpack-plugin": "^5.0.3",
-    "uglifyjs-webpack-plugin": "^2.2.0",
+    "terser-webpack-plugin": "^4.2",
     "webpack": "4.41.4",
     "webpack-cli": "^3.3.10"
-  },
-  "resolutions": {
-    "serialize-javascript": "^2.1.1"
   }
 }
