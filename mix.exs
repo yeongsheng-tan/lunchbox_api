@@ -4,8 +4,8 @@ defmodule LunchboxApi.MixProject do
   def project do
     [
       app: :lunchbox_api,
-      version: "1.1.5",
-      elixir: "~> 1.10",
+      version: "1.2.0",
+      elixir: "~> 1.11.0",
       elixirc_paths: elixirc_paths(Mix.env()),
       compilers: [:phoenix, :gettext] ++ Mix.compilers(),
       start_permanent: Mix.env() == :prod,
@@ -39,11 +39,11 @@ defmodule LunchboxApi.MixProject do
       {:ecto, "~> 2.2"},
       {:postgrex, "~> 0.13", hex: :postgrex_cdb, override: true},
       {:ecto_replay_sandbox, "~> 1.0", only: :test},
-      {:gettext, "~> 0.17"},
-      {:jason, "~> 1.1"},
+      {:gettext, "~> 0.18"},
+      {:jason, "~> 1.2"},
       {:plug_cowboy, "~> 2.1"},
-      {:guardian, "~> 2.0"},
-      {:argon2_elixir, "~> 2.1"},
+      {:guardian, "~> 2.1"},
+      {:argon2_elixir, "~> 2.3"},
       {:distillery, "~> 2.1", runtime: false}
     ]
   end
