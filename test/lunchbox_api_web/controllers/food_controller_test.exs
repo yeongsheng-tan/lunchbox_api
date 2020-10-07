@@ -1,5 +1,6 @@
 defmodule LunchboxApiWeb.FoodControllerTest do
   use LunchboxApiWeb.ConnCase
+  import Plug.BasicAuth
 
   alias LunchboxApi.Lunchbox
   alias LunchboxApi.Lunchbox.Food
@@ -35,8 +36,7 @@ defmodule LunchboxApiWeb.FoodControllerTest do
 
   # basic auth
   defp using_basic_auth(conn, username, password) do
-    header_content = "Basic " <> Base.encode64("#{username}:#{password}")
-    conn |> put_req_header("authorization", header_content)
+    conn |> put_req_header("authorization", encode_basic_auth(username, password))
   end
 
   describe "index" do

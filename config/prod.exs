@@ -73,14 +73,9 @@ config :logger, level: :info
 
 # import_config "prod.secret.exs"
 config :lunchbox_api, LunchboxApi.Repo,
-       adapter: Ecto.Adapters.Postgres,
-       url: "${DATABASE_URL}",
-       database: "",
-       ssl: true,
-       pool_size: 2 # Free tier db only allows 1 conn
-
-# Configure Basic_auth for prod
-config :lunchbox_api, lunchbox_auth: [
-  username: "${BASIC_AUTH_USERNAME}",
-  password: "${BASIC_AUTH_PASSWORD}"
-]
+  adapter: Ecto.Adapters.Postgres,
+  url: "${DATABASE_URL}",
+  database: "",
+  ssl: true,
+  # Free tier db only allows 1 conn
+  pool_size: 2

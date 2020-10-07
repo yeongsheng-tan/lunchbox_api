@@ -23,6 +23,8 @@ defmodule LunchboxApiWeb do
 
       import Plug.Conn
       import LunchboxApiWeb.Gettext
+      import Plug.BasicAuth
+      plug :basic_auth, Application.compile_env(:lunchbox_api, :basic_auth)
       alias LunchboxApiWeb.Router.Helpers, as: Routes
     end
   end

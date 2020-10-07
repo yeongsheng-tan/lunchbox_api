@@ -53,9 +53,3 @@ config :lunchbox_api, LunchboxApi.Repo,
   database: "lunchbox_api_dev",
   hostname: "localhost",
   pool_size: 10
-
-# Configure Basic_auth for dev
-config :lunchbox_api, lunchbox_auth: [
-  username: System.get_env("BASIC_AUTH_USERNAME"),
-  password: System.get_env("BASIC_AUTH_PASSWORD")
-]

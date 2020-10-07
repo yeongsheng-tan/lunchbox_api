@@ -16,9 +16,3 @@ config :lunchbox_api, LunchboxApi.Repo,
   database: "lunchbox_api_test",
   hostname: "localhost",
   pool: Ecto.Adapters.SQL.Sandbox
-
-# Configure Basic_auth for test
-config :lunchbox_api, lunchbox_auth: [
-  username: System.get_env("BASIC_AUTH_USERNAME"),
-  password: System.get_env("BASIC_AUTH_PASSWORD")
-]

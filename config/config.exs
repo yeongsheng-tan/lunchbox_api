@@ -25,6 +25,11 @@ config :logger, :console,
 # Use Jason for JSON parsing in Phoenix
 config :phoenix, :json_library, Jason
 
+# BasicAuth
+config :lunchbox_api, :basic_auth,
+  username: System.get_env("BASIC_AUTH_USERNAME"),
+  password: System.get_env("BASIC_AUTH_PASSWORD")
+
 # Import environment specific config. This must remain at the bottom
 # of this file so it overrides the configuration defined above.
 import_config "#{Mix.env()}.exs"
