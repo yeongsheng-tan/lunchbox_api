@@ -1,5 +1,6 @@
 defmodule LunchboxApiWeb.Router do
   use LunchboxApiWeb, :router
+  import Plug.BasicAuth
 
   pipeline :browser do
     plug :accepts, ["json"]
@@ -13,14 +14,19 @@ defmodule LunchboxApiWeb.Router do
     plug :accepts, ["json"]
   end
 
+  pipeline :authenticated do
+    plug :basic_auth,
+      username: System.get_env("BASIC_AUTH_USERNAME"),
+      password: System.get_env("BASIC_AUTH_PASSWORD")
+  end
+
   scope "/", LunchboxApiWeb do
-    pipe_through [:browser]
+    pipe_through [:browser, :authenticated]
     get "/", FoodController, :index
   end
 
   scope "/api/v1", LunchboxApiWeb do
-    pipe_through [:api]
-
+    pipe_through [:api, :authenticated]
     resources "/foods", FoodController, except: [:new, :edit]
   end
 end
