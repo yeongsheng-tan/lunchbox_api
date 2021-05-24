@@ -3,13 +3,13 @@ defmodule LunchboxApi.Application do
   # for more information on OTP Applications
   @moduledoc false
 
-  use Application
-
   def start(_type, _args) do
     # List all child processes to be supervised
     children = [
       # Start the Ecto repository
       LunchboxApi.Repo,
+      LunchboxApiWeb.Telemetry,
+      {Phoenix.PubSub, name: LunchboxApi.PubSub},
       # Start the endpoint when the application starts
       LunchboxApiWeb.Endpoint
       # Starts a worker by calling: LunchboxApi.Worker.start_link(arg)

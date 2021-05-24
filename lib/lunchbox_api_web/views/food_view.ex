@@ -11,8 +11,6 @@ defmodule LunchboxApiWeb.FoodView do
   end
 
   def render("food.json", %{food: food}) do
-    %{id: food.id,
-      name: food.name,
-      status: food.status}
+    %{id: food.id, name: food.name, status: food.status}
   end
 end

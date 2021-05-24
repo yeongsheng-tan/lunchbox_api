@@ -1,6 +1,8 @@
 defmodule LunchboxApiWeb.FoodControllerTest do
-  use LunchboxApiWeb.ConnCase
+  import Plug.Conn
+  import Phoenix.ConnTest
   import Plug.BasicAuth
+  use LunchboxApiWeb.ConnCase
 
   alias LunchboxApi.Lunchbox
   alias LunchboxApi.Lunchbox.Food
@@ -54,7 +56,7 @@ defmodule LunchboxApiWeb.FoodControllerTest do
       conn = get(conn, Routes.food_path(conn, :show, id))
 
       assert %{
-               "id" => id,
+               "id" => _id,
                "name" => "some name",
                "status" => "some status"
              } = json_response(conn, 200)["data"]
@@ -76,7 +78,7 @@ defmodule LunchboxApiWeb.FoodControllerTest do
       conn = get(conn, Routes.food_path(conn, :show, id))
 
       assert %{
-               "id" => id,
+               "id" => _id,
                "name" => "some updated name",
                "status" => "some updated status"
              } = json_response(conn, 200)["data"]

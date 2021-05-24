@@ -13,6 +13,6 @@ config :logger, level: :warn
 config :lunchbox_api, LunchboxApi.Repo,
   username: "postgres",
   password: "postgres",
-  database: "lunchbox_api_test",
+  database: "lunchbox_api_test#{System.get_env("MIX_TEST_PARTITION")}",
   hostname: "localhost",
   pool: Ecto.Adapters.SQL.Sandbox

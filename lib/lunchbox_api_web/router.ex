@@ -5,7 +5,8 @@ defmodule LunchboxApiWeb.Router do
   pipeline :browser do
     plug :accepts, ["json"]
     plug :fetch_session
-    plug :fetch_flash
+    plug :fetch_live_flash
+    plug :put_root_layout, {LunchboxApiWeb.LayoutView, :root}
     plug :protect_from_forgery
     plug :put_secure_browser_headers
   end
@@ -22,11 +23,21 @@ defmodule LunchboxApiWeb.Router do
 
   scope "/", LunchboxApiWeb do
     pipe_through [:browser, :authenticated]
-    get "/", FoodController, :index
+    # get "/", FoodController, :index
+    live "/", PageLive, :index
   end
 
   scope "/api/v1", LunchboxApiWeb do
     pipe_through [:api, :authenticated]
     resources "/foods", FoodController, except: [:new, :edit]
+  end
+
+  if Mix.env() in [:dev, :test] do
+    import Phoenix.LiveDashboard.Router
+
+    scope "/" do
+      pipe_through :browser
+      live_dashboard "/dashboard", metrics: LunchboxApiWeb.Telemetry
+    end
   end
 end

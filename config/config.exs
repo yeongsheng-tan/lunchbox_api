@@ -14,8 +14,9 @@ config :lunchbox_api,
 config :lunchbox_api, LunchboxApiWeb.Endpoint,
   url: [host: "localhost"],
   secret_key_base: "7R/dI10x1tt/FnDkKsdB3QTWRQkX9VVtVGOVFBAuobw/T2G23RJ9RM7nvMsj0+T3",
-  render_errors: [view: LunchboxApiWeb.ErrorView, accepts: ~w(json)],
-  pubsub: [name: LunchboxApi.PubSub, adapter: Phoenix.PubSub.PG2]
+  render_errors: [view: LunchboxApiWeb.ErrorView, accepts: ~w(json), layout: false],
+  pubsub_server: LunchboxApi.PubSub,
+  live_view: [signing_salt: "7R/dI10x1tt/FnDkKsdB3QTWRQkX9VVtVGOVFBAuobw/T2G23RJ9RM7nvMsj0+T3"]
 
 # Configures Elixir's Logger
 config :logger, :console,

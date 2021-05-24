@@ -18,9 +18,12 @@ defmodule LunchboxApiWeb.ConnCase do
   using do
     quote do
       # Import conveniences for testing with connections
-      use Phoenix.ConnTest
-      alias LunchboxApiWeb.Router.Helpers, as: Routes
+      import Plug.Conn
+      import Phoenix.ConnTest
+      # alias LunchboxApiWeb.Router.Helpers, as: Routes
+      import LunchboxApiWeb.ConnCase
 
+      alias LunchboxApiWeb.Router.Helpers, as: Routes
       # The default endpoint for testing
       @endpoint LunchboxApiWeb.Endpoint
     end
