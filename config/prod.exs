@@ -12,6 +12,7 @@ use Mix.Config
 config :lunchbox_api, LunchboxApiWeb.Endpoint,
   http: [:inet6, port: System.get_env("PORT") || 4000],
   server: true,
+  check_origin: ["//*.gigalixirapp.com"],
   secret_key_base: "${SECRET_KEY_BASE}",
   url: [host: "example.com", port: 80],
   cache_static_manifest: "priv/static/cache_manifest.json"
