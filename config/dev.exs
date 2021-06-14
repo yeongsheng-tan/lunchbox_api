@@ -69,8 +69,8 @@ config :lunchbox_api, LunchboxApiWeb.Endpoint,
     patterns: [
       ~r"priv/static/.*(js|css|png|jpeg|jpg|gif|svg)$",
       ~r"priv/gettext/.*(po)$",
-      ~r"lib/sample_app_web/(live|views)/.*(ex)$",
-      ~r"lib/sample_app_web/templates/.*(eex)$"
+      ~r"lib/lunchbox_api_web/(live|views)/.*(ex)$",
+      ~r"lib/lunchbox_api_web/templates/.*(eex)$"
     ]
   ]
 

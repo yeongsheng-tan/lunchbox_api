@@ -14,7 +14,7 @@ config :lunchbox_api, LunchboxApiWeb.Endpoint,
   server: true,
   check_origin: ["//*.gigalixirapp.com"],
   secret_key_base: "${SECRET_KEY_BASE}",
-  url: [host: "example.com", port: 80],
+  url: [host: "gigalixirapp.com", port: 80],
   cache_static_manifest: "priv/static/cache_manifest.json"
 
 # Do not print debug messages in production
@@ -80,3 +80,13 @@ config :lunchbox_api, LunchboxApi.Repo,
   ssl: true,
   # Free tier db only allows 1 conn
   pool_size: 2
+
+config :lunchbox_api, LunchboxApiWeb.Endpoint,
+  live_reload: [
+    patterns: [
+      ~r"priv/static/.*(js|css|png|jpeg|jpg|gif|svg)$",
+      ~r"priv/gettext/.*(po)$",
+      ~r"lib/lunchbox_api_web/(live|views)/.*(ex)$",
+      ~r"lib/lunchbox_api_web/templates/.*(eex)$"
+    ]
+  ]
