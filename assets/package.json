@@ -24,5 +24,8 @@
     "sass-loader": "^11.0.1",
     "webpack": "^5.38.1",
     "webpack-cli": "^4.7.2"
+  },
+  "resolutions": {
+    "css-what": "5.0.1"
   }
 }
