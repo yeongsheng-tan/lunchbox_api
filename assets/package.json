@@ -4,5 +4,8 @@
   "license": "MIT",
   "scripts": {
     "deploy": "cd .. && mix assets.deploy && rm -f _build/esbuild"
+  },
+  "dependencies": {
+    "topbar": "^1.0.1"
   }
 }
