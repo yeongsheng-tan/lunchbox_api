@@ -31,6 +31,15 @@ config :lunchbox_api, :basic_auth,
   username: System.get_env("BASIC_AUTH_USERNAME"),
   password: System.get_env("BASIC_AUTH_PASSWORD")
 
+# esbuild
+config :esbuild,
+  version: "0.13.10",
+  default: [
+    args: ~w(js/app.js --bundle --target=es2016 --outdir=../priv/static/assets),
+    cd: Path.expand("../assets", __DIR__),
+    env: %{"NODE_PATH" => Path.expand("../deps", __DIR__)}
+  ]
+
 # Import environment specific config. This must remain at the bottom
 # of this file so it overrides the configuration defined above.
 import_config "#{Mix.env()}.exs"

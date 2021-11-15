@@ -10,6 +10,7 @@ defmodule LunchboxApi.MixProject do
       compilers: [:phoenix, :gettext] ++ Mix.compilers(),
       start_permanent: Mix.env() == :prod,
       aliases: aliases(),
+      "assets.deploy": ["esbuild default --minify", "phx.digest"],
       deps: deps()
     ]
   end
