@@ -36,7 +36,7 @@ defmodule LunchboxApiWeb.Router do
     import Phoenix.LiveDashboard.Router
 
     scope "/" do
-      pipe_through :browser
+      pipe_through [:browser, :authenticated]
       live_dashboard "/dashboard", metrics: LunchboxApiWeb.Telemetry
     end
   end
