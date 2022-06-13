@@ -6,6 +6,6 @@
     "deploy": "cd .. && mix assets.deploy && rm -f _build/esbuild"
   },
   "dependencies": {
-    "topbar": "^1.0.1"
+    "topbar": "^1.0"
   }
 }
