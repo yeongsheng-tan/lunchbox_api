@@ -23,7 +23,6 @@ defmodule LunchboxApiWeb.Router do
 
   scope "/", LunchboxApiWeb do
     pipe_through [:browser, :authenticated]
-    # get "/", FoodController, :index
     live "/", PageLive, :index
   end
 
