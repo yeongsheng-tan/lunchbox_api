@@ -4,7 +4,7 @@ defmodule LunchboxApi.MixProject do
   def project do
     [
       app: :lunchbox_api,
-      version: "1.8.22",
+      version: "1.8.23",
       elixir: "~> 1.15.5",
       elixirc_paths: elixirc_paths(Mix.env()),
       compilers: [:phoenix] ++ Mix.compilers(),
@@ -39,16 +39,16 @@ defmodule LunchboxApi.MixProject do
       {:ecto_sql, "~> 3.4"},
       {:postgrex, "~> 0.15"},
       {:phoenix_live_view, "~> 0.16.4"},
-      {:floki, ">= 0.32.0", only: :test},
+      {:floki, ">= 0.34.3", only: :test},
       {:phoenix_html, "~> 3.0"},
       {:phoenix_live_reload, "~> 1.2", only: :dev},
       {:phoenix_live_dashboard, "~> 0.5"},
       {:telemetry_metrics, "~> 0.6"},
       {:telemetry_poller, "~> 1.0"},
-      {:esbuild, "~> 0.3.4", runtime: Mix.env() == :dev},
-      {:gettext, "~> 0.18"},
-      {:jason, "~> 1.2"},
-      {:plug_cowboy, "~> 2.5"},
+      {:esbuild, "~> 0.7.1", runtime: Mix.env() == :dev},
+      {:gettext, "~> 0.23.1"},
+      {:jason, "~> 1.4"},
+      {:plug_cowboy, "~> 2.6"},
       {:distillery, "~> 2.1", runtime: false},
       {:plug_forwarded_peer, "~> 0.1.0"}
     ]
