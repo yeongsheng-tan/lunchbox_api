@@ -4,8 +4,8 @@ defmodule LunchboxApi.MixProject do
   def project do
     [
       app: :lunchbox_api,
-      version: "1.8.21",
-      elixir: "~> 1.14.5",
+      version: "1.8.22",
+      elixir: "~> 1.15.5",
       elixirc_paths: elixirc_paths(Mix.env()),
       compilers: [:phoenix] ++ Mix.compilers(),
       start_permanent: Mix.env() == :prod,
@@ -50,7 +50,7 @@ defmodule LunchboxApi.MixProject do
       {:jason, "~> 1.2"},
       {:plug_cowboy, "~> 2.5"},
       {:distillery, "~> 2.1", runtime: false},
-      {:plug_forwarded_peer, "~> 0.0.2"}
+      {:plug_forwarded_peer, "~> 0.1.0"}
     ]
   end
 
