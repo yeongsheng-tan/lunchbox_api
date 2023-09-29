@@ -4,7 +4,7 @@ defmodule LunchboxApi.MixProject do
   def project do
     [
       app: :lunchbox_api,
-      version: "1.8.24",
+      version: "1.8.25",
       elixir: "~> 1.15.6",
       elixirc_paths: elixirc_paths(Mix.env()),
       compilers: [:phoenix] ++ Mix.compilers(),
@@ -20,7 +20,7 @@ defmodule LunchboxApi.MixProject do
   def application do
     [
       mod: {LunchboxApi.Application, []},
-      extra_applications: [:logger, :runtime_tools]
+      extra_applications: [:sasl, :logger, :runtime_tools]
     ]
   end
 
