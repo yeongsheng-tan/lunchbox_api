@@ -10,7 +10,14 @@ defmodule LunchboxApi.MixProject do
       compilers: [:phoenix] ++ Mix.compilers(),
       start_permanent: Mix.env() == :prod,
       aliases: aliases(),
-      deps: deps()
+      deps: deps(),
+      releases: [
+        lunchbox_api: [
+          cookie: "0Q@X,WNlR$C~4I=Ch{P&FCFlP|Wy>lpccA^D()2H3iwKU;/DQ&7p@6zC@DzKS,xk",
+          include_erts: true,
+          applications: [lunchbox_api: :permanent]
+        ]
+      ]
     ]
   end
 
@@ -49,7 +56,7 @@ defmodule LunchboxApi.MixProject do
       {:gettext, "~> 0.23.1"},
       {:jason, "~> 1.4"},
       {:plug_cowboy, "~> 2.6"},
-      {:distillery, "~> 2.1", runtime: false},
+      # {:distillery, "~> 2.1", runtime: false},
       {:plug_forwarded_peer, "~> 0.1.0"}
     ]
   end
