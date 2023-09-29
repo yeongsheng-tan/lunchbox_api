@@ -1,6 +1,6 @@
 defmodule LunchboxApiWeb.Endpoint do
   use Phoenix.Endpoint, otp_app: :lunchbox_api
-  use Plug.Builder
+  # use Plug.Builder
 
   # Very simple plug which reads X-Forwarded-For or
   # Forwarded header according to rfc7239 and
