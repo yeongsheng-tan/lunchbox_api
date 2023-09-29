@@ -7,7 +7,7 @@ config :lunchbox_api, LunchboxApiWeb.Endpoint,
   server: false
 
 # Print only warnings and errors during test
-config :logger, level: :warn
+config :logger, level: :warning
 
 # Configure your database
 config :lunchbox_api, LunchboxApi.Repo,
