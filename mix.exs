@@ -56,7 +56,6 @@ defmodule LunchboxApi.MixProject do
       {:gettext, "~> 0.23.1"},
       {:jason, "~> 1.4"},
       {:plug_cowboy, "~> 2.6"},
-      # {:distillery, "~> 2.1", runtime: false},
       {:plug_forwarded_peer, "~> 0.1.0"}
     ]
   end
