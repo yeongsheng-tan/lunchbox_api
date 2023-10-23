@@ -7,12 +7,6 @@
 |> Path.wildcard()
 |> Enum.map(&Code.eval_file(&1))
 
-use Distillery.Releases.Config,
-    # This sets the default release built by `mix release`
-    default_release: :default,
-    # This sets the default environment used by `mix release`
-    default_environment: Mix.env()
-
 # For a full list of config options for both releases
 # and environments, visit https://hexdocs.pm/distillery/config/distillery.html
 
