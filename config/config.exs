@@ -33,9 +33,9 @@ config :lunchbox_api, :basic_auth,
 
 # esbuild
 config :esbuild,
-  version: "0.13.10",
+  version: "0.19.5",
   default: [
-    args: ~w(js/app.js --bundle --target=es2016 --outdir=../priv/static/assets),
+    args: ~w(js/app.js --bundle --target=es2021 --outdir=../priv/static/assets),
     cd: Path.expand("../assets", __DIR__),
     env: %{"NODE_PATH" => Path.expand("../deps", __DIR__)}
   ]
