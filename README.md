@@ -79,7 +79,7 @@
   }
   ```
 ---  
-##### Setup and configure Gigalixir account-app and deploy distillery OTP release to Gigalixir and run lunchbox_api against PostgreSQL.
+##### Setup and configure Gigalixir account-app and deploy elixir releases OTP release to Gigalixir and run lunchbox_api against PostgreSQL.
   * Generate prod OTP release for release into Gigalixir (**N/B: currently gigalixir only has PostgreSQL; However, the code will work as-is**)
   ```
   BASIC_AUTH_USERNAME=specialPowerUserName BASIC_AUTH_PASSWORD=ultimatePassword MIX_ENV=prod mix release --env=prod
@@ -167,7 +167,8 @@ Ready to run in production? Please [check our deployment guides](https://hexdocs
   * Postgrex-CDB hex package: https://hexdocs.pm/postgrex_cdb/readme.html
   * EctoReplaySandbox hex package (used in testing): https://hexdocs.pm/ecto_replay_sandbox/readme.html
   * Gigalixir: https://gigalixir.com/
-  * Distillery 2.0: https://dockyard.com/blog/2018/08/23/announcing-distillery-2-0
+  * Gigalixir with elixir releases: https://www.gigalixir.com/docs/getting-started-guide/phoenix-releases-deploy
+  * Migrate Gigalixir app from distillery to elixir releases: https://www.gigalixir.com/docs/modify-app/releases#specify-buildpacks-optional
   * Official Phoenix: http://www.phoenixframework.org/
   * Guides: https://hexdocs.pm/phoenix/overview.html
   * Docs: https://hexdocs.pm/phoenix

@@ -51,25 +51,6 @@ config :logger, level: :info
 #
 # Check `Plug.SSL` for all available options in `force_ssl`.
 
-# ## Using releases (distillery)
-#
-# If you are doing OTP releases, you need to instruct Phoenix
-# to start the server for all endpoints:
-#
-#     config :phoenix, :serve_endpoints, true
-#
-# Alternatively, you can configure exactly which server to
-# start per endpoint:
-#
-#     config :lunchbox_api, LunchboxApiWeb.Endpoint, server: true
-#
-# Note you can't rely on `System.get_env/1` when using releases.
-# See the releases documentation accordingly.
-
-# Finally import the config/prod.secret.exs which should be versioned
-# separately.
-
-# import_config "prod.secret.exs"
 config :lunchbox_api, LunchboxApi.Repo,
   adapter: Ecto.Adapters.Postgres,
   url: "${DATABASE_URL}",

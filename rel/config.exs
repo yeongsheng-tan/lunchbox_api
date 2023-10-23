@@ -7,9 +7,6 @@
 |> Path.wildcard()
 |> Enum.map(&Code.eval_file(&1))
 
-# For a full list of config options for both releases
-# and environments, visit https://hexdocs.pm/distillery/config/distillery.html
-
 # You may define one or more environments in this file,
 # an environment's settings will override those of a release
 # when building in that environment, this combination of release
