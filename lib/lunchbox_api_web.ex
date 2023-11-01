@@ -17,6 +17,8 @@ defmodule LunchboxApiWeb do
   and import those modules here.
   """
 
+  def static_paths, do: ~w(assets fonts images favicon.ico robots.txt)
+
   def controller do
     quote do
       use Phoenix.Controller, namespace: LunchboxApiWeb
@@ -24,6 +26,8 @@ defmodule LunchboxApiWeb do
       import Plug.Conn
       import LunchboxApiWeb.Gettext
       alias LunchboxApiWeb.Router.Helpers, as: Routes
+
+      unquote(verified_routes())
     end
   end
 
@@ -47,13 +51,8 @@ defmodule LunchboxApiWeb do
   def live_view do
     quote do
       use Phoenix.LiveView,
-        layout: {LunchboxApiWeb.LayoutView, "live.html"}
+        layout: {LunchboxApiWeb.LayoutView, "live"}
 
-      # import LunchboxApiWeb.Router.Helpers
-      # layout: {LunchboxApiWeb.LayoutView, "live.html"}
-      # import LunchboxApiWeb.ErrorHelpers
-
-      # import LunchboxApiWeb.Gettext
       unquote(view_helpers())
     end
   end
@@ -82,13 +81,22 @@ defmodule LunchboxApiWeb do
     end
   end
 
+  def verified_routes do
+    quote do
+      use Phoenix.VerifiedRoutes,
+        endpoint: LunchboxApiWeb.Endpoint,
+        router: LunchboxApiWeb.Router,
+        statics: LunchboxApiWeb.static_paths()
+    end
+  end
+
   defp view_helpers do
     quote do
       # Use all HTML functionality (forms, tags, etc)
       use Phoenix.HTML
 
       # Import LiveView helpers (live_render, live_component, live_patch, etc)
-      import Phoenix.LiveView.Helpers
+      import Phoenix.Component
 
       # Import basic rendering functionality (render, render_layout, etc)
       import Phoenix.View
@@ -96,6 +104,8 @@ defmodule LunchboxApiWeb do
       import LunchboxApiWeb.ErrorHelpers
       import LunchboxApiWeb.Gettext
       alias LunchboxApiWeb.Router.Helpers, as: Routes
+
+      unquote(verified_routes())
     end
   end
 

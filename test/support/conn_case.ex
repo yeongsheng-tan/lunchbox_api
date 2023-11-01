@@ -26,6 +26,8 @@ defmodule LunchboxApiWeb.ConnCase do
       alias LunchboxApiWeb.Router.Helpers, as: Routes
       # The default endpoint for testing
       @endpoint LunchboxApiWeb.Endpoint
+
+      use LunchboxApiWeb, :verified_routes
     end
   end
 
