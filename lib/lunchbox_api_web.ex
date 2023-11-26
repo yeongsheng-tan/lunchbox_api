@@ -51,7 +51,7 @@ defmodule LunchboxApiWeb do
   def live_view do
     quote do
       use Phoenix.LiveView,
-        layout: {LunchboxApiWeb.LayoutView, "live"}
+        layout: {LunchboxApiWeb.LayoutView, :live}
 
       unquote(view_helpers())
     end
