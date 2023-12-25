@@ -4,12 +4,13 @@ defmodule LunchboxApi.MixProject do
   def project do
     [
       app: :lunchbox_api,
-      version: "1.10.3",
-      elixir: "~> 1.15.7",
+      version: "1.11.0",
+      elixir: "~> 1.16.0",
       elixirc_paths: elixirc_paths(Mix.env()),
       start_permanent: Mix.env() == :prod,
       aliases: aliases(),
       deps: deps(),
+      compilers: [:leex, :yecc] ++ Mix.compilers(),
       releases: [
         lunchbox_api: [
           cookie: "0Q@X,WNlR$C~4I=Ch{P&FCFlP|Wy>lpccA^D()2H3iwKU;/DQ&7p@6zC@DzKS,xk",
