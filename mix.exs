@@ -10,7 +10,7 @@ defmodule LunchboxApi.MixProject do
       start_permanent: Mix.env() == :prod,
       aliases: aliases(),
       deps: deps(),
-      compilers: [:leex, :yecc] ++ Mix.compilers(),
+      compilers: [:leex] ++ [:yecc] ++ Mix.compilers(),
       releases: [
         lunchbox_api: [
           cookie: "0Q@X,WNlR$C~4I=Ch{P&FCFlP|Wy>lpccA^D()2H3iwKU;/DQ&7p@6zC@DzKS,xk",
