@@ -4,7 +4,7 @@ defmodule LunchboxApi.MixProject do
   def project do
     [
       app: :lunchbox_api,
-      version: "1.11.0",
+      version: "1.12.0",
       elixir: "~> 1.16.0",
       elixirc_paths: elixirc_paths(Mix.env()),
       start_permanent: Mix.env() == :prod,
@@ -41,20 +41,21 @@ defmodule LunchboxApi.MixProject do
   defp deps do
     [
       {:phoenix, "~> 1.7"},
-      {:phoenix_pubsub, "~> 2.0"},
-      {:phoenix_ecto, "~> 4.1"},
-      {:ecto_sql, "~> 3.4"},
-      {:postgrex, "~> 0.15"},
+      {:phoenix_pubsub, "~> 2.1"},
+      {:phoenix_ecto, "~> 4.4"},
+      {:ecto_sql, "~> 3.11"},
+      {:postgrex, "~> 0.17"},
       {:phoenix_view, "~> 2.0"},
       {:phoenix_live_view, "~> 0.20"},
-      {:floki, ">= 0.34.3", only: :test},
-      {:phoenix_html, "~> 3.3"},
+      {:floki, "~> 0.35", only: :test},
+      {:phoenix_html, "~> 4.0"},
+      {:phoenix_html_helpers, "~> 1.0"},
       {:phoenix_live_reload, "~> 1.4", only: :dev},
       {:phoenix_live_dashboard, "~> 0.8"},
       {:telemetry_metrics, "~> 0.6"},
       {:telemetry_poller, "~> 1.0"},
-      {:esbuild, "~> 0.7", runtime: Mix.env() == :dev},
-      {:gettext, "~> 0.23.1"},
+      {:esbuild, "~> 0.8", runtime: Mix.env() == :dev},
+      {:gettext, "~> 0.24"},
       {:jason, "~> 1.4"},
       {:plug_cowboy, "~> 2.6"},
       {:plug_forwarded_peer, "~> 0.1.0"}

@@ -3,7 +3,8 @@ defmodule LunchboxApiWeb.ErrorHelpers do
   Conveniences for translating and building error messages.
   """
 
-  use Phoenix.HTML
+  import Phoenix.HTML.Form
+  use PhoenixHTMLHelpers
 
   def error_tag(form, field) do
     Enum.map(Keyword.get_values(form.errors, field), fn error ->

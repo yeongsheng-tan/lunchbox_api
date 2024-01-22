@@ -3,7 +3,7 @@ defmodule LunchboxApiWeb.Router do
   import Plug.BasicAuth
 
   pipeline :browser do
-    plug(:accepts, ["json"])
+    plug(:accepts, ["html"])
     plug(:fetch_session)
     plug(:fetch_live_flash)
     plug(:put_root_layout, {LunchboxApiWeb.LayoutView, :root})
@@ -16,19 +16,20 @@ defmodule LunchboxApiWeb.Router do
   end
 
   pipeline :authenticated do
-    plug(:basic_auth,
+    plug(
+      :basic_auth,
       username: System.get_env("BASIC_AUTH_USERNAME"),
       password: System.get_env("BASIC_AUTH_PASSWORD")
     )
   end
 
   scope "/", LunchboxApiWeb do
-    pipe_through([:browser, :authenticated])
+    pipe_through([:authenticated, :browser])
     live("/", PageLive, :index)
   end
 
   scope "/api/v1", LunchboxApiWeb do
-    pipe_through([:api, :authenticated])
+    pipe_through([:authenticated, :api])
     resources("/foods", FoodController, except: [:new, :edit])
   end
 
@@ -36,7 +37,7 @@ defmodule LunchboxApiWeb.Router do
     import Phoenix.LiveDashboard.Router
 
     scope "/" do
-      pipe_through([:browser])
+      pipe_through([:authenticated, :browser])
       live_dashboard("/dashboard", metrics: LunchboxApiWeb.Telemetry)
     end
   end
