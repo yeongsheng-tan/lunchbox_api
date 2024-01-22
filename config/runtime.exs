@@ -12,7 +12,6 @@ if config_env() == :prod do
   config :lunchbox_api, LunchboxApi.Repo,
     adapter: Ecto.Adapters.Postgres,
     url: "${DATABASE_URL}",
-    host: "postgres-free-tier-1.gigalixir.com",
     database: "",
     ssl: true,
     # Free tier db only allows 1 conn
