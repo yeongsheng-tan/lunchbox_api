@@ -13,7 +13,6 @@ if config_env() == :prod do
     adapter: Ecto.Adapters.Postgres,
     url: System.get_env("DATABASE_URL"),
     database: "",
-    ssl: false,
     # Free tier db only allows 1 conn
     pool_size: 2
 
