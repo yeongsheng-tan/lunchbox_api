@@ -13,7 +13,7 @@ config :lunchbox_api, LunchboxApiWeb.Endpoint,
   http: [:inet6, port: System.get_env("PORT") || 4000],
   server: true,
   check_origin: ["//*.gigalixirapp.com"],
-  secret_key_base: "${SECRET_KEY_BASE}",
+  secret_key_base: System.get_env("SECRET_KEY_BASE"),
   url: [host: "gigalixirapp.com", port: 80],
   cache_static_manifest: "priv/static/cache_manifest.json"
 
@@ -55,7 +55,7 @@ config :lunchbox_api, LunchboxApi.Repo,
   adapter: Ecto.Adapters.Postgres,
   url: System.get_env("DATABASE_URL"),
   database: "",
-  ssl: true,
+  ssl: false,
   # Free tier db only allows 1 conn
   pool_size: 2
 
