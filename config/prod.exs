@@ -53,7 +53,7 @@ config :logger, level: :info
 
 config :lunchbox_api, LunchboxApi.Repo,
   adapter: Ecto.Adapters.Postgres,
-  url: "${DATABASE_URL}",
+  url: System.get_env("DATABASE_URL"),
   database: "",
   ssl: true,
   # Free tier db only allows 1 conn
