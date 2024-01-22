@@ -43,7 +43,7 @@ defmodule LunchboxApi.MixProject do
       {:phoenix, "~> 1.7"},
       {:phoenix_pubsub, "~> 2.1"},
       {:phoenix_ecto, "~> 4.4"},
-      {:ecto_sql, "== 3.7.2"},
+      {:ecto_sql, "== 3.8.3"},
       {:postgrex, "~> 0.15"},
       {:phoenix_view, "~> 2.0"},
       {:phoenix_live_view, "~> 0.20"},
