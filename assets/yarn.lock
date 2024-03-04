@@ -3,17 +3,17 @@
 
 
 "phoenix@file:../deps/phoenix":
-  version "1.7.9"
+  version "1.7.11"
 
 "phoenix_html@file:../deps/phoenix_html":
-  version "3.3.3"
+  version "4.1.0"
 
 phoenix_live_view@^0.20.1:
-  version "0.20.1"
-  resolved "https://registry.yarnpkg.com/phoenix_live_view/-/phoenix_live_view-0.20.1.tgz#0fd4e4c6822a996cabbb5b946cf16d1186a046cb"
-  integrity sha512-bEFec53iySU9MvSIgGA/T7F8Ikqvu5qlFzBn+nY88T36ZsIp/8SJJZqF8foWMOb7+Pb721tt04cz6T7dq0ZdrA==
+  version "0.20.11"
+  resolved "https://registry.yarnpkg.com/phoenix_live_view/-/phoenix_live_view-0.20.11.tgz#20484921b69f5e6c441dca505d02e02d41e56ed9"
+  integrity sha512-L93RgBoabNwMwwlCw+lrq4+UBAmXNV0xTZPH4OQnNlkSck7Q6yrHkBK/6pEXIvV5RgH4jFhI0DP1IVzqYqGn1A==
 
 topbar@^2.0.1:
-  version "2.0.1"
-  resolved "https://registry.yarnpkg.com/topbar/-/topbar-2.0.1.tgz#03a0ae1a92ff9566af8b0c7ddf711f5303bf40a3"
-  integrity sha512-4KvcxrJuGS3wkx8QacT7dfnkwyPJOuDzGUvHO/GDZqgoEEEFKTnZqCC6PYcvuZ0OfMNdyyKeAzVB2MPk0BIe8A==
+  version "2.0.2"
+  resolved "https://registry.yarnpkg.com/topbar/-/topbar-2.0.2.tgz#fd5890a84553da2469f35d24e6304e7f71d179e2"
+  integrity sha512-hCKoSaWxXqGIgjag8rIVajysE41as7ti5z9GDO5rcx2zmII1/rY5zvO9IgKwbf50HL82EzlimL6OmPYPUgbpEw==
