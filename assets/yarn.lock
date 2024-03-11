@@ -9,9 +9,9 @@
   version "4.1.0"
 
 phoenix_live_view@^0.20.1:
-  version "0.20.11"
-  resolved "https://registry.yarnpkg.com/phoenix_live_view/-/phoenix_live_view-0.20.11.tgz#20484921b69f5e6c441dca505d02e02d41e56ed9"
-  integrity sha512-L93RgBoabNwMwwlCw+lrq4+UBAmXNV0xTZPH4OQnNlkSck7Q6yrHkBK/6pEXIvV5RgH4jFhI0DP1IVzqYqGn1A==
+  version "0.20.12"
+  resolved "https://registry.yarnpkg.com/phoenix_live_view/-/phoenix_live_view-0.20.12.tgz#c5b26f2c62e95b5dfd22580123b3080ea7bd01d6"
+  integrity sha512-TbKxU+61gAchfwQ7F5o8qjX5aYxJN5njXkD71p5dbfjYvNAIR5yFyD57kb+4yJtlqq/7AGgKDf05L1ubdGP0kg==
 
 topbar@^2.0.1:
   version "2.0.2"
