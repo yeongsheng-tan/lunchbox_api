@@ -1,15 +1,16 @@
 {
   "packages": [
-    "elixir@1.16.2",
-    "postgresql_16@latest"
+    "postgresql_16@latest",
+    "elixir@1.16.3",
+    "erlang_27@27.0"
   ],
   "shell": {
     "init_hook": [
-      "echo 'Welcome to devbox!' > /dev/null"
+      "echo 'Welcome to devbox for lunchbox_api!' > /dev/null"
     ],
     "scripts": {
       "test": [
-        "echo \"Error: no test specified\" && exit 1"
+        "BASIC_AUTH_USERNAME=specialUserName BASIC_AUTH_PASSWORD=superSecretPassword mix test"
       ]
     }
   }
