@@ -1,7 +1,6 @@
 {
   "packages": [
     "postgresql_16@latest",
-    "elixir@1.16.3",
     "erlang_27@27.0"
   ],
   "shell": {
