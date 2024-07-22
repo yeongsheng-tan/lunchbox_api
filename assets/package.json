@@ -1,13 +1,10 @@
 {
   "name": "lunchbox_api_assets",
   "license": "MIT",
-  "packageManager": "pnpm@9.0.6",
   "engines": {
-    "node": ">=20",
-    "pnpm": ">=9.0"
+    "node": ">=20"
   },
   "scripts": {
-    "preinstall": "npx only-allow pnpm",
     "postinstall": "syncpack fix-mismatches",
     "deploy": "cd .. && mix assets.deploy && rm -f _build/esbuild"
   },
