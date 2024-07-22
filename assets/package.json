@@ -1,8 +1,14 @@
 {
-  "repository": {},
   "name": "lunchbox_api_assets",
   "license": "MIT",
+  "packageManager": "pnpm@9.6.0",
+  "engines": {
+    "node": ">=20",
+    "pnpm": ">=9.6"
+  },
   "scripts": {
+    "preinstall": "npx only-allow pnpm",
+    "postinstall": "syncpack fix-mismatches",
     "deploy": "cd .. && mix assets.deploy && rm -f _build/esbuild"
   },
   "dependencies": {
@@ -10,5 +16,8 @@
     "phoenix_html": "file:../deps/phoenix_html",
     "phoenix_live_view": "^0.20.17",
     "topbar": "^3.0.0"
+  },
+  "devDependencies": {
+    "syncpack": "^12.3.3"
   }
 }

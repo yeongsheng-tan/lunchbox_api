@@ -1,6 +1,54 @@
 {
   "lockfile_version": "1",
   "packages": {
+    "corepack_20@latest": {
+      "last_modified": "2024-07-10T06:55:44Z",
+      "resolved": "github:NixOS/nixpkgs/aa9461550594533c29866d42f861b6ff079a7fb6#corepack_20",
+      "source": "devbox-search",
+      "version": "20.14.0",
+      "systems": {
+        "aarch64-darwin": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/arj1jw453vmb4b743rvvp9cp7pqb27zm-corepack-nodejs-20.14.0",
+              "default": true
+            }
+          ],
+          "store_path": "/nix/store/arj1jw453vmb4b743rvvp9cp7pqb27zm-corepack-nodejs-20.14.0"
+        },
+        "aarch64-linux": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/flqza8lz3cvyyrz7v8k1r2ap32vskwyf-corepack-nodejs-20.14.0",
+              "default": true
+            }
+          ],
+          "store_path": "/nix/store/flqza8lz3cvyyrz7v8k1r2ap32vskwyf-corepack-nodejs-20.14.0"
+        },
+        "x86_64-darwin": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/3dkq8w4h6gf1pg05lnmzg49q2fbrmpsk-corepack-nodejs-20.14.0",
+              "default": true
+            }
+          ],
+          "store_path": "/nix/store/3dkq8w4h6gf1pg05lnmzg49q2fbrmpsk-corepack-nodejs-20.14.0"
+        },
+        "x86_64-linux": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/zw38hg36phakmnk3lxglyzvjwf2pivsa-corepack-nodejs-20.14.0",
+              "default": true
+            }
+          ],
+          "store_path": "/nix/store/zw38hg36phakmnk3lxglyzvjwf2pivsa-corepack-nodejs-20.14.0"
+        }
+      }
+    },
     "elixir_1_17@latest": {
       "last_modified": "2024-07-12T02:08:50Z",
       "resolved": "github:NixOS/nixpkgs/6794d064edc69918bb0fc0e0eda33ece324be17a#elixir_1_17",
