@@ -2,8 +2,8 @@
   "lockfile_version": "1",
   "packages": {
     "corepack_20@latest": {
-      "last_modified": "2024-07-31T08:48:38Z",
-      "resolved": "github:NixOS/nixpkgs/c3392ad349a5227f4a3464dce87bcc5046692fce#corepack_20",
+      "last_modified": "2024-08-14T11:41:26Z",
+      "resolved": "github:NixOS/nixpkgs/0cb2fd7c59fed0cd82ef858cbcbdb552b9a33465#corepack_20",
       "source": "devbox-search",
       "version": "20.15.1",
       "systems": {
@@ -11,47 +11,47 @@
           "outputs": [
             {
               "name": "out",
-              "path": "/nix/store/7xirzlsmqqr7583ifij89szyypanh0zl-corepack-nodejs-20.15.1",
+              "path": "/nix/store/8ld6zk4rbsawiihg8mw4rirmqaidd9ah-corepack-nodejs-20.15.1",
               "default": true
             }
           ],
-          "store_path": "/nix/store/7xirzlsmqqr7583ifij89szyypanh0zl-corepack-nodejs-20.15.1"
+          "store_path": "/nix/store/8ld6zk4rbsawiihg8mw4rirmqaidd9ah-corepack-nodejs-20.15.1"
         },
         "aarch64-linux": {
           "outputs": [
             {
               "name": "out",
-              "path": "/nix/store/4blkgsa8vjr0l5xwi28450i605j964kp-corepack-nodejs-20.15.1",
+              "path": "/nix/store/dmvzfffjwn995a9k8ixmdjd4gz89nfxx-corepack-nodejs-20.15.1",
               "default": true
             }
           ],
-          "store_path": "/nix/store/4blkgsa8vjr0l5xwi28450i605j964kp-corepack-nodejs-20.15.1"
+          "store_path": "/nix/store/dmvzfffjwn995a9k8ixmdjd4gz89nfxx-corepack-nodejs-20.15.1"
         },
         "x86_64-darwin": {
           "outputs": [
             {
               "name": "out",
-              "path": "/nix/store/0iy6jhg00n8z1c1i1x53kd4kv87bdfkc-corepack-nodejs-20.15.1",
+              "path": "/nix/store/82gq7lxdd4szknhyk2s59jqphz09rya6-corepack-nodejs-20.15.1",
               "default": true
             }
           ],
-          "store_path": "/nix/store/0iy6jhg00n8z1c1i1x53kd4kv87bdfkc-corepack-nodejs-20.15.1"
+          "store_path": "/nix/store/82gq7lxdd4szknhyk2s59jqphz09rya6-corepack-nodejs-20.15.1"
         },
         "x86_64-linux": {
           "outputs": [
             {
               "name": "out",
-              "path": "/nix/store/3sg65dq9anrh28hhv68qfl56daq58ar1-corepack-nodejs-20.15.1",
+              "path": "/nix/store/n3sh9r56b0ir41r3ishkcnqr5naf4qma-corepack-nodejs-20.15.1",
               "default": true
             }
           ],
-          "store_path": "/nix/store/3sg65dq9anrh28hhv68qfl56daq58ar1-corepack-nodejs-20.15.1"
+          "store_path": "/nix/store/n3sh9r56b0ir41r3ishkcnqr5naf4qma-corepack-nodejs-20.15.1"
         }
       }
     },
     "elixir_1_17@latest": {
-      "last_modified": "2024-07-31T08:48:38Z",
-      "resolved": "github:NixOS/nixpkgs/c3392ad349a5227f4a3464dce87bcc5046692fce#elixir_1_17",
+      "last_modified": "2024-08-14T11:41:26Z",
+      "resolved": "github:NixOS/nixpkgs/0cb2fd7c59fed0cd82ef858cbcbdb552b9a33465#elixir_1_17",
       "source": "devbox-search",
       "version": "1.17.2",
       "systems": {
@@ -59,47 +59,47 @@
           "outputs": [
             {
               "name": "out",
-              "path": "/nix/store/j6fdf12xmj1sxspbsdkkfl4jynmnaxxn-elixir-1.17.2",
+              "path": "/nix/store/bbxld6r7vgsmvaq2sj52hmpi0y4jx26w-elixir-1.17.2",
               "default": true
             }
           ],
-          "store_path": "/nix/store/j6fdf12xmj1sxspbsdkkfl4jynmnaxxn-elixir-1.17.2"
+          "store_path": "/nix/store/bbxld6r7vgsmvaq2sj52hmpi0y4jx26w-elixir-1.17.2"
         },
         "aarch64-linux": {
           "outputs": [
             {
               "name": "out",
-              "path": "/nix/store/pv6s0br9dja590vdhybcb5f8qv2pvmpl-elixir-1.17.2",
+              "path": "/nix/store/d40kdj05wlp12s376lnlsjij27s5xz60-elixir-1.17.2",
               "default": true
             }
           ],
-          "store_path": "/nix/store/pv6s0br9dja590vdhybcb5f8qv2pvmpl-elixir-1.17.2"
+          "store_path": "/nix/store/d40kdj05wlp12s376lnlsjij27s5xz60-elixir-1.17.2"
         },
         "x86_64-darwin": {
           "outputs": [
             {
               "name": "out",
-              "path": "/nix/store/c25kng0sda43dhn74lqbp3431m4vc7n0-elixir-1.17.2",
+              "path": "/nix/store/ywhyha0w6v0fw447n3sx8xj9rnkaplj8-elixir-1.17.2",
               "default": true
             }
           ],
-          "store_path": "/nix/store/c25kng0sda43dhn74lqbp3431m4vc7n0-elixir-1.17.2"
+          "store_path": "/nix/store/ywhyha0w6v0fw447n3sx8xj9rnkaplj8-elixir-1.17.2"
         },
         "x86_64-linux": {
           "outputs": [
             {
               "name": "out",
-              "path": "/nix/store/wby7vdpdhbvm8kdjmxkhdx7wws6c15xs-elixir-1.17.2",
+              "path": "/nix/store/x7pn5i4xjirn2wymbqaj0pg6m5bf24cw-elixir-1.17.2",
               "default": true
             }
           ],
-          "store_path": "/nix/store/wby7vdpdhbvm8kdjmxkhdx7wws6c15xs-elixir-1.17.2"
+          "store_path": "/nix/store/x7pn5i4xjirn2wymbqaj0pg6m5bf24cw-elixir-1.17.2"
         }
       }
     },
     "erlang_27@latest": {
-      "last_modified": "2024-07-31T08:48:38Z",
-      "resolved": "github:NixOS/nixpkgs/c3392ad349a5227f4a3464dce87bcc5046692fce#erlang_27",
+      "last_modified": "2024-08-14T11:41:26Z",
+      "resolved": "github:NixOS/nixpkgs/0cb2fd7c59fed0cd82ef858cbcbdb552b9a33465#erlang_27",
       "source": "devbox-search",
       "version": "27.0",
       "systems": {
@@ -107,48 +107,48 @@
           "outputs": [
             {
               "name": "out",
-              "path": "/nix/store/c3hpsq24r09hnnl16fglyvgz8avxlzyn-erlang-27.0",
+              "path": "/nix/store/0sj7cfy6zazdlkmhz240qin1vcknaj8j-erlang-27.0",
               "default": true
             }
           ],
-          "store_path": "/nix/store/c3hpsq24r09hnnl16fglyvgz8avxlzyn-erlang-27.0"
+          "store_path": "/nix/store/0sj7cfy6zazdlkmhz240qin1vcknaj8j-erlang-27.0"
         },
         "aarch64-linux": {
           "outputs": [
             {
               "name": "out",
-              "path": "/nix/store/zaaql8cwiq0kc10727pgbfa0a8yx37r9-erlang-27.0",
+              "path": "/nix/store/c788w5w9g0001arfds1mbdnhl99l27m2-erlang-27.0",
               "default": true
             }
           ],
-          "store_path": "/nix/store/zaaql8cwiq0kc10727pgbfa0a8yx37r9-erlang-27.0"
+          "store_path": "/nix/store/c788w5w9g0001arfds1mbdnhl99l27m2-erlang-27.0"
         },
         "x86_64-darwin": {
           "outputs": [
             {
               "name": "out",
-              "path": "/nix/store/9m1zgx1c1as5lpfg1y97f6flzv42py2l-erlang-27.0",
+              "path": "/nix/store/af1zpamb8cmc7dbfv9f440gy3l8cpcr8-erlang-27.0",
               "default": true
             }
           ],
-          "store_path": "/nix/store/9m1zgx1c1as5lpfg1y97f6flzv42py2l-erlang-27.0"
+          "store_path": "/nix/store/af1zpamb8cmc7dbfv9f440gy3l8cpcr8-erlang-27.0"
         },
         "x86_64-linux": {
           "outputs": [
             {
               "name": "out",
-              "path": "/nix/store/v8cg12x7g3mbfrhy0crw87r27adj5n8v-erlang-27.0",
+              "path": "/nix/store/5ngafjcxwrhf7j22pi10n60zhzm0qxqb-erlang-27.0",
               "default": true
             }
           ],
-          "store_path": "/nix/store/v8cg12x7g3mbfrhy0crw87r27adj5n8v-erlang-27.0"
+          "store_path": "/nix/store/5ngafjcxwrhf7j22pi10n60zhzm0qxqb-erlang-27.0"
         }
       }
     },
     "postgresql_16@latest": {
-      "last_modified": "2024-08-09T16:32:28Z",
+      "last_modified": "2024-08-13T18:00:04Z",
       "plugin_version": "0.0.2",
-      "resolved": "github:NixOS/nixpkgs/154bcb95ad51bc257c2ce4043a725de6ca700ef6#postgresql_16",
+      "resolved": "github:NixOS/nixpkgs/19674872444bb3e0768249e724d99c8649c3bd78#postgresql_16",
       "source": "devbox-search",
       "version": "16.3",
       "systems": {
@@ -215,12 +215,12 @@
               "default": true
             },
             {
-              "name": "lib",
-              "path": "/nix/store/ycsms6g71893ylrrdw6v3dc6q39d3bwh-postgresql-16.3-lib"
-            },
-            {
               "name": "doc",
               "path": "/nix/store/kxsglsjkb66am3x4kvz27l3qhnl7fyrw-postgresql-16.3-doc"
+            },
+            {
+              "name": "lib",
+              "path": "/nix/store/ycsms6g71893ylrrdw6v3dc6q39d3bwh-postgresql-16.3-lib"
             }
           ],
           "store_path": "/nix/store/wc8ljgp8i4xy3h7nbng5zbqhmsycxq2r-postgresql-16.3"
