@@ -1,9 +1,10 @@
 {
   "packages": [
-    "postgresql_16@latest",
     "elixir@latest",
     "erlang_27@latest",
-    "corepack_20@latest"
+    "corepack_20@latest",
+    "postgresql_17@latest",
+    "nodejs_20@latest"
   ],
   "shell": {
     "init_hook": [
