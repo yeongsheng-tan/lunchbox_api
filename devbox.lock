@@ -211,9 +211,9 @@
       }
     },
     "postgresql_17@latest": {
-      "last_modified": "2024-11-05T18:23:38Z",
+      "last_modified": "2024-11-07T05:50:23Z",
       "plugin_version": "0.0.2",
-      "resolved": "github:NixOS/nixpkgs/8c4dc69b9732f6bbe826b5fbb32184987520ff26#postgresql_17",
+      "resolved": "github:NixOS/nixpkgs/85f7e662eda4fa3a995556527c87b2524b691933#postgresql_17",
       "source": "devbox-search",
       "version": "17.0",
       "systems": {
@@ -230,16 +230,16 @@
               "default": true
             },
             {
-              "name": "lib",
-              "path": "/nix/store/3mvf7k0crdpk6dz5ns7zkibsyaryij1x-postgresql-17.0-lib"
-            },
-            {
               "name": "dev",
               "path": "/nix/store/33jgy0lz77y5cqhwnl3sqlrk3d3hrw3s-postgresql-17.0-dev"
             },
             {
               "name": "doc",
               "path": "/nix/store/mm1ziwdk2cn0dg9mrdd2q6fcjg35braj-postgresql-17.0-doc"
+            },
+            {
+              "name": "lib",
+              "path": "/nix/store/3mvf7k0crdpk6dz5ns7zkibsyaryij1x-postgresql-17.0-lib"
             }
           ],
           "store_path": "/nix/store/3wmd815gb9fkjav7ah4p6n7jvqi4hr00-postgresql-17.0"
@@ -315,6 +315,10 @@
               "default": true
             },
             {
+              "name": "debug",
+              "path": "/nix/store/i313jcfhg9y8qxcsly78fc9xin3q57w9-postgresql-17.0-debug"
+            },
+            {
               "name": "dev",
               "path": "/nix/store/57v8m3886b3kvf49q5rcc535llfahjq6-postgresql-17.0-dev"
             },
@@ -325,10 +329,6 @@
             {
               "name": "lib",
               "path": "/nix/store/ka6y8fclayrdhdr7j02fxbqnk5d1ljzn-postgresql-17.0-lib"
-            },
-            {
-              "name": "debug",
-              "path": "/nix/store/i313jcfhg9y8qxcsly78fc9xin3q57w9-postgresql-17.0-debug"
             }
           ],
           "store_path": "/nix/store/p5n515lv5a3wyq53ws14w1a6z9fi28y6-postgresql-17.0"
