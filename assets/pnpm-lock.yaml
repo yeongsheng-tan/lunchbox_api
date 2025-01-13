@@ -15,8 +15,8 @@ importers:
         specifier: file:../deps/phoenix_html
         version: file:../deps/phoenix_html
       phoenix_live_view:
-        specifier: 1.0.0
-        version: 1.0.0
+        specifier: 1.0.2
+        version: 1.0.2
       topbar:
         specifier: ^3.0.0
         version: 3.0.0
@@ -135,12 +135,12 @@ packages:
     resolution: {integrity: sha512-QpmbiqRFRZ+SIlBJh6xi5d/PgXciUc/xWKc4Vi2RWEHHIRx6oM3f0fWNna++zP9VB5HUBTObUK9gTKQP3vVcrQ==}
     engines: {node: '>=8.0.0'}
 
-  fast-glob@3.3.2:
-    resolution: {integrity: sha512-oX2ruAFQwf/Orj8m737Y5adxDQO0LAB7/S5MnxCdTNDd4p6BsyIVsv9JQsATbTSq8KHRpLwIHbVlUNatxd+1Ow==}
+  fast-glob@3.3.3:
+    resolution: {integrity: sha512-7MptL8U0cqcFdzIzwOTHoilX9x5BrNqye7Z/LuC7kCMRio1EMSyqRK3BEAUD7sXRq4iT4AzTVuZdhgQ2TCvYLg==}
     engines: {node: '>=8.6.0'}
 
-  fastq@1.17.1:
-    resolution: {integrity: sha512-sRVD3lWVIXWg6By68ZN7vho9a1pQcN/WBFaAAsDDFzlJjvoGx0P8z7V1t72grFJfJhu3YPZBuu25f7Kaw2jN1w==}
+  fastq@1.18.0:
+    resolution: {integrity: sha512-QKHXPW0hD8g4UET03SdOdunzSouc9N4AuHdsX8XNcTsuz+yYFILVNIX4l9yHABMhiEI9Db0JTTIpu0wB+Y1QQw==}
 
   fill-range@7.1.1:
     resolution: {integrity: sha512-YsGpe3WHLK8ZYi4tWDg2Jy3ebRz2rXowDxnld4bkQB00cc/1Zw9AWnC0i9ztDJitivtQvaI9KaLyKrc+hBW0yg==}
@@ -270,8 +270,8 @@ packages:
   phoenix_html@file:../deps/phoenix_html:
     resolution: {directory: ../deps/phoenix_html, type: directory}
 
-  phoenix_live_view@1.0.0:
-    resolution: {integrity: sha512-YRHoW58/yB+AW1byHf/1leskHwc87ynx/pOhJmPSdehojGogV80MtTzl3EA0EmdHVwbYkUvXSDfBB8UfXWGdYw==}
+  phoenix_live_view@1.0.2:
+    resolution: {integrity: sha512-LCytOz0Ud5dT464wIiMTztaMCAQBQdVA2UwWcurD9E75VAS5RBt/p+Lb6DON0qKrjSEjYqiTh6SwJq6zlaPNzw==}
 
   picocolors@1.1.1:
     resolution: {integrity: sha512-xceH2snhtb5M9liqDsmEw56le376mTZkEX/jEb/RxNFyegNul7eNslCXP9FDj/Lcu0X8KEyMceP2ntpaHrDEVA==}
@@ -400,7 +400,7 @@ snapshots:
   '@nodelib/fs.walk@1.2.8':
     dependencies:
       '@nodelib/fs.scandir': 2.1.5
-      fastq: 1.17.1
+      fastq: 1.18.0
 
   '@sindresorhus/merge-streams@2.3.0': {}
 
@@ -464,7 +464,7 @@ snapshots:
     dependencies:
       pure-rand: 6.1.0
 
-  fast-glob@3.3.2:
+  fast-glob@3.3.3:
     dependencies:
       '@nodelib/fs.stat': 2.0.5
       '@nodelib/fs.walk': 1.2.8
@@ -472,7 +472,7 @@ snapshots:
       merge2: 1.4.1
       micromatch: 4.0.8
 
-  fastq@1.17.1:
+  fastq@1.18.0:
     dependencies:
       reusify: 1.0.4
 
@@ -489,7 +489,7 @@ snapshots:
   globby@14.0.2:
     dependencies:
       '@sindresorhus/merge-streams': 2.3.0
-      fast-glob: 3.3.2
+      fast-glob: 3.3.3
       ignore: 5.3.2
       path-type: 5.0.0
       slash: 5.1.0
@@ -596,7 +596,7 @@ snapshots:
 
   phoenix_html@file:../deps/phoenix_html: {}
 
-  phoenix_live_view@1.0.0: {}
+  phoenix_live_view@1.0.2: {}
 
   picocolors@1.1.1: {}
 
