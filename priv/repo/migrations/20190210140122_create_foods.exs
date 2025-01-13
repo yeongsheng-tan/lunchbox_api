@@ -8,6 +8,5 @@ defmodule LunchboxApi.Repo.Migrations.CreateFoods do
 
       timestamps()
     end
-
   end
 end

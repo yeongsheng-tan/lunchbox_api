@@ -28,7 +28,7 @@ defmodule LunchboxApi.DataCase do
   setup tags do
     :ok = Ecto.Adapters.SQL.Sandbox.checkout(LunchboxApi.Repo)
 
-    unless tags[:async] do
+    if !tags[:async] do
       Ecto.Adapters.SQL.Sandbox.mode(LunchboxApi.Repo, {:shared, self()})
     end
 
