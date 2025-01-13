@@ -53,6 +53,9 @@ defmodule LunchboxApiWeb do
       use Phoenix.LiveView,
         layout: {LunchboxApiWeb.LayoutView, :live}
 
+      import LunchboxApiWeb.Gettext
+      import Phoenix.Component
+
       unquote(view_helpers())
     end
   end
