@@ -15,8 +15,8 @@ importers:
         specifier: file:../deps/phoenix_html
         version: file:../deps/phoenix_html
       phoenix_live_view:
-        specifier: 1.0.9
-        version: 1.0.9
+        specifier: 1.0.10
+        version: 1.0.10
       topbar:
         specifier: ^3.0.0
         version: 3.0.0
@@ -244,8 +244,8 @@ packages:
     resolution: {integrity: sha512-G6T0ZX48xgozx7587koeX9Ys2NYy6Gmv//P89sEte9V9whIapMNF4idKxnW2QtCcLiTWlb/wfCabAtAFWhhBow==}
     engines: {node: '>=16 || 14 >=14.17'}
 
-  morphdom@2.7.4:
-    resolution: {integrity: sha512-ATTbWMgGa+FaMU3FhnFYB6WgulCqwf6opOll4CBzmVDTLvPMmUPrEv8CudmLPK0MESa64+6B89fWOxP3+YIlxQ==}
+  morphdom@2.7.5:
+    resolution: {integrity: sha512-z6bfWFMra7kBqDjQGHud1LSXtq5JJC060viEkQFMBX6baIecpkNr2Ywrn2OQfWP3rXiNFQRPoFjD8/TvJcWcDg==}
 
   npm-package-arg@12.0.2:
     resolution: {integrity: sha512-f1NpFjNI9O4VbKMOlA5QoBq/vSQPORHcTZ2feJpFkTHJ9eQkdlmZEKSjcAhxTGInC7RlEyScT9ui67NaOsjFWA==}
@@ -277,8 +277,8 @@ packages:
   phoenix_html@file:../deps/phoenix_html:
     resolution: {directory: ../deps/phoenix_html, type: directory}
 
-  phoenix_live_view@1.0.9:
-    resolution: {integrity: sha512-8RDmnnOVoSRcpUq5+PdI3VhQL3/xbmhG3by9OCA8oUguwWRvqgAYrxchcgyec2w170htFSM9lz7zxQyzGPPeRg==}
+  phoenix_live_view@1.0.10:
+    resolution: {integrity: sha512-LYcDBZjzyQVpl75bwIMoM3xLgMPUNNvdAX3SPCpz5jB8tabihOrmBy8HbN6gVyORglRstkaEu64hHZft9qFvIw==}
 
   picocolors@1.1.1:
     resolution: {integrity: sha512-xceH2snhtb5M9liqDsmEw56le376mTZkEX/jEb/RxNFyegNul7eNslCXP9FDj/Lcu0X8KEyMceP2ntpaHrDEVA==}
@@ -569,7 +569,7 @@ snapshots:
     dependencies:
       brace-expansion: 2.0.1
 
-  morphdom@2.7.4: {}
+  morphdom@2.7.5: {}
 
   npm-package-arg@12.0.2:
     dependencies:
@@ -611,9 +611,9 @@ snapshots:
 
   phoenix_html@file:../deps/phoenix_html: {}
 
-  phoenix_live_view@1.0.9:
+  phoenix_live_view@1.0.10:
     dependencies:
-      morphdom: 2.7.4
+      morphdom: 2.7.5
 
   picocolors@1.1.1: {}
 
