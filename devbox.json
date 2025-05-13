@@ -8,8 +8,8 @@
   "shell": {
     "init_hook": [
       "echo 'Welcome to devbox for lunchbox_api!' > /dev/null",
-      "corepack prepare pnpm@10.9.0 --activate",
-      "corepack use pnpm@10.9.0",
+      "corepack prepare pnpm@10.10.0 --activate",
+      "corepack use pnpm@10.10.0",
       "cd assets && pnpm --frozen-lockfile recursive install"
     ],
     "scripts": {
