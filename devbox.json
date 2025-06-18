@@ -1,14 +1,14 @@
 {
   "packages": [
     "postgresql@latest",
-    "beam27Packages.elixir@1.18.3",
-    "nodejs@24.0.1"
+    "beam27Packages.elixir@1.18.4",
+    "nodejs@24.1.0"
   ],
   "shell": {
     "init_hook": [
       "echo 'Welcome to devbox for lunchbox_api!' > /dev/null",
-      "corepack prepare pnpm@10.11.0 --activate",
-      "corepack use pnpm@10.11.0",
+      "corepack prepare pnpm@10.12.1 --activate",
+      "corepack use pnpm@10.12.1",
       "cd assets && pnpm --frozen-lockfile recursive install"
     ],
     "scripts": {

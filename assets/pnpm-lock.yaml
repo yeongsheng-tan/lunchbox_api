@@ -15,8 +15,8 @@ importers:
         specifier: file:../deps/phoenix_html
         version: file:../deps/phoenix_html
       phoenix_live_view:
-        specifier: 1.0.11
-        version: 1.0.11
+        specifier: 1.0.17
+        version: 1.0.17
       topbar:
         specifier: ^3.0.0
         version: 3.0.0
@@ -271,8 +271,8 @@ packages:
   phoenix_html@file:../deps/phoenix_html:
     resolution: {directory: ../deps/phoenix_html, type: directory}
 
-  phoenix_live_view@1.0.11:
-    resolution: {integrity: sha512-CXD7CTWld2YISN0rgxT8ptr71vpus56dfJGN2CR/kC2jhc7k3t8T7luwa4ew5IzeTQNyBNv8nJsIOamakmVJUw==}
+  phoenix_live_view@1.0.17:
+    resolution: {integrity: sha512-ydjiQeMkNrGv8OGYgT7BjIho/XM3eSHrk4FCs6qiLg9EfPf5M8w1W5Ax/E1tF9E0w6VFQsWm1fKFdWqzAezgjQ==}
 
   picocolors@1.1.1:
     resolution: {integrity: sha512-xceH2snhtb5M9liqDsmEw56le376mTZkEX/jEb/RxNFyegNul7eNslCXP9FDj/Lcu0X8KEyMceP2ntpaHrDEVA==}
@@ -600,7 +600,7 @@ snapshots:
 
   phoenix_html@file:../deps/phoenix_html: {}
 
-  phoenix_live_view@1.0.11:
+  phoenix_live_view@1.0.17:
     dependencies:
       morphdom: 2.7.5
 
