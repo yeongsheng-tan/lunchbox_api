@@ -16,5 +16,8 @@
   },
   "devDependencies": {
     "syncpack": "^13.0.4"
+  },
+  "overrides": {
+    "brace-expansion": "^2.0.2"
   }
 }
