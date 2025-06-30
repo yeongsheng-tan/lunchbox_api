@@ -24,7 +24,7 @@ defmodule LunchboxApiWeb.Router do
   end
 
   scope "/", LunchboxApiWeb do
-    pipe_through([:authenticated, :browser])
+    pipe_through([:browser])
     live("/", PageLive, :index)
   end
 
