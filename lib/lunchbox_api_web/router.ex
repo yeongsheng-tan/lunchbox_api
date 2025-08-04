@@ -1,6 +1,9 @@
 defmodule LunchboxApiWeb.Router do
   use LunchboxApiWeb, :router
-  import Plug.BasicAuth
+  
+  # Import authentication plugs
+  import Plug.Conn
+  alias LunchboxApiWeb.Plugs.Authenticate
 
   pipeline :browser do
     plug(:accepts, ["html"])
@@ -16,11 +19,23 @@ defmodule LunchboxApiWeb.Router do
   end
 
   pipeline :authenticated do
-    plug(
-      :basic_auth,
-      username: System.get_env("BASIC_AUTH_USERNAME"),
-      password: System.get_env("BASIC_AUTH_PASSWORD")
-    )
+    plug LunchboxApiWeb.Plugs.RedirectUnauth
+    plug Authenticate
+  end
+  
+  # OAuth routes
+  scope "/auth", LunchboxApiWeb do
+    pipe_through :api
+    
+    get "/:provider", AuthController, :request
+    get "/:provider/callback", AuthController, :callback
+    post "/:provider/callback", AuthController, :callback
+    
+    # Token refresh endpoint
+    post "/refresh", AuthController, :refresh
+    
+    # Logout endpoint
+    delete "/logout", AuthController, :delete
   end
 
   scope "/", LunchboxApiWeb do

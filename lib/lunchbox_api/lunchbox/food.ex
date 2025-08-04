@@ -6,13 +6,15 @@ defmodule LunchboxApi.Lunchbox.Food do
     field :name, :string
     field :status, :string
 
+    belongs_to :user, LunchboxApi.Users.User, type: :binary_id
+
     timestamps()
   end
 
   @doc false
   def changeset(food, attrs) do
     food
-    |> cast(attrs, [:name, :status])
-    |> validate_required([:name, :status])
+    |> cast(attrs, [:name, :status, :user_id])
+    |> validate_required([:name, :status, :user_id])
   end
 end
