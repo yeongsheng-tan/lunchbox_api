@@ -2,7 +2,7 @@
   "name": "lunchbox_api_assets",
   "license": "MIT",
   "engines": {
-    "node": ">=24"
+    "node": ">=22"
   },
   "scripts": {
     "postinstall": "syncpack fix-mismatches",
