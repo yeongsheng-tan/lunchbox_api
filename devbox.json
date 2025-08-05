@@ -12,9 +12,8 @@
       "cd assets && pnpm --frozen-lockfile recursive install"
     ],
     "scripts": {
-      "test": [
-        "BASIC_AUTH_USERNAME=specialUserName BASIC_AUTH_PASSWORD=superSecretPassword mix test"
-      ]
+      "test": "BASIC_AUTH_USERNAME=specialUserName BASIC_AUTH_PASSWORD=superSecretPassword mix test",
+      "dev": "BASIC_AUTH_USERNAME=specialUserName BASIC_AUTH_PASSWORD=superSecretPassword mix phx.server"
     }
   }
 }
