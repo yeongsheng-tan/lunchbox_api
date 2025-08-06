@@ -18,8 +18,8 @@ defmodule LunchboxApiWeb.Router do
   pipeline :authenticated do
     plug(
       :basic_auth,
-      username: System.get_env("BASIC_AUTH_USERNAME"),
-      password: System.get_env("BASIC_AUTH_PASSWORD")
+      username: System.get_env("BASIC_AUTH_USERNAME") || "specialUserName",
+      password: System.get_env("BASIC_AUTH_PASSWORD") || "superSecretPassword"
     )
   end
 

@@ -7,13 +7,15 @@
   "shell": {
     "init_hook": [
       "echo 'Welcome to devbox for lunchbox_api!' > /dev/null",
+      "export BASIC_AUTH_USERNAME=specialUserName",
+      "export BASIC_AUTH_PASSWORD=superSecretPassword",
       "corepack prepare pnpm@10.13.1 --activate",
       "corepack use pnpm@10.13.1",
       "cd assets && pnpm --frozen-lockfile recursive install"
     ],
     "scripts": {
       "test": "BASIC_AUTH_USERNAME=specialUserName BASIC_AUTH_PASSWORD=superSecretPassword mix test",
-      "dev": "BASIC_AUTH_USERNAME=specialUserName BASIC_AUTH_PASSWORD=superSecretPassword mix phx.server"
+      "dev": "mix phx.server"
     }
   }
 }

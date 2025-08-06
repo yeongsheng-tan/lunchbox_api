@@ -24,6 +24,22 @@ defmodule LunchboxApi.Lunchbox do
   @doc """
   Gets a single food.
 
+  Returns `nil` if the Food does not exist.
+
+  ## Examples
+
+      iex> get_food(123)
+      %Food{}
+
+      iex> get_food(456)
+      nil
+
+  """
+  def get_food(id), do: Repo.get(Food, id)
+
+  @doc """
+  Gets a single food.
+
   Raises `Ecto.NoResultsError` if the Food does not exist.
 
   ## Examples

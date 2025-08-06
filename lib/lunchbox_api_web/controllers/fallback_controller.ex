@@ -17,6 +17,13 @@ defmodule LunchboxApiWeb.FallbackController do
     conn
     |> put_status(:not_found)
     |> put_view(LunchboxApiWeb.ErrorView)
-    |> render(:"404")
+    |> render("404.json")
+  end
+
+  def call(conn, {:error, %Ecto.NoResultsError{}}) do
+    conn
+    |> put_status(:not_found)
+    |> put_view(LunchboxApiWeb.ErrorView)
+    |> render("404.json")
   end
 end

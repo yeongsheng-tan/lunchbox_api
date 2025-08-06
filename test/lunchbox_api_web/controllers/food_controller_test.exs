@@ -97,9 +97,8 @@ defmodule LunchboxApiWeb.FoodControllerTest do
       conn = delete(conn, Routes.food_path(conn, :delete, food))
       assert response(conn, 204)
 
-      assert_error_sent(404, fn ->
-        get(conn, Routes.food_path(conn, :show, food))
-      end)
+      conn = get(conn, Routes.food_path(conn, :show, food))
+      assert json_response(conn, 404) == %{"errors" => %{"detail" => "Not Found"}}
     end
   end
 
