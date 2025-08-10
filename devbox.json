@@ -2,7 +2,8 @@
   "packages": [
     "nodejs@22.14.0",
     "postgresql@17.5",
-    "beam27Packages.elixir@1.18.4"
+    "beam27Packages.elixir@1.18.4",
+    "gigalixir@1.15.0"
   ],
   "shell": {
     "init_hook": [

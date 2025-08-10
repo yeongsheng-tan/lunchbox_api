@@ -49,6 +49,70 @@
         }
       }
     },
+    "gigalixir@1.15.0": {
+      "last_modified": "2025-07-28T17:09:23Z",
+      "resolved": "github:NixOS/nixpkgs/648f70160c03151bc2121d179291337ad6bc564b#gigalixir",
+      "source": "devbox-search",
+      "version": "1.15.0",
+      "systems": {
+        "aarch64-darwin": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/z3rc1f9m7vjq6d0iggs8v2j6v6f4bxab-gigalixir-1.15.0",
+              "default": true
+            },
+            {
+              "name": "dist",
+              "path": "/nix/store/mycrr8grsv3z1bxwsk14ffa383vd4qkj-gigalixir-1.15.0-dist"
+            }
+          ],
+          "store_path": "/nix/store/z3rc1f9m7vjq6d0iggs8v2j6v6f4bxab-gigalixir-1.15.0"
+        },
+        "aarch64-linux": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/fiykkamivpcl7dz1kc7jn5zgzr3irs1c-gigalixir-1.15.0",
+              "default": true
+            },
+            {
+              "name": "dist",
+              "path": "/nix/store/7qfgr8319z17csw2js59nplibss1yix3-gigalixir-1.15.0-dist"
+            }
+          ],
+          "store_path": "/nix/store/fiykkamivpcl7dz1kc7jn5zgzr3irs1c-gigalixir-1.15.0"
+        },
+        "x86_64-darwin": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/nhkffcjrc8ryc3hs1y5q28dib41650vh-gigalixir-1.15.0",
+              "default": true
+            },
+            {
+              "name": "dist",
+              "path": "/nix/store/3aykfd0dysakw4i0vczc3ny7ffg57h3r-gigalixir-1.15.0-dist"
+            }
+          ],
+          "store_path": "/nix/store/nhkffcjrc8ryc3hs1y5q28dib41650vh-gigalixir-1.15.0"
+        },
+        "x86_64-linux": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/4ky8yqwvxh67pk2mgrljyw58nhqxzb6j-gigalixir-1.15.0",
+              "default": true
+            },
+            {
+              "name": "dist",
+              "path": "/nix/store/jwlg99dgyi04mhgpflfdly92sc2vhgxn-gigalixir-1.15.0-dist"
+            }
+          ],
+          "store_path": "/nix/store/4ky8yqwvxh67pk2mgrljyw58nhqxzb6j-gigalixir-1.15.0"
+        }
+      }
+    },
     "github:NixOS/nixpkgs/nixpkgs-unstable": {
       "last_modified": "2025-08-09T20:54:02Z",
       "resolved": "github:NixOS/nixpkgs/1ef586712f85b4b004caecd385d6b023e7fd2450?lastModified=1754772842"
