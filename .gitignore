@@ -54,3 +54,47 @@ npm-debug.log
 !.yarn/releases
 !.yarn/sdks
 !.yarn/versions
+
+# pnpm
+.pnpm-debug.log*
+.pnpm-store/
+
+# Log files
+*.log
+server.log
+
+# Test and development scripts
+test_server.sh
+
+# Devbox cache
+.devbox/
+
+# Release builds
+/rel/
+
+# Include directory (usually for NIFs)
+/include/
+
+# Environment files
+.env
+.env.local
+.env.*.local
+
+# IDE and editor files
+.vscode/
+*.swp
+*.swo
+*~
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Temporary files
+*.tmp
+*.temp
