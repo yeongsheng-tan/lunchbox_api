@@ -1,0 +1,118 @@
+nohup: ignoring input
+Info: Running script "dev" on /Users/yeongshengtan/code_repos/hobby/lunchbox_api
+[info] Running LunchboxApiWeb.Endpoint with cowboy 2.13.0 at 0.0.0.0:4000 (http)
+[info] Access LunchboxApiWeb.Endpoint at http://localhost:4000
+[watch] build finished, watching for changes...
+≈ tailwindcss v4.0.9
+
+Done in 37ms
+[watch] build started (change: "../../package.json")
+[watch] build finished
+[debug] Live reload: priv/static/assets/app.css
+Done in 1ms
+[info] GET /assets/tailwindcss
+[debug] ** (Phoenix.Router.NoRouteError) no route found for GET /assets/tailwindcss (LunchboxApiWeb.Router)
+    (lunchbox_api 1.16.8) deps/phoenix/lib/phoenix/router.ex:465: LunchboxApiWeb.Router.call/2
+    (lunchbox_api 1.16.8) lib/lunchbox_api_web/endpoint.ex:1: LunchboxApiWeb.Endpoint.plug_builder_call/2
+    (lunchbox_api 1.16.8) deps/plug/lib/plug/debugger.ex:155: LunchboxApiWeb.Endpoint."call (overridable 3)"/2
+    (lunchbox_api 1.16.8) lib/lunchbox_api_web/endpoint.ex:1: LunchboxApiWeb.Endpoint.call/2
+    (phoenix 1.8.0) lib/phoenix/endpoint/sync_code_reload_plug.ex:22: Phoenix.Endpoint.SyncCodeReloadPlug.do_call/4
+    (plug_cowboy 2.7.4) lib/plug/cowboy/handler.ex:11: Plug.Cowboy.Handler.init/2
+    (cowboy 2.13.0) /Users/yeongshengtan/code_repos/hobby/lunchbox_api/deps/cowboy/src/cowboy_handler.erl:37: :cowboy_handler.execute/2
+    (cowboy 2.13.0) /Users/yeongshengtan/code_repos/hobby/lunchbox_api/deps/cowboy/src/cowboy_stream_h.erl:310: :cowboy_stream_h.execute/3
+    (cowboy 2.13.0) /Users/yeongshengtan/code_repos/hobby/lunchbox_api/deps/cowboy/src/cowboy_stream_h.erl:299: :cowboy_stream_h.request_process/3
+    (stdlib 7.0.2) proc_lib.erl:333: :proc_lib.init_p_do_apply/3
+
+Done in 15ms
+[debug] Live reload: assets/node_modules/.pnpm/phoenix_html@file+..+deps+phoenix_html/node_modules/phoenix_html_tmp_93219/priv/static/phoenix_html.js
+[debug] Live reload: assets/node_modules/.pnpm/phoenix_html@file+..+deps+phoenix_html/node_modules/phoenix_html/priv/static/phoenix_html.js
+[debug] Live reload: assets/node_modules/.pnpm/phoenix@file+..+deps+phoenix/node_modules/phoenix_tmp_93219/priv/static/phoenix.cjs.js
+[debug] Live reload: assets/node_modules/.pnpm/phoenix@file+..+deps+phoenix/node_modules/phoenix_tmp_93219/priv/static/phoenix.js
+[debug] Live reload: assets/node_modules/.pnpm/phoenix@file+..+deps+phoenix/node_modules/phoenix_tmp_93219/priv/static/phoenix.min.js
+[debug] Live reload: assets/node_modules/.pnpm/phoenix@file+..+deps+phoenix/node_modules/phoenix_tmp_93219/priv/static/phoenix.mjs
+[debug] Live reload: assets/node_modules/.pnpm/phoenix@file+..+deps+phoenix/node_modules/phoenix_tmp_93219/priv/static/phoenix-orange.png
+[debug] Live reload: assets/node_modules/.pnpm/phoenix@file+..+deps+phoenix/node_modules/phoenix_tmp_93219/priv/static/phoenix.png
+[debug] Live reload: assets/node_modules/.pnpm/phoenix@file+..+deps+phoenix/node_modules/phoenix/priv/static/phoenix-orange.png
+[debug] Live reload: assets/node_modules/.pnpm/phoenix@file+..+deps+phoenix/node_modules/phoenix/priv/static/phoenix.cjs.js
+[debug] Live reload: assets/node_modules/.pnpm/phoenix@file+..+deps+phoenix/node_modules/phoenix/priv/static/phoenix.js
+[debug] Live reload: assets/node_modules/.pnpm/phoenix@file+..+deps+phoenix/node_modules/phoenix/priv/static/phoenix.min.js
+[debug] Live reload: assets/node_modules/.pnpm/phoenix@file+..+deps+phoenix/node_modules/phoenix/priv/static/phoenix.mjs
+[debug] Live reload: assets/node_modules/.pnpm/phoenix@file+..+deps+phoenix/node_modules/phoenix/priv/static/phoenix.png
+[debug] Live reload: priv/static/assets/app.css
+[info] GET /
+[debug] Processing with LunchboxApiWeb.PageLive.__live__/0
+  Parameters: %{}
+  Pipelines: [:browser]
+[info] Sent 200 in 44ms
+Done in 1ms
+[info] CONNECTED TO Phoenix.LiveView.Socket in 14µs
+  Transport: :websocket
+  Serializer: Phoenix.Socket.V2.JSONSerializer
+  Parameters: %{"_csrf_token" => "dEtuBV0IGz41V2ZcGXwZRGIoLwYMXigU08V611qwgb-kvQI54DUWJ-ju", "_live_referer" => "undefined", "_mount_attempts" => "0", "_mounts" => "0", "_track_static" => %{"0" => "http://localhost:4000/assets/app.css", "1" => "http://localhost:4000/assets/app.js"}, "vsn" => "2.0.0"}
+[debug] MOUNT LunchboxApiWeb.PageLive
+  Parameters: %{}
+  Session: %{"_csrf_token" => "Ds83l9jIR5K7o-PqVlzQFsBa"}
+[debug] Replied in 68µs
+[info] GET /
+[debug] Processing with LunchboxApiWeb.PageLive.__live__/0
+  Parameters: %{}
+  Pipelines: [:browser]
+[info] Sent 200 in 2ms
+[info] GET /
+[debug] Processing with LunchboxApiWeb.PageLive.__live__/0
+  Parameters: %{}
+  Pipelines: [:browser]
+[info] Sent 200 in 2ms
+[info] GET /api/v1/foods
+[debug] Processing with LunchboxApiWeb.FoodController.index/2
+  Parameters: %{}
+  Pipelines: [:authenticated, :api]
+[debug] QUERY OK source="foods" db=0.6ms queue=0.6ms idle=1431.4ms
+SELECT f0."id", f0."name", f0."status", f0."inserted_at", f0."updated_at" FROM "foods" AS f0 []
+[info] Sent 200 in 6ms
+[info] GET /api/v1/time_now
+[debug] Processing with LunchboxApiWeb.TimeController.time_now/2
+  Parameters: %{}
+  Pipelines: [:authenticated, :api]
+[info] Sent 200 in 5ms
+Done in 624µs
+[debug] Live reload: assets/node_modules/.pnpm/phoenix_html@file+..+deps+phoenix_html/node_modules/phoenix_html_tmp_95192/priv/static/phoenix_html.js
+[debug] Live reload: assets/node_modules/.pnpm/phoenix@file+..+deps+phoenix/node_modules/phoenix_tmp_95192/priv/static/phoenix.cjs.js
+[debug] Live reload: assets/node_modules/.pnpm/phoenix_html@file+..+deps+phoenix_html/node_modules/phoenix_html/priv/static/phoenix_html.js
+[debug] Live reload: assets/node_modules/.pnpm/phoenix@file+..+deps+phoenix/node_modules/phoenix_tmp_95192/priv/static/phoenix.js
+[debug] Live reload: assets/node_modules/.pnpm/phoenix@file+..+deps+phoenix/node_modules/phoenix_tmp_95192/priv/static/phoenix.min.js
+[debug] Live reload: assets/node_modules/.pnpm/phoenix@file+..+deps+phoenix/node_modules/phoenix_tmp_95192/priv/static/phoenix.mjs
+[debug] Live reload: assets/node_modules/.pnpm/phoenix@file+..+deps+phoenix/node_modules/phoenix_tmp_95192/priv/static/phoenix-orange.png
+[debug] Live reload: assets/node_modules/.pnpm/phoenix@file+..+deps+phoenix/node_modules/phoenix_tmp_95192/priv/static/phoenix.png
+[debug] Live reload: assets/node_modules/.pnpm/phoenix@file+..+deps+phoenix/node_modules/phoenix/priv/static/phoenix-orange.png
+[debug] Live reload: assets/node_modules/.pnpm/phoenix@file+..+deps+phoenix/node_modules/phoenix/priv/static/phoenix.cjs.js
+[debug] Live reload: assets/node_modules/.pnpm/phoenix@file+..+deps+phoenix/node_modules/phoenix/priv/static/phoenix.js
+[debug] Live reload: assets/node_modules/.pnpm/phoenix@file+..+deps+phoenix/node_modules/phoenix/priv/static/phoenix.min.js
+[debug] Live reload: assets/node_modules/.pnpm/phoenix@file+..+deps+phoenix/node_modules/phoenix/priv/static/phoenix.mjs
+[debug] Live reload: assets/node_modules/.pnpm/phoenix@file+..+deps+phoenix/node_modules/phoenix/priv/static/phoenix.png
+Done in 698µs
+[info] CONNECTED TO Phoenix.LiveView.Socket in 14µs
+  Transport: :websocket
+  Serializer: Phoenix.Socket.V2.JSONSerializer
+  Parameters: %{"_csrf_token" => "dEtuBV0IGz41V2ZcGXwZRGIoLwYMXigU08V611qwgb-kvQI54DUWJ-ju", "_live_referer" => "undefined", "_mount_attempts" => "0", "_mounts" => "0", "_track_static" => %{"0" => "http://localhost:4000/assets/app.css", "1" => "http://localhost:4000/assets/app.js"}, "vsn" => "2.0.0"}
+[debug] MOUNT LunchboxApiWeb.PageLive
+  Parameters: %{}
+  Session: %{"_csrf_token" => "Ds83l9jIR5K7o-PqVlzQFsBa"}
+[debug] Replied in 54µs
+[info] GET /
+[debug] Processing with LunchboxApiWeb.PageLive.__live__/0
+  Parameters: %{}
+  Pipelines: [:browser]
+[info] Sent 200 in 2ms
+[info] CONNECTED TO Phoenix.LiveView.Socket in 18µs
+  Transport: :websocket
+  Serializer: Phoenix.Socket.V2.JSONSerializer
+  Parameters: %{"_csrf_token" => "DSEIdFoIMA4Gag0OCEkXCzkbCAYXOTMiIR0G61ZGT_F9gdGzowrWQJqC", "_live_referer" => "undefined", "_mount_attempts" => "0", "_mounts" => "0", "_track_static" => %{"0" => "http://localhost:4000/assets/app.css", "1" => "http://localhost:4000/assets/app.js"}, "vsn" => "2.0.0"}
+[debug] MOUNT LunchboxApiWeb.PageLive
+  Parameters: %{}
+  Session: %{"_csrf_token" => "Ds83l9jIR5K7o-PqVlzQFsBa"}
+[debug] Replied in 36µs
+Done in 342µs
+/Users/yeongshengtan/code_repos/hobby/lunchbox_api/.devbox/gen/scripts/dev.sh: line 7: 92467 Killed: 9                  mix phx.server
+Error: error running script "dev" in Devbox: exit status 137
+
