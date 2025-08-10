@@ -24,7 +24,7 @@ defmodule LunchboxApiWeb.Endpoint do
   plug(Plug.Static,
     at: "/",
     from: :lunchbox_api,
-    gzip: false,
+    gzip: true,
     only: LunchboxApiWeb.static_paths()
   )
 
