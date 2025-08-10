@@ -26,11 +26,13 @@ defmodule LunchboxApiWeb.Router do
   scope "/", LunchboxApiWeb do
     pipe_through([:browser])
     live("/", PageLive, :index)
+    get("/favicon.ico", PageController, :favicon)
   end
 
   scope "/api/v1", LunchboxApiWeb do
     pipe_through([:authenticated, :api])
     resources("/foods", FoodController, except: [:new, :edit])
+    get("/time_now", TimeController, :time_now)
   end
 
   if Mix.env() in [:dev, :test] do

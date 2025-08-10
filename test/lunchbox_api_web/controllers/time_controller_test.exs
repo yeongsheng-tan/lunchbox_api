@@ -28,27 +28,23 @@ defmodule LunchboxApiWeb.TimeControllerTest do
       conn = get(conn, "/api/v1/time_now")
 
       # Verify the endpoint is reachable
-      assert %{"time" => time_string} = json_response(conn, 200)
-      IO.inspect time_string
-
+      assert %{"time" => _time_string} = json_response(conn, 200)
     end
 
-    # test "returns a real current datetime string", %{conn: conn} do
-    #   conn = get(conn, "/api/v1/time_now")
-    #   assert %{"time" => time_string} = json_response(conn, 200)
-    #   IO.inspect time_string
+    test "returns a real current datetime string", %{conn: conn} do
+      conn = get(conn, "/api/v1/time_now")
+      assert %{"time" => time_string} = json_response(conn, 200)
 
-    #   # Verify the time string is in ISO 8601 format with timezone
-    #   assert {:ok, _returned_datetime, _offset} = DateTime.from_iso8601(time_string)
-    # end
+      # Verify the time string is in ISO 8601 format with timezone
+      assert {:ok, _returned_datetime, _offset} = DateTime.from_iso8601(time_string)
+    end
 
-    # test "returns a real current datetime string in Singapore timezone", %{conn: conn} do
-    #   conn = get(conn, "/api/v1/time_now")
-    #   assert %{"time" => time_string} = json_response(conn, 200)
-    #   IO.inspect time_string
+    test "returns a real current datetime string in Singapore timezone", %{conn: conn} do
+      conn = get(conn, "/api/v1/time_now")
+      assert %{"time" => time_string} = json_response(conn, 200)
 
-    #   # Verify the timezone is Singapore (+08:00 or +0800)
-    #   assert String.contains?(time_string, "+08:00") or String.contains?(time_string, "+0800")
-    # end
+      # Verify the timezone is Singapore (+08:00 or +0800)
+      assert String.contains?(time_string, "+08:00") or String.contains?(time_string, "+0800")
+    end
   end
 end

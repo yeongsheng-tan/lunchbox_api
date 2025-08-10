@@ -1,5 +1,167 @@
+@import "tailwindcss";
+
+@source "../lib/*_web.ex";
+@source "../lib/*_web/**/*.*ex";
+@source "./js/**/*.js";
+
+@plugin "@tailwindcss/forms";
+
+@variant phx-click-loading ([".phx-click-loading&", ".phx-click-loading &"]);
+@variant phx-submit-loading ([".phx-submit-loading&", ".phx-submit-loading &"]);
+@variant phx-change-loading ([".phx-change-loading&", ".phx-change-loading &"]);
+@variant phx-no-feedback ([".phx-no-feedback&", ".phx-no-feedback &"]);
+
 /* This file is for your main application CSS */
-@import "./phoenix.css";
+
+/* Phoenix Framework default styles */
+html {
+  font-size: 14px;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #212529;
+  background-color: #fff;
+}
+
+header {
+  width: 100%;
+  background: #fff;
+  border-bottom: 1px solid #e6eaed;
+  margin-bottom: 2rem;
+}
+
+header section {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 0.5rem 1rem;
+}
+
+header section :first-child {
+  order: 2;
+}
+
+header section :last-child {
+  order: 1;
+}
+
+header nav ul,
+header nav li {
+  margin: 0;
+  padding: 0;
+  display: block;
+  text-align: right;
+  white-space: nowrap;
+}
+
+header nav ul {
+  margin: 1rem;
+  margin-top: 0;
+}
+
+header nav a {
+  display: block;
+  padding: 0.5rem 0.7rem;
+  color: #212529;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 700;
+  border-radius: 3px;
+  transition: color 0.1s ease;
+}
+
+header nav a:hover {
+  color: rgba(0, 0, 0, 0.7);
+}
+
+.phx-logo {
+  display: flex;
+  align-items: center;
+  border: 0;
+  background: none;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  appearance: none;
+  border-radius: 6px;
+  padding: 0.5rem;
+  filter: drop-shadow(0px 4px 6px rgba(0, 0, 0, 0.07)) drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.05));
+  active: filter: drop-shadow(0px 3px 4px rgba(0, 0, 0, 0.07)) drop-shadow(0px 1px 1px rgba(0, 0, 0, 0.05));
+}
+
+.phx-logo img {
+  width: auto;
+  height: 2rem;
+  margin: 0;
+}
+
+.phx-hero {
+  text-align: center;
+  border-bottom: 1px solid #e6eaed;
+  background: #eef8ff;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+  background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+  color: #fff;
+  padding: 6rem 2rem 4rem;
+  margin-bottom: 2rem;
+}
+
+.phx-hero h1 {
+  font-weight: 200;
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+}
+
+.phx-hero p {
+  font-size: 1.25rem;
+  font-weight: 300;
+  margin-bottom: 2rem;
+}
+
+.phx-hero form {
+  margin: 0 auto;
+  max-width: 30rem;
+  position: relative;
+}
+
+.phx-hero input {
+  appearance: none;
+  border: none;
+  border-radius: 6px;
+  border: 1px solid #d1d5db;
+  background: #fff;
+  padding: 0.5rem 1rem;
+  font-size: 1.1rem;
+  width: 100%;
+  box-sizing: border-box;
+  margin-bottom: 1rem;
+}
+
+.phx-hero button {
+  appearance: none;
+  border: none;
+  border-radius: 6px;
+  background: #047857;
+  color: #fff;
+  font-size: 1.1rem;
+  font-weight: 700;
+  padding: 0.5rem 1.5rem;
+  cursor: pointer;
+  transition: background-color 0.1s ease;
+}
+
+.phx-hero button:hover {
+  background: #065f46;
+}
+
+.container {
+  max-width: 1024px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
 
 /* Alerts and form errors used by phx.new */
 .alert {
@@ -8,27 +170,33 @@
   border: 1px solid transparent;
   border-radius: 4px;
 }
+
 .alert-info {
   color: #31708f;
   background-color: #d9edf7;
   border-color: #bce8f1;
 }
+
 .alert-warning {
   color: #8a6d3b;
   background-color: #fcf8e3;
   border-color: #faebcc;
 }
+
 .alert-danger {
   color: #a94442;
   background-color: #f2dede;
   border-color: #ebccd1;
 }
+
 .alert p {
   margin-bottom: 0;
 }
+
 .alert:empty {
   display: none;
 }
+
 .invalid-feedback {
   color: #a94442;
   display: block;
@@ -46,15 +214,16 @@
   transition: opacity 1s ease-out;
 }
 
-.phx-disconnected{
+.phx-disconnected {
   cursor: wait;
 }
-.phx-disconnected *{
+
+.phx-disconnected * {
   pointer-events: none;
 }
 
 .phx-modal {
-  opacity: 1!important;
+  opacity: 1 !important;
   position: fixed;
   z-index: 1;
   left: 0;
@@ -62,8 +231,8 @@
   width: 100%;
   height: 100%;
   overflow: auto;
-  background-color: rgb(0,0,0);
-  background-color: rgba(0,0,0,0.4);
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.4);
 }
 
 .phx-modal-content {

@@ -21,7 +21,8 @@ defmodule LunchboxApiWeb do
 
   def controller do
     quote do
-      use Phoenix.Controller, namespace: LunchboxApiWeb
+      use Phoenix.Controller,
+        formats: [:html, :json]
 
       import Plug.Conn
       import LunchboxApiWeb.Gettext
@@ -34,8 +35,7 @@ defmodule LunchboxApiWeb do
   def view do
     quote do
       use Phoenix.View,
-        root: "lib/lunchbox_api_web/templates",
-        namespace: LunchboxApiWeb
+        root: "lib/lunchbox_api_web/templates"
 
       # Import convenience functions from controllers
       import Phoenix.Controller,
