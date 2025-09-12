@@ -73,6 +73,8 @@ export BASIC_AUTH_PASSWORD=superSecretPassword
 
 ### Testing
 ```bash
+# Start postgresql DB process before attempt to run full test suite
+devbox services up -b
 # Run all tests
 devbox run test
 # OR
@@ -84,6 +86,8 @@ mix test test/path/to/test_file.exs
 
 ### Development Server
 ```bash
+# Start postgresql DB process before attempt to start dev server
+devbox services up -b
 # Using devbox
 devbox run dev
 # OR
@@ -92,6 +96,8 @@ mix phx.server
 
 ### Database Operations
 ```bash
+# Start postgresql DB process before attempt to create/migrate/seed DB
+devbox services up -b
 mix ecto.setup    # Create, migrate, seed
 mix ecto.migrate  # Run migrations
 mix ecto.reset    # Drop and recreate
@@ -197,6 +203,8 @@ end
 
 ```bash
 # Development
+devbox services up -b   # Startup postgresql DB process via process-compose in background
+devbox services down    # Shutdown any running processes started by 'devbox service up -b'
 devbox run dev          # Start development server
 devbox run test         # Run test suite
 mix deps.get           # Install dependencies
