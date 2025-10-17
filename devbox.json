@@ -1,9 +1,9 @@
 {
   "packages": [
-    "postgresql@17.5",
     "beam27Packages.elixir@1.18.4",
     "gigalixir@1.15.0",
-    "nodejs-slim@22.19.0"
+    "nodejs-slim@22.19.0",
+    "postgresql@17.6"
   ],
   "env": {
     "DEVBOX_COREPACK_ENABLED": "true"
