@@ -29,7 +29,9 @@ defmodule LunchboxApiWeb.FoodController do
 
   def update(conn, %{"id" => id, "food" => food_params}) do
     case Lunchbox.get_food(id) do
-      nil -> {:error, :not_found}
+      nil ->
+        {:error, :not_found}
+
       food ->
         with {:ok, %Food{} = food} <- Lunchbox.update_food(food, food_params) do
           render(conn, "show.json", food: food)
@@ -39,7 +41,9 @@ defmodule LunchboxApiWeb.FoodController do
 
   def delete(conn, %{"id" => id}) do
     case Lunchbox.get_food(id) do
-      nil -> {:error, :not_found}
+      nil ->
+        {:error, :not_found}
+
       food ->
         with {:ok, %Food{}} <- Lunchbox.delete_food(food) do
           send_resp(conn, :no_content, "")

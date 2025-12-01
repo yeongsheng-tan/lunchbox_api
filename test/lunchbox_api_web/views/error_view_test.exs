@@ -9,6 +9,8 @@ defmodule LunchboxApiWeb.ErrorViewTest do
   end
 
   test "renders 500.json" do
-    assert render(LunchboxApiWeb.ErrorView, "500.json", []) == %{errors: %{detail: "Internal Server Error"}}
+    assert render(LunchboxApiWeb.ErrorView, "500.json", []) == %{
+             errors: %{detail: "Internal Server Error"}
+           }
   end
 end
