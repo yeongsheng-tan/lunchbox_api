@@ -2,7 +2,7 @@
   "name": "lunchbox_api_assets",
   "license": "MIT",
   "engines": {
-    "node": ">=22"
+    "node": ">=24"
   },
   "scripts": {
     "postinstall": "syncpack fix-mismatches",
@@ -15,8 +15,8 @@
     "topbar": "^3.0.0"
   },
   "devDependencies": {
-    "syncpack": "^13.0.4",
-    "js-yaml": ">=4.1.1"
+    "js-yaml": "^4.1.1",
+    "syncpack": "^13.0.4"
   },
   "overrides": {
     "brace-expansion": "^2.0.2"
