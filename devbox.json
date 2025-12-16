@@ -14,7 +14,6 @@
       "export BASIC_AUTH_USERNAME=specialUserName",
       "export BASIC_AUTH_PASSWORD=superSecretPassword",
       "corepack prepare pnpm@10.26.0 --activate",
-      "corepack use pnpm@10.26.0",
       "cd assets && pnpm --frozen-lockfile recursive install"
     ],
     "scripts": {
