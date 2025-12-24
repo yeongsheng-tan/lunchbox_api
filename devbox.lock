@@ -21,11 +21,11 @@
           "outputs": [
             {
               "name": "out",
-              "path": "/nix/store/nhsgliw5i9fz8lnl4pa0k18bwflfiih7-elixir-1.19.4",
+              "path": "/nix/store/prkrn0brf98j1knsmpwb6h2lw3srkgxi-elixir-1.19.4",
               "default": true
             }
           ],
-          "store_path": "/nix/store/nhsgliw5i9fz8lnl4pa0k18bwflfiih7-elixir-1.19.4"
+          "store_path": "/nix/store/prkrn0brf98j1knsmpwb6h2lw3srkgxi-elixir-1.19.4"
         },
         "x86_64-darwin": {
           "outputs": [
@@ -41,11 +41,11 @@
           "outputs": [
             {
               "name": "out",
-              "path": "/nix/store/c5w58wxvy9z7vlfzlnbk61p3xgn1jlr4-elixir-1.19.4",
+              "path": "/nix/store/5hc8lzraif0zbhyr3n8kwig1g4hh1yf0-elixir-1.19.4",
               "default": true
             }
           ],
-          "store_path": "/nix/store/c5w58wxvy9z7vlfzlnbk61p3xgn1jlr4-elixir-1.19.4"
+          "store_path": "/nix/store/5hc8lzraif0zbhyr3n8kwig1g4hh1yf0-elixir-1.19.4"
         }
       }
     },
@@ -114,8 +114,8 @@
       }
     },
     "github:NixOS/nixpkgs/nixpkgs-unstable": {
-      "last_modified": "2025-12-19T06:18:24Z",
-      "resolved": "github:NixOS/nixpkgs/7d853e518814cca2a657b72eeba67ae20ebf7059?lastModified=1766125104"
+      "last_modified": "2025-12-23T06:39:02Z",
+      "resolved": "github:NixOS/nixpkgs/cfc52a405c6e85462364651a8f11e28ae8065c91?lastModified=1766471942"
     },
     "glibcLocales@latest": {
       "last_modified": "2025-11-23T21:50:36Z",
@@ -145,84 +145,84 @@
         }
       }
     },
-    "nodejs-slim@24.11.1": {
-      "last_modified": "2025-12-16T16:49:59Z",
+    "nodejs-slim@24.12.0": {
+      "last_modified": "2025-12-18T02:44:17Z",
       "plugin_version": "0.0.2",
-      "resolved": "github:NixOS/nixpkgs/e8d16d2186d6ed9f047eb30948e97e7e01886d10#nodejs-slim_24",
+      "resolved": "github:NixOS/nixpkgs/def3da69945bbe338c373fddad5a1bb49cf199ce#nodejs-slim_24",
       "source": "devbox-search",
-      "version": "24.11.1",
+      "version": "24.12.0",
       "systems": {
         "aarch64-darwin": {
           "outputs": [
             {
               "name": "out",
-              "path": "/nix/store/csh98yv3h23a61mkrwligbmpyyqrmbdk-nodejs-slim-24.11.1",
+              "path": "/nix/store/7aqqbabnh8scswhynbnspgh5fjiazc8j-nodejs-slim-24.12.0",
               "default": true
             },
             {
-              "name": "libv8",
-              "path": "/nix/store/kfvzk2bw020b5kp6vmn496cbf93nx9hx-nodejs-slim-24.11.1-libv8"
+              "name": "dev",
+              "path": "/nix/store/axfm89554rvyws1kfli3qmja29dxrnxc-nodejs-slim-24.12.0-dev"
             },
             {
-              "name": "dev",
-              "path": "/nix/store/9hcapbfwslam52dvd220j793km9zhzn0-nodejs-slim-24.11.1-dev"
+              "name": "libv8",
+              "path": "/nix/store/6aanjf1xzjbr5lk43sh9vmkd3lmqxpxj-nodejs-slim-24.12.0-libv8"
             }
           ],
-          "store_path": "/nix/store/csh98yv3h23a61mkrwligbmpyyqrmbdk-nodejs-slim-24.11.1"
+          "store_path": "/nix/store/7aqqbabnh8scswhynbnspgh5fjiazc8j-nodejs-slim-24.12.0"
         },
         "aarch64-linux": {
           "outputs": [
             {
               "name": "out",
-              "path": "/nix/store/kp1q63fz19sb1qq2lzb2shkgz6xz0833-nodejs-slim-24.11.1",
+              "path": "/nix/store/p77shsi65w3y1yr8f15apkfs1isz43cb-nodejs-slim-24.12.0",
               "default": true
             },
             {
               "name": "dev",
-              "path": "/nix/store/4pb6cnai419cagl4x40ijzymdpp8grmv-nodejs-slim-24.11.1-dev"
+              "path": "/nix/store/cdkvlbc9872il5yb2163k3p7iwz2w992-nodejs-slim-24.12.0-dev"
             },
             {
               "name": "libv8",
-              "path": "/nix/store/9jgps5vs17ybzi2sgpby4lph1dr1h736-nodejs-slim-24.11.1-libv8"
+              "path": "/nix/store/rndspg05dg9j41vjzbfhkkb9k3pl0qks-nodejs-slim-24.12.0-libv8"
             }
           ],
-          "store_path": "/nix/store/kp1q63fz19sb1qq2lzb2shkgz6xz0833-nodejs-slim-24.11.1"
+          "store_path": "/nix/store/p77shsi65w3y1yr8f15apkfs1isz43cb-nodejs-slim-24.12.0"
         },
         "x86_64-darwin": {
           "outputs": [
             {
               "name": "out",
-              "path": "/nix/store/hd7slxqrgd9hibcrqdmmvh61jpysmhf6-nodejs-slim-24.11.1",
+              "path": "/nix/store/d9d39grkg6rpjv3bdz6ljsj2r8y7z5cg-nodejs-slim-24.12.0",
               "default": true
             },
             {
-              "name": "dev",
-              "path": "/nix/store/dqlfqwk4plfgjdddb8nlyxm16s4n5sf3-nodejs-slim-24.11.1-dev"
+              "name": "libv8",
+              "path": "/nix/store/n9g9zwrrzfln2c1dd5kjg2zyrwilj2wi-nodejs-slim-24.12.0-libv8"
             },
             {
-              "name": "libv8",
-              "path": "/nix/store/f57gn4qin4qb575r4xgg7899na8pzsrh-nodejs-slim-24.11.1-libv8"
+              "name": "dev",
+              "path": "/nix/store/z7vycmms8k1bnss3wv3z65dvi6309qg5-nodejs-slim-24.12.0-dev"
             }
           ],
-          "store_path": "/nix/store/hd7slxqrgd9hibcrqdmmvh61jpysmhf6-nodejs-slim-24.11.1"
+          "store_path": "/nix/store/d9d39grkg6rpjv3bdz6ljsj2r8y7z5cg-nodejs-slim-24.12.0"
         },
         "x86_64-linux": {
           "outputs": [
             {
               "name": "out",
-              "path": "/nix/store/0h58hwcc3xk8n8q1vnlnl2m1hgm2v9p2-nodejs-slim-24.11.1",
+              "path": "/nix/store/pkc31cfrm7sjmv3ljwkdfh29g3xxkfd0-nodejs-slim-24.12.0",
               "default": true
             },
             {
               "name": "dev",
-              "path": "/nix/store/c1q468kna3nvhn56ba81n4m9i4kdd8gw-nodejs-slim-24.11.1-dev"
+              "path": "/nix/store/33ldgdp062smqnqbp7sl9hc0jsxi2pcp-nodejs-slim-24.12.0-dev"
             },
             {
               "name": "libv8",
-              "path": "/nix/store/39ff32p6jg6jc48ivgvdyikam1ir3ybd-nodejs-slim-24.11.1-libv8"
+              "path": "/nix/store/qkb9dsriz7m9dack4z15r0r4s0cnjpif-nodejs-slim-24.12.0-libv8"
             }
           ],
-          "store_path": "/nix/store/0h58hwcc3xk8n8q1vnlnl2m1hgm2v9p2-nodejs-slim-24.11.1"
+          "store_path": "/nix/store/pkc31cfrm7sjmv3ljwkdfh29g3xxkfd0-nodejs-slim-24.12.0"
         }
       }
     },
