@@ -13,7 +13,7 @@
       "echo 'Welcome to devbox for lunchbox_api!' > /dev/null",
       "export BASIC_AUTH_USERNAME=specialUserName",
       "export BASIC_AUTH_PASSWORD=superSecretPassword",
-      "corepack prepare pnpm@10.27.0 --activate",
+      "corepack prepare pnpm@10.28.0 --activate",
       "cd assets && pnpm --frozen-lockfile recursive install"
     ],
     "scripts": {
