@@ -5,18 +5,18 @@
     "node": ">=24"
   },
   "scripts": {
-    "postinstall": "syncpack fix-mismatches",
+    "postinstall": "syncpack fix",
     "deploy": "cd .. && mix assets.deploy && rm -f _build/esbuild"
   },
   "dependencies": {
     "phoenix": "file:../deps/phoenix",
     "phoenix_html": "file:../deps/phoenix_html",
-    "phoenix_live_view": "1.1.23",
+    "phoenix_live_view": "1.1.24",
     "topbar": "^3.0.0"
   },
   "devDependencies": {
     "js-yaml": "^4.1.1",
-    "syncpack": "^13.0.4"
+    "syncpack": "^14.0.0"
   },
   "overrides": {
     "brace-expansion": "^2.0.2"
