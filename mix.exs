@@ -4,7 +4,7 @@ defmodule LunchboxApi.MixProject do
   def project do
     [
       app: :lunchbox_api,
-      version: "1.18.14",
+      version: "1.18.15",
       elixir: "~> 1.19.5",
       elixirc_paths: elixirc_paths(Mix.env()),
       start_permanent: Mix.env() == :prod,

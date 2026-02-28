@@ -15,11 +15,11 @@ importers:
         specifier: file:../deps/phoenix_html
         version: file:../deps/phoenix_html
       phoenix_live_view:
-        specifier: 1.1.24
-        version: 1.1.24
+        specifier: 1.1.25
+        version: 1.1.25
       topbar:
-        specifier: ^3.0.0
-        version: 3.0.0
+        specifier: ^3.0.1
+        version: 3.0.1
     devDependencies:
       js-yaml:
         specifier: ^4.1.1
@@ -46,8 +46,8 @@ packages:
   phoenix_html@file:../deps/phoenix_html:
     resolution: {directory: ../deps/phoenix_html, type: directory}
 
-  phoenix_live_view@1.1.24:
-    resolution: {integrity: sha512-X+NVelGFhc0VOyQwkFxKlq+n/JVOlgyzibT82yTWP52pNlQqP7FO0wR0lKQzzpWrrAyopOdTc3GkU802bKOMWw==}
+  phoenix_live_view@1.1.25:
+    resolution: {integrity: sha512-BKL47dPzgf2X8F8oFskx2C5fuRBPN4IGaTteQx3X5RhxoGc1MAnvqFwiT02djD4K61IXTiK8qO+0rcmn7tdS8Q==}
 
   syncpack-darwin-arm64@14.0.0:
     resolution: {integrity: sha512-mEcku9YkOHfM6JOxhq9McgeLvd4djsJvRwNONZXHeoJ6+yqC96DdxZwFjkw3e8Vn95wsxsrwY5ZjMExs5Gbacw==}
@@ -94,8 +94,8 @@ packages:
     engines: {node: '>=14.17.0'}
     hasBin: true
 
-  topbar@3.0.0:
-    resolution: {integrity: sha512-mhczD7KfYi1anfoMPKRdl0wPSWiYc0YOK4KyycYs3EaNT15pVVNDG5CtfgZcEBWIPJEdfR7r8K4hTXDD2ECBVQ==}
+  topbar@3.0.1:
+    resolution: {integrity: sha512-3CFWdkUC4KLsyLpW8IcX5EXskFtJtNl9O2/qNO/4Ncd/lWgipY/pmyv0D8bw2bTepl/+MUGhNhu2n3IitUuQNA==}
 
 snapshots:
 
@@ -111,7 +111,7 @@ snapshots:
 
   phoenix_html@file:../deps/phoenix_html: {}
 
-  phoenix_live_view@1.1.24:
+  phoenix_live_view@1.1.25:
     dependencies:
       morphdom: 2.7.8
 
@@ -150,4 +150,4 @@ snapshots:
       syncpack-windows-arm64: 14.0.0
       syncpack-windows-x64: 14.0.0
 
-  topbar@3.0.0: {}
+  topbar@3.0.1: {}
