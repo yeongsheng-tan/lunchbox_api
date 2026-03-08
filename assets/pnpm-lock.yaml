@@ -15,8 +15,8 @@ importers:
         specifier: file:../deps/phoenix_html
         version: file:../deps/phoenix_html
       phoenix_live_view:
-        specifier: 1.1.25
-        version: 1.1.25
+        specifier: 1.1.26
+        version: 1.1.26
       topbar:
         specifier: ^3.0.1
         version: 3.0.1
@@ -25,8 +25,8 @@ importers:
         specifier: ^4.1.1
         version: 4.1.1
       syncpack:
-        specifier: ^14.0.0
-        version: 14.0.0
+        specifier: ^14.1.0
+        version: 14.1.0
 
 packages:
 
@@ -46,51 +46,51 @@ packages:
   phoenix_html@file:../deps/phoenix_html:
     resolution: {directory: ../deps/phoenix_html, type: directory}
 
-  phoenix_live_view@1.1.25:
-    resolution: {integrity: sha512-BKL47dPzgf2X8F8oFskx2C5fuRBPN4IGaTteQx3X5RhxoGc1MAnvqFwiT02djD4K61IXTiK8qO+0rcmn7tdS8Q==}
+  phoenix_live_view@1.1.26:
+    resolution: {integrity: sha512-k6CeDOHK/IdvHDCS+UCIJC1HhySztrbv5ax83pwxgMeP23eB06zI93rzSzEvKTPBZIp4DWRuLxfYhAGds0jJAw==}
 
-  syncpack-darwin-arm64@14.0.0:
-    resolution: {integrity: sha512-mEcku9YkOHfM6JOxhq9McgeLvd4djsJvRwNONZXHeoJ6+yqC96DdxZwFjkw3e8Vn95wsxsrwY5ZjMExs5Gbacw==}
+  syncpack-darwin-arm64@14.1.0:
+    resolution: {integrity: sha512-w7Ggqfy5XlzkGN7HcX8wH+hyd09rq9/UT+lkTPApZ6AekEqmxP3RLnRLTe9GiFWyZRxgLVAf7YWZ2k534m07PQ==}
     cpu: [arm64]
     os: [darwin]
 
-  syncpack-darwin-x64@14.0.0:
-    resolution: {integrity: sha512-qSj3bT3SIZA5NLM5PNVeExapyOrdmptlGSMu0SLVHj9hata/Vqh3xWgwq7wB9uajmlrHljeJ84R/NKAHyzFewA==}
+  syncpack-darwin-x64@14.1.0:
+    resolution: {integrity: sha512-iHjuvRtXtRHaf9h+N0eRdh55fye7XXqfXwFOslq+opDqUodTJwmqeiWYHencf+++I0LS3OZ5LHzQi79835Do+A==}
     cpu: [x64]
     os: [darwin]
 
-  syncpack-linux-arm64-musl@14.0.0:
-    resolution: {integrity: sha512-i57Chz0tHP7ybKElPLhoygl6Cab1fxyUKS9xRgezX5NDrNxKUgrvqBfYd7288/QKB4C8+IcYHugFPjZjoFlAIA==}
+  syncpack-linux-arm64-musl@14.1.0:
+    resolution: {integrity: sha512-YH/BDnW9AAzW9/0w2PSALTt81usfatD1CeorIHlL7rKpXaZMTsxTNrMqJLdVUDCXdQeRw9ldUEiPzteQm6zbuA==}
     cpu: [arm64]
     os: [linux]
 
-  syncpack-linux-arm64@14.0.0:
-    resolution: {integrity: sha512-votlkb4P/0Bxd9yhBWCSUOjZwaii+LfFn1tZZVN5dfs8qcjcLeqfdG5zbnlJSzZhS3T+BfzejFW+Z95OxZag0A==}
+  syncpack-linux-arm64@14.1.0:
+    resolution: {integrity: sha512-f75fBuveMnLrciM7tRkJHnu7Dxv5Be9YHpu5onpdG1V2sKsUPeiZptNeRH5mMNSbZFOfx68spZB7Gu7riRTIkw==}
     cpu: [arm64]
     os: [linux]
 
-  syncpack-linux-x64-musl@14.0.0:
-    resolution: {integrity: sha512-RKyp+29UlLGE8oYkd3UfwgjWUHN4dLHDyarv0dS6gWVpWM6qHtHS339KBc9JcIS7FD1vNGnQ3GmSaAodxDlkMA==}
+  syncpack-linux-x64-musl@14.1.0:
+    resolution: {integrity: sha512-9+D/QpL/AjYG6r2el95EkAJkm3u1CJV9dAmeAAehwJ2mDg5LMnhdMJkdaayOM9opQcjESCYOVCXU4PCgy3TCRg==}
     cpu: [x64]
     os: [linux]
 
-  syncpack-linux-x64@14.0.0:
-    resolution: {integrity: sha512-sZGy4+uL+P/+nI0yc9jwW/R22u9lw0+NXDYC/9ts9eYiWFyO4+luOeosvVKbED1OavUp/GQJqNV+9KHjMwq0Fw==}
+  syncpack-linux-x64@14.1.0:
+    resolution: {integrity: sha512-Yoin2bc1VXpWoN+iQjJQ6GijEOBej7Y8VB2dmj1DKVRRMT8Sb2mapEv0B5NLKrXh20BR8A5JeGxVVoF510WETQ==}
     cpu: [x64]
     os: [linux]
 
-  syncpack-windows-arm64@14.0.0:
-    resolution: {integrity: sha512-aNtr0F6HkA7M0azDuDkt//DlPWlplFa4kmvHXirwDmJQ9u3SAvN3ZItW4ZYS96ZbiV1DgO15jIKBI7rDkzcwrQ==}
+  syncpack-windows-arm64@14.1.0:
+    resolution: {integrity: sha512-LwxunC5lU4Febq7fwWSc/+pN3e8GHVqQaQJSHcGSSWTwxJ1Rep13FYCKESPT6GW4/GW6Sa5rwGhG1n6Ldo4JmA==}
     cpu: [arm64]
     os: [win32]
 
-  syncpack-windows-x64@14.0.0:
-    resolution: {integrity: sha512-usMH61wlonssfh2Q8SJDiiAcsXVzuPzRl8XdHqdavR3XeCSGBIW9ieJpPfiKvDPWslekufWD+GhLNoH+8vV0Cg==}
+  syncpack-windows-x64@14.1.0:
+    resolution: {integrity: sha512-ECZFzBWph0P9CM1P6Mwmj8C8U/uuMfBdbBKrCVlqUMiFxKiWq5eiGGRqFFm+DWPD+GGLmmTNgdok0wu4CB/lMg==}
     cpu: [x64]
     os: [win32]
 
-  syncpack@14.0.0:
-    resolution: {integrity: sha512-OfAa3Oip5YC9Ad1jEs92Hw08Wy4JfdpdeequIwaJGsQG0tJtb8gpQfCdLuBefsk6n8WiUdt/5qmzcW+BDXtzbQ==}
+  syncpack@14.1.0:
+    resolution: {integrity: sha512-sk0u95rpgpLeW/SWqeZ3q5jsfJwAZ4FqFqy3mG6WBEbRKbaEK3LA69Q7ocnuCxHrWA54kg7Stu63fSY/pr0tmw==}
     engines: {node: '>=14.17.0'}
     hasBin: true
 
@@ -111,43 +111,43 @@ snapshots:
 
   phoenix_html@file:../deps/phoenix_html: {}
 
-  phoenix_live_view@1.1.25:
+  phoenix_live_view@1.1.26:
     dependencies:
       morphdom: 2.7.8
 
-  syncpack-darwin-arm64@14.0.0:
+  syncpack-darwin-arm64@14.1.0:
     optional: true
 
-  syncpack-darwin-x64@14.0.0:
+  syncpack-darwin-x64@14.1.0:
     optional: true
 
-  syncpack-linux-arm64-musl@14.0.0:
+  syncpack-linux-arm64-musl@14.1.0:
     optional: true
 
-  syncpack-linux-arm64@14.0.0:
+  syncpack-linux-arm64@14.1.0:
     optional: true
 
-  syncpack-linux-x64-musl@14.0.0:
+  syncpack-linux-x64-musl@14.1.0:
     optional: true
 
-  syncpack-linux-x64@14.0.0:
+  syncpack-linux-x64@14.1.0:
     optional: true
 
-  syncpack-windows-arm64@14.0.0:
+  syncpack-windows-arm64@14.1.0:
     optional: true
 
-  syncpack-windows-x64@14.0.0:
+  syncpack-windows-x64@14.1.0:
     optional: true
 
-  syncpack@14.0.0:
+  syncpack@14.1.0:
     optionalDependencies:
-      syncpack-darwin-arm64: 14.0.0
-      syncpack-darwin-x64: 14.0.0
-      syncpack-linux-arm64: 14.0.0
-      syncpack-linux-arm64-musl: 14.0.0
-      syncpack-linux-x64: 14.0.0
-      syncpack-linux-x64-musl: 14.0.0
-      syncpack-windows-arm64: 14.0.0
-      syncpack-windows-x64: 14.0.0
+      syncpack-darwin-arm64: 14.1.0
+      syncpack-darwin-x64: 14.1.0
+      syncpack-linux-arm64: 14.1.0
+      syncpack-linux-arm64-musl: 14.1.0
+      syncpack-linux-x64: 14.1.0
+      syncpack-linux-x64-musl: 14.1.0
+      syncpack-windows-arm64: 14.1.0
+      syncpack-windows-x64: 14.1.0
 
   topbar@3.0.1: {}
