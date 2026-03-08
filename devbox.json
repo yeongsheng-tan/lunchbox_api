@@ -3,10 +3,11 @@
     "gigalixir@1.15.0",
     "beam28Packages.elixir_1_19@1.19.5",
     "nodejs-slim@24.13.0",
+    "corepack@latest",
     "postgresql_18@latest"
   ],
   "env": {
-    "DEVBOX_COREPACK_ENABLED": "true"
+    "DEVBOX_COREPACK_ENABLED": "1"
   },
   "shell": {
     "init_hook": [
