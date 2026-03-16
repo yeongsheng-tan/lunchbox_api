@@ -5,6 +5,9 @@
     "nodejs@24.12.0",
     "postgresql_18@latest"
   ],
+  "env": {
+    "DEVBOX_COREPACK_ENABLED": "1"
+  },
   "shell": {
     "init_hook": [
       "echo 'Welcome to devbox for lunchbox_api!' > /dev/null",

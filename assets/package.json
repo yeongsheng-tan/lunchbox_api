@@ -12,7 +12,7 @@
   "dependencies": {
     "phoenix": "file:../deps/phoenix",
     "phoenix_html": "file:../deps/phoenix_html",
-    "phoenix_live_view": "1.1.26",
+    "phoenix_live_view": "1.1.27",
     "topbar": "^3.0.1"
   },
   "devDependencies": {
