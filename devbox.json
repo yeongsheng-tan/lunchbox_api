@@ -3,18 +3,15 @@
     "beam28Packages.elixir_1_19@1.19.5",
     "postgresql_18@latest",
     "gigalixir@latest",
-    "nodejs@25.8.1"
+    "nodejs@25.8.1",
+    "pnpm@latest"
   ],
-  "env": {
-    "DEVBOX_COREPACK_ENABLED": "1"
-  },
   "shell": {
     "init_hook": [
       "echo 'Welcome to devbox for lunchbox_api!' > /dev/null",
       "export BASIC_AUTH_USERNAME=specialUserName",
       "export BASIC_AUTH_PASSWORD=superSecretPassword",
-      "cd assets && corepack prepare pnpm@10.32.1 --activate && corepack use pnpm@10.32.1",
-      "pnpm --frozen-lockfile recursive install"
+      "cd assets && pnpm install --frozen-lockfile"
     ],
     "scripts": {
       "test": "BASIC_AUTH_USERNAME=specialUserName BASIC_AUTH_PASSWORD=superSecretPassword mix test",

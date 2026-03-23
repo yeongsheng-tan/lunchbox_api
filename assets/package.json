@@ -17,7 +17,7 @@
   },
   "devDependencies": {
     "js-yaml": "^4.1.1",
-    "syncpack": "^14.2.0"
+    "syncpack": "^14.2.1"
   },
   "overrides": {
     "brace-expansion": "^2.0.2"
