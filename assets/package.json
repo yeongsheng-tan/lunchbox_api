@@ -1,7 +1,6 @@
 {
   "name": "lunchbox_api_assets",
   "license": "MIT",
-  "packageManager": "pnpm@10.32.1+sha512.a706938f0e89ac1456b6563eab4edf1d1faf3368d1191fc5c59790e96dc918e4456ab2e67d613de1043d2e8c81f87303e6b40d4ffeca9df15ef1ad567348f2be",
   "engines": {
     "node": ">=24"
   },
@@ -12,7 +11,7 @@
   "dependencies": {
     "phoenix": "file:../deps/phoenix",
     "phoenix_html": "file:../deps/phoenix_html",
-    "phoenix_live_view": "1.1.27",
+    "phoenix_live_view": "1.1.28",
     "topbar": "^3.0.1"
   },
   "devDependencies": {

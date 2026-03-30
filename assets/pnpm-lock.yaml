@@ -15,8 +15,8 @@ importers:
         specifier: file:../deps/phoenix_html
         version: file:../deps/phoenix_html
       phoenix_live_view:
-        specifier: 1.1.27
-        version: 1.1.27
+        specifier: 1.1.28
+        version: 1.1.28
       topbar:
         specifier: ^3.0.1
         version: 3.0.1
@@ -46,8 +46,8 @@ packages:
   phoenix_html@file:../deps/phoenix_html:
     resolution: {directory: ../deps/phoenix_html, type: directory}
 
-  phoenix_live_view@1.1.27:
-    resolution: {integrity: sha512-oJKme4Hdy9EbSumkznCLNax8opJr0sTd3Yv3EIEezV4BTls+euCvWi3UDdReh+ss6hVwR0KvKQkGXw6XbWXPbA==}
+  phoenix_live_view@1.1.28:
+    resolution: {integrity: sha512-YXpMxwBE9HLCRk8fO+2p0cfYB5EIyvvTPfQeYA8PLmcX29Yu/LNy7aoqQoMAhedXMXCtx1nlPnG/TljnsA9WTQ==}
 
   syncpack-darwin-arm64@14.2.1:
     resolution: {integrity: sha512-SGrC163UWiL68TRo8rmPQFgbT83ieT7zQ1GKyoPZ3TAGNQ+6a/3GMXlZQ+HKV3ydVyB2t60H5CsQFlz13QHTqA==}
@@ -111,7 +111,7 @@ snapshots:
 
   phoenix_html@file:../deps/phoenix_html: {}
 
-  phoenix_live_view@1.1.27:
+  phoenix_live_view@1.1.28:
     dependencies:
       morphdom: 2.7.8
 
