@@ -3,9 +3,12 @@
     "beam28Packages.elixir_1_19@1.19.5",
     "postgresql_18@latest",
     "gigalixir@latest",
-    "nodejs@25.8.1",
-    "pnpm@latest"
+    "nodejs@25.9.0",
+    "corepack@latest"
   ],
+  "env": {
+    "DEVBOX_COREPACK_ENABLED": "1"
+  },
   "shell": {
     "init_hook": [
       "echo 'Welcome to devbox for lunchbox_api!' > /dev/null",
