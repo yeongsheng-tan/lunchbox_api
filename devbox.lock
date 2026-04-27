@@ -2,8 +2,8 @@
   "lockfile_version": "1",
   "packages": {
     "beam28Packages.elixir_1_19@1.19.5": {
-      "last_modified": "2026-03-21T07:29:51Z",
-      "resolved": "github:NixOS/nixpkgs/09061f748ee21f68a089cd5d91ec1859cd93d0be#beam28Packages.elixir_1_19",
+      "last_modified": "2026-04-16T08:46:55Z",
+      "resolved": "github:NixOS/nixpkgs/b86751bc4085f48661017fa226dee99fab6c651b#beam28Packages.elixir_1_19",
       "source": "devbox-search",
       "version": "1.19.5",
       "systems": {
@@ -11,41 +11,41 @@
           "outputs": [
             {
               "name": "out",
-              "path": "/nix/store/ga42375ggm4g7nfyzi4jbw6x94rznnyp-elixir-1.19.5",
+              "path": "/nix/store/rrin96dmgyy9bv45g1143xsip94a0k1w-elixir-1.19.5",
               "default": true
             }
           ],
-          "store_path": "/nix/store/ga42375ggm4g7nfyzi4jbw6x94rznnyp-elixir-1.19.5"
+          "store_path": "/nix/store/rrin96dmgyy9bv45g1143xsip94a0k1w-elixir-1.19.5"
         },
         "aarch64-linux": {
           "outputs": [
             {
               "name": "out",
-              "path": "/nix/store/mv5wnyq5jb6m15ww8v54f3kq4cdi2dpx-elixir-1.19.5",
+              "path": "/nix/store/25rj9rsql9zf3akcfgzi1jhly8dz050v-elixir-1.19.5",
               "default": true
             }
           ],
-          "store_path": "/nix/store/mv5wnyq5jb6m15ww8v54f3kq4cdi2dpx-elixir-1.19.5"
+          "store_path": "/nix/store/25rj9rsql9zf3akcfgzi1jhly8dz050v-elixir-1.19.5"
         },
         "x86_64-darwin": {
           "outputs": [
             {
               "name": "out",
-              "path": "/nix/store/5kigwhswfd3p7i1y9yy96w18v5awdllz-elixir-1.19.5",
+              "path": "/nix/store/18dhqf8g10ayx4ffwjp5hvdj044mprb2-elixir-1.19.5",
               "default": true
             }
           ],
-          "store_path": "/nix/store/5kigwhswfd3p7i1y9yy96w18v5awdllz-elixir-1.19.5"
+          "store_path": "/nix/store/18dhqf8g10ayx4ffwjp5hvdj044mprb2-elixir-1.19.5"
         },
         "x86_64-linux": {
           "outputs": [
             {
               "name": "out",
-              "path": "/nix/store/rjk043xnv7rmgplwz0ybnhl4q54ffbs7-elixir-1.19.5",
+              "path": "/nix/store/9mvb9sj0gvvbhgxgrkfkb0n8dsmxrixi-elixir-1.19.5",
               "default": true
             }
           ],
-          "store_path": "/nix/store/rjk043xnv7rmgplwz0ybnhl4q54ffbs7-elixir-1.19.5"
+          "store_path": "/nix/store/9mvb9sj0gvvbhgxgrkfkb0n8dsmxrixi-elixir-1.19.5"
         }
       }
     },
@@ -162,8 +162,8 @@
       }
     },
     "github:NixOS/nixpkgs/nixpkgs-unstable": {
-      "last_modified": "2026-04-11T06:17:25Z",
-      "resolved": "github:NixOS/nixpkgs/13043924aaa7375ce482ebe2494338e058282925?lastModified=1775888245"
+      "last_modified": "2026-04-23T13:07:47Z",
+      "resolved": "github:NixOS/nixpkgs/01fbdeef22b76df85ea168fbfe1bfd9e63681b30?lastModified=1776949667"
     },
     "glibcLocales@latest": {
       "last_modified": "2026-03-21T07:29:51Z",
@@ -193,10 +193,10 @@
         }
       }
     },
-    "nodejs@25.9.0": {
-      "last_modified": "2026-04-01T17:36:14Z",
+    "nodejs@25": {
+      "last_modified": "2026-04-16T08:46:55Z",
       "plugin_version": "0.0.2",
-      "resolved": "github:NixOS/nixpkgs/6ebfbc38bdc6b22822a6f991f2d922306f33cfbc#nodejs_25",
+      "resolved": "github:NixOS/nixpkgs/b86751bc4085f48661017fa226dee99fab6c651b#nodejs_25",
       "source": "devbox-search",
       "version": "25.9.0",
       "systems": {
@@ -243,9 +243,9 @@
       }
     },
     "postgresql_18@latest": {
-      "last_modified": "2026-04-07T16:32:49Z",
+      "last_modified": "2026-04-16T08:46:55Z",
       "plugin_version": "0.0.2",
-      "resolved": "github:NixOS/nixpkgs/dfd9566f82a6e1d55c30f861879186440614696e#postgresql_18",
+      "resolved": "github:NixOS/nixpkgs/b86751bc4085f48661017fa226dee99fab6c651b#postgresql_18",
       "source": "devbox-search",
       "version": "18.3",
       "systems": {
@@ -262,10 +262,6 @@
               "default": true
             },
             {
-              "name": "dev",
-              "path": "/nix/store/r74g54nhp3v3h61cqjs1mfip1sfxaxwv-postgresql-18.3-dev"
-            },
-            {
               "name": "doc",
               "path": "/nix/store/83d0v17bjyw91ssf5ikjm2hpx9z0fbdi-postgresql-18.3-doc"
             },
@@ -278,8 +274,8 @@
               "path": "/nix/store/bxppz95nmliqc87jkrzxlhglmkpdsjfk-postgresql-18.3-plperl"
             },
             {
-              "name": "pltcl",
-              "path": "/nix/store/achbr7zlj189xzr4axcd0vl9i0ggmllz-postgresql-18.3-pltcl"
+              "name": "dev",
+              "path": "/nix/store/r74g54nhp3v3h61cqjs1mfip1sfxaxwv-postgresql-18.3-dev"
             },
             {
               "name": "jit",
@@ -288,6 +284,10 @@
             {
               "name": "plpython3",
               "path": "/nix/store/35ipqk11z98ad0mpm6m8ab6qb0ks4q25-postgresql-18.3-plpython3"
+            },
+            {
+              "name": "pltcl",
+              "path": "/nix/store/achbr7zlj189xzr4axcd0vl9i0ggmllz-postgresql-18.3-pltcl"
             }
           ],
           "store_path": "/nix/store/kzcpprq2dmv6mcn6rgf4p3iglq797c6m-postgresql-18.3"
@@ -305,16 +305,16 @@
               "default": true
             },
             {
-              "name": "plpython3",
-              "path": "/nix/store/1lsxpvcb6750hdcw0ccss5yj493znxz6-postgresql-18.3-plpython3"
-            },
-            {
               "name": "pltcl",
               "path": "/nix/store/bzxpf859v0m575nmjhrxcs6rhz6jadhj-postgresql-18.3-pltcl"
             },
             {
               "name": "debug",
               "path": "/nix/store/alvmbc0cln5cvwafk63xwad3q67vq5vk-postgresql-18.3-debug"
+            },
+            {
+              "name": "plperl",
+              "path": "/nix/store/xxz9qbmc5al457mciq62y2is7kyhl2nv-postgresql-18.3-plperl"
             },
             {
               "name": "dev",
@@ -329,12 +329,12 @@
               "path": "/nix/store/1p7qzldm8iphhddk1kfw9s0vc03wjgra-postgresql-18.3-jit"
             },
             {
-              "name": "plperl",
-              "path": "/nix/store/xxz9qbmc5al457mciq62y2is7kyhl2nv-postgresql-18.3-plperl"
-            },
-            {
               "name": "lib",
               "path": "/nix/store/n946f49rfgng7gkgmsws82b0x6jr5jrn-postgresql-18.3-lib"
+            },
+            {
+              "name": "plpython3",
+              "path": "/nix/store/1lsxpvcb6750hdcw0ccss5yj493znxz6-postgresql-18.3-plpython3"
             }
           ],
           "store_path": "/nix/store/b2s16w3g4sgxwhzi58v762amb0j8c6m3-postgresql-18.3"
@@ -352,10 +352,6 @@
               "default": true
             },
             {
-              "name": "plpython3",
-              "path": "/nix/store/i6c947dh8djc7zkis9kw4vvzhvjfd3al-postgresql-18.3-plpython3"
-            },
-            {
               "name": "dev",
               "path": "/nix/store/2bhgsj4fj4znkaxqz8d13qr6xzvk1r28-postgresql-18.3-dev"
             },
@@ -364,20 +360,24 @@
               "path": "/nix/store/4gycrrv9wv6kljhf13l073m99crlsw50-postgresql-18.3-doc"
             },
             {
-              "name": "lib",
-              "path": "/nix/store/rid00v9qh66wf19g9mdl1m0krp7gx7pj-postgresql-18.3-lib"
-            },
-            {
-              "name": "pltcl",
-              "path": "/nix/store/ias7m8glwhqnh50pja35cifgram0n618-postgresql-18.3-pltcl"
-            },
-            {
               "name": "jit",
               "path": "/nix/store/qg00i7sy4mphxqdm1rmnj1y71s1q47rk-postgresql-18.3-jit"
             },
             {
               "name": "plperl",
               "path": "/nix/store/xs9cpmpxy99jxwjsln031ar177jzhzf5-postgresql-18.3-plperl"
+            },
+            {
+              "name": "plpython3",
+              "path": "/nix/store/i6c947dh8djc7zkis9kw4vvzhvjfd3al-postgresql-18.3-plpython3"
+            },
+            {
+              "name": "lib",
+              "path": "/nix/store/rid00v9qh66wf19g9mdl1m0krp7gx7pj-postgresql-18.3-lib"
+            },
+            {
+              "name": "pltcl",
+              "path": "/nix/store/ias7m8glwhqnh50pja35cifgram0n618-postgresql-18.3-pltcl"
             }
           ],
           "store_path": "/nix/store/hsiqmpbdw1fgw1h0lh5vcl27hzdpg5li-postgresql-18.3"
@@ -395,12 +395,20 @@
               "default": true
             },
             {
+              "name": "dev",
+              "path": "/nix/store/an3q5j16zvagihxd4jxf7hm5l32r71kb-postgresql-18.3-dev"
+            },
+            {
+              "name": "lib",
+              "path": "/nix/store/qy0s729fh6d1wmvplkmzhcmj7h6c5dyr-postgresql-18.3-lib"
+            },
+            {
               "name": "plpython3",
               "path": "/nix/store/6yim15kd2viliz7q4cd05px7nwxnicz4-postgresql-18.3-plpython3"
             },
             {
-              "name": "pltcl",
-              "path": "/nix/store/w64rq9y8ra22dlppdx2rikzg6a1nps3b-postgresql-18.3-pltcl"
+              "name": "doc",
+              "path": "/nix/store/s2biyilsc0igmwba29bmkj4pldk86rm9-postgresql-18.3-doc"
             },
             {
               "name": "jit",
@@ -411,20 +419,12 @@
               "path": "/nix/store/nsqhb7l4077l8j0sm0l5gw5pd52mrcav-postgresql-18.3-plperl"
             },
             {
+              "name": "pltcl",
+              "path": "/nix/store/w64rq9y8ra22dlppdx2rikzg6a1nps3b-postgresql-18.3-pltcl"
+            },
+            {
               "name": "debug",
               "path": "/nix/store/2in8rx0h7i61r1vvdrdhl73ldw2lz9h6-postgresql-18.3-debug"
-            },
-            {
-              "name": "dev",
-              "path": "/nix/store/an3q5j16zvagihxd4jxf7hm5l32r71kb-postgresql-18.3-dev"
-            },
-            {
-              "name": "doc",
-              "path": "/nix/store/s2biyilsc0igmwba29bmkj4pldk86rm9-postgresql-18.3-doc"
-            },
-            {
-              "name": "lib",
-              "path": "/nix/store/qy0s729fh6d1wmvplkmzhcmj7h6c5dyr-postgresql-18.3-lib"
             }
           ],
           "store_path": "/nix/store/dfqi25n0nbgxks4qvl6bay16vy24yv27-postgresql-18.3"

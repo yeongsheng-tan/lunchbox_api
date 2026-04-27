@@ -3,7 +3,7 @@
     "beam28Packages.elixir_1_19@1.19.5",
     "postgresql_18@latest",
     "gigalixir@latest",
-    "nodejs@25.9.0",
+    "nodejs@25",
     "corepack@latest"
   ],
   "env": {
