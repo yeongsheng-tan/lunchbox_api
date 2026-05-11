@@ -3,9 +3,9 @@
   "license": "MIT",
   "engines": {
     "node": ">=25",
-    "pnpm": ">=11.0.9"
+    "pnpm": ">=10.33.4"
   },
-  "packageManager": "pnpm@11.0.9",
+  "packageManager": "pnpm@10.33.4",
   "scripts": {
     "postinstall": "syncpack fix",
     "deploy": "cd .. && mix assets.deploy && rm -f _build/esbuild"
@@ -18,7 +18,7 @@
   "devDependencies": {
     "js-yaml": "^4.1.1",
     "phoenix_live_view": "1.1.30",
-    "syncpack": "^14.3.1"
+    "syncpack": "^15.1.2"
   },
   "overrides": {
     "brace-expansion": "^2.0.2"
