@@ -13,11 +13,11 @@
   "dependencies": {
     "phoenix": "file:../deps/phoenix",
     "phoenix_html": "file:../deps/phoenix_html",
-    "phoenix_live_view": "1.1.28",
     "topbar": "^3.0.1"
   },
   "devDependencies": {
     "js-yaml": "^4.1.1",
+    "phoenix_live_view": "1.1.30",
     "syncpack": "^14.3.1"
   },
   "overrides": {
