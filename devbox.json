@@ -4,11 +4,9 @@
     "postgresql_18@latest",
     "gigalixir@latest",
     "nodejs@25",
-    "corepack@latest"
+    "pnpm@10.33.4"
   ],
-  "env": {
-    "DEVBOX_COREPACK_ENABLED": "1"
-  },
+  "env": {},
   "shell": {
     "init_hook": [
       "echo 'Welcome to devbox for lunchbox_api!' > /dev/null",
