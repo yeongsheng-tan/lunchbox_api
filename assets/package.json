@@ -2,7 +2,7 @@
   "name": "lunchbox_api_assets",
   "license": "MIT",
   "engines": {
-    "node": ">=24",
+    "node": ">=26",
     "pnpm": ">=11.4"
   },
   "packageManager": "pnpm@11.4.0",
@@ -16,8 +16,8 @@
     "topbar": "^3.0.1"
   },
   "devDependencies": {
-    "js-yaml": "^4.2.0",
-    "phoenix_live_view": "1.1.31",
-    "syncpack": "^15.3.1"
+    "js-yaml": "^5.0.0",
+    "phoenix_live_view": "1.2.3",
+    "syncpack": "^15.3.2"
   }
 }
