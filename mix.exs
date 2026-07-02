@@ -4,7 +4,7 @@ defmodule LunchboxApi.MixProject do
   def project do
     [
       app: :lunchbox_api,
-      version: "1.20.3",
+      version: "1.20.4",
       elixir: "~> 1.20.2",
       elixirc_paths: elixirc_paths(Mix.env()),
       start_permanent: Mix.env() == :prod,
@@ -47,7 +47,7 @@ defmodule LunchboxApi.MixProject do
       {:ecto_sql, "~> 3.11"},
       {:postgrex, "~> 0.17"},
       {:phoenix_view, "~> 2.0"},
-      {:phoenix_live_view, "~> 1.1.3"},
+      {:phoenix_live_view, "~> 1.2.5"},
       {:floki, "~> 0.35", only: :test},
       {:phoenix_html, "~> 4.0"},
       {:phoenix_html_helpers, "~> 1.0"},
