@@ -16,8 +16,8 @@
     "topbar": "^3.0.1"
   },
   "devDependencies": {
-    "js-yaml": "^5.2.0",
-    "phoenix_live_view": "1.2.5",
+    "js-yaml": "^5.2.1",
+    "phoenix_live_view": "1.2.6",
     "syncpack": "^15.3.2"
   }
 }

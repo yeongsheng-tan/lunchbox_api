@@ -2,9 +2,9 @@
   "packages": [
     "postgresql_18@latest",
     "gigalixir@latest",
-    "pnpm@11.9.0",
     "beam29Packages.elixir_1_20@1.20.2",
-    "nodejs@26.4.0"
+    "nodejs@26.4.0",
+    "pnpm@11.9.0"
   ],
   "env": {},
   "shell": {

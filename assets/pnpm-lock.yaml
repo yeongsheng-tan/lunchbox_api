@@ -19,11 +19,11 @@ importers:
         version: 3.0.1
     devDependencies:
       js-yaml:
-        specifier: ^5.2.0
-        version: 5.2.0
+        specifier: ^5.2.1
+        version: 5.2.1
       phoenix_live_view:
-        specifier: 1.2.5
-        version: 1.2.5
+        specifier: 1.2.6
+        version: 1.2.6
       syncpack:
         specifier: ^15.3.2
         version: 15.3.2
@@ -33,8 +33,8 @@ packages:
   argparse@2.0.1:
     resolution: {integrity: sha512-8+9WqebbFzpX9OR+Wa6O29asIogeRMzcGtAINdpMHHyAg10f05aSFVBbcEqGf/PXw1EjAZ+q2/bEBg3DvurK3Q==}
 
-  js-yaml@5.2.0:
-    resolution: {integrity: sha512-YeLUMlvR4Ou1B119LIaM0r65JvbOBooJDc9yEu0dClb/uSC5P4FrLU8OCCz/HXWvtPoIrR0dRzABTjo1sTN9Bw==}
+  js-yaml@5.2.1:
+    resolution: {integrity: sha512-zfLtNfQqxVqq3uaTqSkh4x4hZw3KHobGUA0fJUj4wawW8bsQLTVqpHdXSIzidh7o+4lEW36tANuAGdaFx6Zgnw==}
     hasBin: true
 
   morphdom@2.7.8:
@@ -46,8 +46,8 @@ packages:
   phoenix_html@file:../deps/phoenix_html:
     resolution: {directory: ../deps/phoenix_html, type: directory}
 
-  phoenix_live_view@1.2.5:
-    resolution: {integrity: sha512-XOcfiE8UuapvBwUR+hIJAtvvAl30x92NWrNAEY0j8t7a2uywnLf/wSFJVPmS4SZylsOXpVxLPUZlcG7qC/3Law==}
+  phoenix_live_view@1.2.6:
+    resolution: {integrity: sha512-5CkZqsPcl9oFU7UqrsZsO+of5TUROh3aL+9T9GC77w2iVyqsRbcPxm8eU0qJXW2thOOJjgZzCbEgBUmnMzO1Dg==}
 
   syncpack-darwin-arm64@15.3.2:
     resolution: {integrity: sha512-rQwZOvWJbvUzhBySbKnvs+F5khmdkH2W/kTZo+zz6UfH651K9z2fiOYlcpDPX0L97m566gRxVmOr930ygB97ZQ==}
@@ -101,7 +101,7 @@ snapshots:
 
   argparse@2.0.1: {}
 
-  js-yaml@5.2.0:
+  js-yaml@5.2.1:
     dependencies:
       argparse: 2.0.1
 
@@ -111,7 +111,7 @@ snapshots:
 
   phoenix_html@file:../deps/phoenix_html: {}
 
-  phoenix_live_view@1.2.5:
+  phoenix_live_view@1.2.6:
     dependencies:
       morphdom: 2.7.8
 
