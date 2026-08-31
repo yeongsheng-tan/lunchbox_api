@@ -3,9 +3,9 @@
   "license": "MIT",
   "engines": {
     "node": ">=26",
-    "pnpm": ">=11.20"
+    "pnpm": ">=11.22"
   },
-  "packageManager": "pnpm@11.20.0",
+  "packageManager": "pnpm@11.22.0",
   "scripts": {
     "postinstall": "syncpack fix",
     "deploy": "cd .. && mix assets.deploy && rm -f _build/esbuild"
@@ -16,8 +16,8 @@
     "topbar": "^3.0.1"
   },
   "devDependencies": {
-    "js-yaml": "^5.2.3",
-    "phoenix_live_view": "1.2.9",
+    "js-yaml": "^5.4.1",
+    "phoenix_live_view": "1.2.11",
     "syncpack": "^15.3.3"
   }
 }

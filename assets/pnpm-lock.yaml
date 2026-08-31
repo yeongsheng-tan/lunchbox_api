@@ -19,11 +19,11 @@ importers:
         version: 3.0.1
     devDependencies:
       js-yaml:
-        specifier: ^5.2.3
-        version: 5.2.3
+        specifier: ^5.4.1
+        version: 5.4.1
       phoenix_live_view:
-        specifier: 1.2.9
-        version: 1.2.9
+        specifier: 1.2.11
+        version: 1.2.11
       syncpack:
         specifier: ^15.3.3
         version: 15.3.3
@@ -33,13 +33,9 @@ packages:
   argparse@2.0.1:
     resolution: {integrity: sha512-8+9WqebbFzpX9OR+Wa6O29asIogeRMzcGtAINdpMHHyAg10f05aSFVBbcEqGf/PXw1EjAZ+q2/bEBg3DvurK3Q==}
 
-  js-yaml@5.2.3:
-    resolution: {integrity: sha512-n+mUVyUX5bVv7G/G2zyIHOhdxfuU1dY2NOFzTQUWiMUbFss8b57NFlgCCaggU78wSw5KVS9cllzeLyzyR+n5nw==}
+  js-yaml@5.4.1:
+    resolution: {integrity: sha512-28R/k+NAjeuf7+CKlTxWZVExJGwVVLwY06DgEnOMz2gEpfNkDcD7QvyiVPT0xy0XXhU8vHsd4Ot42OOPdJG7dQ==}
     hasBin: true
-
-  morphdom@https://codeload.github.com/SteffenDE/morphdom/tar.gz/3a35c8bbd3f2621f5eab967f777eb8ce7e1b9430:
-    resolution: {gitHosted: true, integrity: sha512-jRdjI7j8Pp0Ph6+sGgQ34gxjO0N3mdXUDh7KrO6xONJkQ/AWWbSzEzmr3NJbY/BTN8g2wKd0hj//kgKfik7eAA==, tarball: https://codeload.github.com/SteffenDE/morphdom/tar.gz/3a35c8bbd3f2621f5eab967f777eb8ce7e1b9430}
-    version: 2.7.8
 
   phoenix@file:../deps/phoenix:
     resolution: {directory: ../deps/phoenix, type: directory}
@@ -47,8 +43,8 @@ packages:
   phoenix_html@file:../deps/phoenix_html:
     resolution: {directory: ../deps/phoenix_html, type: directory}
 
-  phoenix_live_view@1.2.9:
-    resolution: {integrity: sha512-XJo3rSOyvtoK6EzXLz3/+xjfaz6Uo9AazJpvysxll0+W61HfCtkUI5giqbGXK8UurgyPUxXaOaz6/nF+mgMX0w==}
+  phoenix_live_view@1.2.11:
+    resolution: {integrity: sha512-52aAL+cW0IGxZT9QMEkN+3+pRfCTCBEQZUL6C1gRgAlqmOf15VkMFxISHX71IAj+Px7uQl31ROmYUsWXDUT95g==}
 
   syncpack-darwin-arm64@15.3.3:
     resolution: {integrity: sha512-sFnHOUT7ZYShxAXfzK8zIxNvY5ciW6c71fHYOJIgZ8Ry25IMWkaGfyLc894wxIPaYTbgEmeeZN6BV7G5Gu27mA==}
@@ -102,19 +98,15 @@ snapshots:
 
   argparse@2.0.1: {}
 
-  js-yaml@5.2.3:
+  js-yaml@5.4.1:
     dependencies:
       argparse: 2.0.1
-
-  morphdom@https://codeload.github.com/SteffenDE/morphdom/tar.gz/3a35c8bbd3f2621f5eab967f777eb8ce7e1b9430: {}
 
   phoenix@file:../deps/phoenix: {}
 
   phoenix_html@file:../deps/phoenix_html: {}
 
-  phoenix_live_view@1.2.9:
-    dependencies:
-      morphdom: https://codeload.github.com/SteffenDE/morphdom/tar.gz/3a35c8bbd3f2621f5eab967f777eb8ce7e1b9430
+  phoenix_live_view@1.2.11: {}
 
   syncpack-darwin-arm64@15.3.3:
     optional: true

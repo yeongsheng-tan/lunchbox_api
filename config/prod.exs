@@ -10,7 +10,7 @@ import Config
 # which you should run after static files are built and
 # before starting your production server.
 config :lunchbox_api, LunchboxApiWeb.Endpoint,
-  http: [:inet6, port: System.get_env("PORT") || 4000],
+  http: [ip: {0, 0, 0, 0, 0, 0, 0, 0}, port: System.get_env("PORT") || 4000],
   server: true,
   check_origin: ["//*.gigalixirapp.com"],
   secret_key_base: System.get_env("SECRET_KEY_BASE"),

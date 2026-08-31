@@ -67,7 +67,7 @@ defmodule LunchboxApi.MixProject do
        depth: 1},
       {:gettext, "~> 0.24"},
       {:jason, "~> 1.4"},
-      {:plug_cowboy, "~> 2.6"},
+      {:bandit, "~> 1.0"},
       {:plug_forwarded_peer, "~> 0.1.0"},
       {:file_system, "~> 1.0", override: true}
     ]

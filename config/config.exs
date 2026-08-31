@@ -12,6 +12,7 @@ config :lunchbox_api,
 
 # Configures the endpoint
 config :lunchbox_api, LunchboxApiWeb.Endpoint,
+  adapter: Bandit.PhoenixAdapter,
   url: [host: "localhost"],
   secret_key_base: "7R/dI10x1tt/FnDkKsdB3QTWRQkX9VVtVGOVFBAuobw/T2G23RJ9RM7nvMsj0+T3",
   render_errors: [view: LunchboxApiWeb.ErrorView, accepts: ~w(json), layout: false],

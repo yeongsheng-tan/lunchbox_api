@@ -4,7 +4,7 @@
     "gigalixir@latest",
     "beam29Packages.elixir_1_20@1.20.3",
     "nodejs@26",
-    "pnpm@11.20.0"
+    "pnpm@11.22.0"
   ],
   "env": {},
   "shell": {
