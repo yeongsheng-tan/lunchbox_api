@@ -3,9 +3,9 @@
   "license": "MIT",
   "engines": {
     "node": ">=26",
-    "pnpm": ">=12.4.1"
+    "pnpm": ">=12.4.2"
   },
-  "packageManager": "pnpm@12.4.1.0",
+  "packageManager": "pnpm@12.4.2",
   "scripts": {
     "postinstall": "syncpack fix",
     "deploy": "cd .. && mix assets.deploy && rm -f _build/esbuild"
