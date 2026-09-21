@@ -17,7 +17,7 @@
   },
   "devDependencies": {
     "js-yaml": "^5.4.2",
-    "phoenix_live_view": "1.2.11",
+    "phoenix_live_view": "1.2.12",
     "syncpack": "^15.3.3"
   }
 }

@@ -180,8 +180,8 @@ importers:
         specifier: ^5.4.2
         version: 5.4.2
       phoenix_live_view:
-        specifier: 1.2.11
-        version: 1.2.11
+        specifier: 1.2.12
+        version: 1.2.12
       syncpack:
         specifier: ^15.3.3
         version: 15.3.3
@@ -201,8 +201,8 @@ packages:
   phoenix_html@file:../deps/phoenix_html:
     resolution: {directory: ../deps/phoenix_html, type: directory}
 
-  phoenix_live_view@1.2.11:
-    resolution: {integrity: sha512-52aAL+cW0IGxZT9QMEkN+3+pRfCTCBEQZUL6C1gRgAlqmOf15VkMFxISHX71IAj+Px7uQl31ROmYUsWXDUT95g==}
+  phoenix_live_view@1.2.12:
+    resolution: {integrity: sha512-MmJSXZrqThk4mTzyvxSujzdRj6OHdVf5P5IS+qLPKdquCzHBYC7YXCkltBPCaom4uKS1cBKGahU7fGhU3Vyo4w==}
 
   syncpack-darwin-arm64@15.3.3:
     resolution: {integrity: sha512-sFnHOUT7ZYShxAXfzK8zIxNvY5ciW6c71fHYOJIgZ8Ry25IMWkaGfyLc894wxIPaYTbgEmeeZN6BV7G5Gu27mA==}
@@ -264,7 +264,7 @@ snapshots:
 
   phoenix_html@file:../deps/phoenix_html: {}
 
-  phoenix_live_view@1.2.11: {}
+  phoenix_live_view@1.2.12: {}
 
   syncpack-darwin-arm64@15.3.3:
     optional: true
