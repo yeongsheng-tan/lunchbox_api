@@ -1,6 +1,6 @@
 {
   "packages": [
-    "postgresql_18@latest",
+    "postgresql_19@latest",
     "gigalixir@latest",
     "beam29Packages.elixir_1_20@1.20.4",
     "nodejs@26"
