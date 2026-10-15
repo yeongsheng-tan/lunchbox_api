@@ -10,7 +10,12 @@ import Config
 # which you should run after static files are built and
 # before starting your production server.
 config :lunchbox_api, LunchboxApiWeb.Endpoint,
-  http: [ip: {0, 0, 0, 0, 0, 0, 0, 0}, port: System.get_env("PORT") || 4000],
+  # shortcut: h2 off to dodge CVE-2026-105659 (bandit <= 1.12.5); drop once fixed bandit on hex
+  http: [
+    ip: {0, 0, 0, 0, 0, 0, 0, 0},
+    port: System.get_env("PORT") || 4000,
+    http_2_options: [enabled: false]
+  ],
   server: true,
   check_origin: ["//*.gigalixirapp.com"],
   secret_key_base: System.get_env("SECRET_KEY_BASE"),
