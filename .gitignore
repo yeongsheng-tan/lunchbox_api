@@ -98,3 +98,5 @@ Thumbs.db
 # Temporary files
 *.tmp
 *.temp
+# CocoIndex Code (ccc)
+/.cocoindex_code/
