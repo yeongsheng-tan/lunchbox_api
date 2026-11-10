@@ -63,13 +63,20 @@ end
 
 ### Environment Setup
 ```bash
-# Using devbox (preferred)
+# Using devbox (preferred): sets BASIC_AUTH_* via devbox.jsonc `env`,
+# runs set-env.sh (corepack pnpm shim, mix deps.get if missing, assets pnpm install)
 devbox shell
+devbox services up -b   # postgres must be up before `devbox run test` / `devbox run dev`
+devbox run test
+devbox run dev
 
-# Manual setup
+# Manual setup (no devbox)
 export BASIC_AUTH_USERNAME=specialUserName
 export BASIC_AUTH_PASSWORD=superSecretPassword
+# start postgres yourself, then: mix test / mix phx.server
 ```
+
+Note: if direnv already loaded the devbox env, `devbox run` skips init_hook; open a fresh `devbox shell` to re-run set-env.sh.
 
 ### Testing
 ```bash

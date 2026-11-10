@@ -1,21 +1,27 @@
 {
-  "packages": [
-    "postgresql_19@latest",
-    "gigalixir@latest",
-    "nodejs@26",
-    "beam29Packages.elixir_1_20@1.20.5"
-  ],
-  "env": {},
+  "$schema": "https://raw.githubusercontent.com/jetify-com/devbox/0.20.0/.schema/devbox.schema.json",
+  "packages": {
+    "postgresql_19": "latest",
+    "gigalixir": "latest",
+    "corepack": "latest",
+    "nodejs": {
+      "version": "26"
+    },
+    "beam29Packages.elixir_1_20": "1.20.5"
+  },
+  "env": {
+    "DEVBOX_COREPACK_ENABLED": "true",
+    "COREPACK_ENABLE_DOWNLOAD_PROMPT": "0",
+    "BASIC_AUTH_USERNAME": "specialUserName",
+    "BASIC_AUTH_PASSWORD": "superSecretPassword"
+  },
   "shell": {
     "init_hook": [
-      "echo 'Welcome to devbox for lunchbox_api!' > /dev/null",
-      "export BASIC_AUTH_USERNAME=specialUserName",
-      "export BASIC_AUTH_PASSWORD=superSecretPassword",
-      "cd assets && pnpm install --frozen-lockfile"
+      ". ./set-env.sh"
     ],
     "scripts": {
-      "test": "BASIC_AUTH_USERNAME=specialUserName BASIC_AUTH_PASSWORD=superSecretPassword mix test",
-      "dev":  "mix phx.server"
+      "test": "mix test",
+      "dev": "mix phx.server"
     }
   }
 }
