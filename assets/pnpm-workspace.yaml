@@ -1,0 +1,8 @@
+packages:
+  - .
+
+# phoenix_live_view@1.2.8+ pulls morphdom from an unpinned git branch
+# (github:SteffenDE/morphdom#main) instead of the npm registry, which trips
+# pnpm's default supply-chain check. Allowing it knowingly since it's the
+# LiveView team's own dependency choice.
+blockExoticSubdeps: false
