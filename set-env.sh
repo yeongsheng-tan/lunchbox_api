@@ -35,3 +35,5 @@ fi
 
 echo "Setting up PNPM..."
 (cd assets && pnpm install --frozen-lockfile)   # subshell: corepack reads packageManager from cwd; bare `cd` would leak into shell
+# non-fatal: a failed hook aborts `devbox run`, blocking the very command needed to fix the lockfile
+[ $? -eq 0 ] || echo "⚠ pnpm install failed. After a packageManager bump run: cd assets && pnpm install --no-frozen-lockfile"
